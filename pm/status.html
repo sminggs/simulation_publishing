@@ -375,21 +375,6 @@
       </div>
     </div>
 
-    <script>
-      // 테이블 행 애니메이션
-      document.addEventListener("DOMContentLoaded", function () {
-        const rows = document.querySelectorAll(".page-table tbody tr");
-        rows.forEach((row, index) => {
-          row.style.opacity = "0";
-          row.style.transform = "translateX(-20px)";
-          setTimeout(() => {
-            row.style.transition = "all 0.5s ease";
-            row.style.opacity = "1";
-            row.style.transform = "translateX(0)";
-          }, index * 100);
-        });
-      });
-    </script>
   </body>
 </html>
 

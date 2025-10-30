@@ -107,6 +107,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "NanumSquare Neo", "Pretendard", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
@@ -119,7 +125,7 @@ body {
 
 /* PM 템플릿 색상 */
 body.pm-template {
-  --primary-color: #1e88e5;
+  --primary-color: #1d7fff;
   --primary-dark: #1565c0;
   --primary-light: #42a5f5;
   --secondary-color: #26c6da;

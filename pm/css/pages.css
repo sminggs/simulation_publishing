@@ -1,9 +1,5 @@
 /* ========================================
-   페이지별 스타일 통합
-   ======================================== */
-
-/* ========================================
-   1. 로그인 페이지
+   인트로 페이지
    ======================================== */
 
 /* 배경 */
@@ -29,27 +25,10 @@
 .login-box {
   text-align: center;
   width: 100%;
-  animation: slideUp 0.6s ease-out;
-}
-
-.login-box.login-success {
-  animation: zoomOut 0.5s ease-in forwards;
-}
-
-@keyframes zoomOut {
-  to {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-}
-
-.login-header {
-  margin-bottom: 50px;
 }
 
 .login-header h1 {
   text-align: center;
-  font-family: "NanumSquare Neo";
   font-size: 78px;
   font-style: normal;
   font-weight: 800;
@@ -76,71 +55,70 @@
 }
 
 .login-form {
-  margin-top: 40px;
+  max-width: 352px;
+  margin: 0 auto;
+  margin-top: 43px;
 }
 
 .form-group {
-  margin-bottom: 30px;
+  margin-bottom: 43px;
   text-align: left;
   position: relative;
 }
 
-.form-group.focused label {
-  color: var(--primary-color);
-}
-
 .form-group label {
   display: block;
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-  font-weight: 600;
-  transition: color 0.3s;
+  padding-left: 13px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1.2px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 15px 20px;
-  border: 2px solid #e0e0e0;
+  height: 80px;
+  padding: 23px 20px;
+  border: 0;
   border-radius: 10px;
-  font-size: 16px;
-  transition: all 0.3s;
-  background: #fff;
+  border: 1px solid #d1d5dc;
+  background: #f3f3f5;
+  color: #858585;
+  font-family: "Pretendard", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
 }
 
 .form-group input::placeholder {
-  color: #aaa;
+  color: #858585;
 }
 
 .btn-enter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 16px;
+  max-width: 244px;
+  margin: 0 auto;
+  height: 80px;
   background: var(--primary-color);
   color: #fff;
   border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s;
-  letter-spacing: 2px;
-  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
-}
-
-.btn-enter:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 136, 229, 0.6);
-}
-
-.btn-enter:active {
-  transform: translateY(0);
+  border-radius: 999px;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* ========================================
