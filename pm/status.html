@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로젝트 리더십 시뮬레이션 - 페이지 현황판</title>
+    <link rel="stylesheet" target="_blank" href="css/common.css" />
+    <style>
+      .dashboard-container {
+        min-height: 100vh;
+        padding: 100px 20px 80px;
+      }
+
+      .dashboard-header {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #fff;
+      }
+
+      .dashboard-header h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .dashboard-header p {
+        font-size: 18px;
+        color: var(--primary-light);
+        font-weight: 300;
+      }
+
+      .page-table-wrapper {
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .page-table-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid var(--primary-color);
+      }
+
+      .page-table-header h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .page-table-header p {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .page-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      .page-table thead {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      }
+
+      .page-table thead th {
+        padding: 18px 20px;
+        text-align: left;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+      }
+
+      .page-table thead th:first-child {
+        border-radius: 10px 0 0 0;
+      }
+
+      .page-table thead th:last-child {
+        border-radius: 0 10px 0 0;
+      }
+
+      .page-table tbody tr {
+        border-bottom: 1px solid #e0e0e0;
+        transition: all 0.3s;
+      }
+
+      .page-table tbody tr:hover {
+        background: rgba(30, 136, 229, 0.05);
+        transform: scale(1.01);
+      }
+
+      .page-table tbody tr:last-child {
+        border-bottom: none;
+      }
+
+      .page-table tbody td {
+        padding: 18px 20px;
+        color: #333;
+      }
+
+      .page-number {
+        font-weight: 700;
+        color: var(--primary-color);
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .page-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .page-description {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .page-link {
+        display: inline-block;
+        padding: 8px 20px;
+        background: var(--primary-color);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s;
+      }
+
+      .page-link:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(30, 136, 229, 0.4);
+      }
+
+      .category-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-right: 8px;
+      }
+
+      .category-auth {
+        background: #e3f2fd;
+        color: #1565c0;
+      }
+
+      .category-info {
+        background: #f3e5f5;
+        color: #6a1b9a;
+      }
+
+      .category-simulation {
+        background: #e8f5e9;
+        color: #2e7d32;
+      }
+
+      .category-interaction {
+        background: #fff3e0;
+        color: #e65100;
+      }
+
+      .category-result {
+        background: #fce4ec;
+        color: #c2185b;
+      }
+
+      /* 반응형 */
+      @media (max-width: 768px) {
+        .dashboard-header h1 {
+          font-size: 28px;
+        }
+
+        .page-table-wrapper {
+          padding: 20px;
+        }
+
+        .page-table {
+          font-size: 14px;
+        }
+
+        .page-table thead th,
+        .page-table tbody td {
+          padding: 12px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body class="pm-template">
+    <div class="bg-office"></div>
+
+    <div class="dashboard-container container">
+      <div class="dashboard-header fade-in">
+        <h1>🎯 프로젝트 리더십 시뮬레이션</h1>
+        <p>페이지 현황판 (Dashboard)</p>
+      </div>
+
+      <div class="page-table-wrapper slide-up">
+        <div class="page-table-header">
+          <h2>📋 전체 페이지 목록</h2>
+          <p>총 10개의 페이지가 있습니다. 각 페이지를 클릭하여 바로 이동할 수 있습니다.</p>
+        </div>
+
+        <table class="page-table">
+          <thead>
+            <tr>
+              <th style="width: 60px; text-align: center;">No.</th>
+              <th style="width: 35%;">페이지명</th>
+              <th style="width: 35%;">설명</th>
+              <th style="width: 20%; text-align: center;">바로가기</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="page-number">1</td>
+              <td>
+                <span class="category-badge category-auth">인트로</span>
+                <span class="page-title">시뮬레이션 접속</span>
+              </td>
+              <td class="page-description">시뮬레이션 접속을 위한 패스워드 입력 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="intro_password.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="page-number">2</td>
+              <td>
+                <span class="category-badge category-auth">인트로</span>
+                <span class="page-title">정보 등록</span>
+              </td>
+              <td class="page-description">시뮬레이션 접속 후 정보 등록 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="login.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="page-number">3</td>
+              <td>
+                <span class="category-badge category-auth">인트로</span>
+                <span class="page-title">시뮬레이션 기능</span>
+              </td>
+              <td class="page-description"></td>
+              <td style="text-align: center;">
+                <a target="_blank" href="login.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="page-number">3</td>
+              <td>
+                <span class="category-badge category-auth">인트로</span>
+                <span class="page-title">시뮬레이션 기능</span>
+              </td>
+              <td class="page-description"></td>
+              <td style="text-align: center;">
+                <a target="_blank" href="login.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">2</td>
+              <td>
+                <span class="category-badge category-info">소개</span>
+                <span class="page-title">환영 페이지</span>
+              </td>
+              <td class="page-description">시뮬레이션 개요 및 역할 안내 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="welcome.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">3</td>
+              <td>
+                <span class="category-badge category-info">소개</span>
+                <span class="page-title">배경 정보</span>
+              </td>
+              <td class="page-description">회사 정보, 조직도, 통장인물 등 시뮬레이션 배경 정보</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="intro.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">4</td>
+              <td>
+                <span class="category-badge category-simulation">시뮬레이션</span>
+                <span class="page-title">공지사항 게시판</span>
+              </td>
+              <td class="page-description">프로젝트 관련 공지사항 및 여름휴가 계획 제출 공지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="board.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">5</td>
+              <td>
+                <span class="category-badge category-interaction">상호작용</span>
+                <span class="page-title">대화/채팅</span>
+              </td>
+              <td class="page-description">서민준 과장과 안성호 과장의 채팅 대화 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="dialogue.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">6</td>
+              <td>
+                <span class="category-badge category-interaction">상호작용</span>
+                <span class="page-title">메일</span>
+              </td>
+              <td class="page-description">홍현주 이사의 메일 - 프로젝트 요구명세서 근거 자료</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="mail.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">7</td>
+              <td>
+                <span class="category-badge category-interaction">상호작용</span>
+                <span class="page-title">전화</span>
+              </td>
+              <td class="page-description">고영길 사장과의 전화 대화 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="phone.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">8</td>
+              <td>
+                <span class="category-badge category-simulation">시뮬레이션</span>
+                <span class="page-title">의사결정 문제</span>
+              </td>
+              <td class="page-description">여러 상황에 대한 선택지 제시 및 의사결정 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="question.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">9</td>
+              <td>
+                <span class="category-badge category-result">결과</span>
+                <span class="page-title">점수 현황</span>
+              </td>
+              <td class="page-description">팀개발, 리더십, 내외부 이해관계자 등 점수 확인 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="score.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">10</td>
+              <td>
+                <span class="category-badge category-result">결과</span>
+                <span class="page-title">라운드 종료</span>
+              </td>
+              <td class="page-description">1라운드 종료 메시지 및 피드백 확인 안내 페이지</td>
+              <td style="text-align: center;">
+                <a target="_blank" href="round-end.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      // 테이블 행 애니메이션
+      document.addEventListener("DOMContentLoaded", function () {
+        const rows = document.querySelectorAll(".page-table tbody tr");
+        rows.forEach((row, index) => {
+          row.style.opacity = "0";
+          row.style.transform = "translateX(-20px)";
+          setTimeout(() => {
+            row.style.transition = "all 0.5s ease";
+            row.style.opacity = "1";
+            row.style.transform = "translateX(0)";
+          }, index * 100);
+        });
+      });
+    </script>
+  </body>
+</html>
+

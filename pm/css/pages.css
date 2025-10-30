@@ -13,53 +13,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+  background: url("../images/layout/intro_bg.jpg") no-repeat center;
   z-index: -1;
 }
 
-.login-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 35px,
-    rgba(255, 255, 255, 0.05) 35px,
-    rgba(255, 255, 255, 0.05) 70px
-  );
-  animation: bgMove 20s linear infinite;
-}
-
-@keyframes bgMove {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    transform: translateX(70px) translateY(70px);
-  }
-}
-
-/* 로그인 컨테이너 */
-.login-container {
+/* 인트로 로그인 컨테이너 */
+.intro-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 20px;
 }
 
 .login-box {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
-  padding: 60px 80px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   text-align: center;
-  max-width: 500px;
   width: 100%;
   animation: slideUp 0.6s ease-out;
 }
@@ -80,19 +48,31 @@
 }
 
 .login-header h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1a1a2e;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
-  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: "NanumSquare Neo";
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -4.68px;
+  color: #fff;
+  background: var(
+    --gradation_blue,
+    linear-gradient(90deg, #fff 0%, #b0d6ff 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .login-header p {
-  font-size: 16px;
-  color: var(--primary-color);
+  color: #86bfff;
+  text-align: center;
+  font-family: "Pretendard", san-serif;
+  font-size: 46px;
+  font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  line-height: normal;
 }
 
 .login-form {
@@ -1839,308 +1819,5 @@
 
   .score-bar-container {
     width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  /* 로그인 */
-  .login-box {
-    padding: 40px 30px;
-  }
-
-  .login-header h1 {
-    font-size: 24px;
-  }
-
-  .login-header p {
-    font-size: 14px;
-  }
-
-  /* 인트로 */
-  .profile-content {
-    flex-direction: column;
-  }
-
-  .company-image {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .info-item {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .member-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .tab-content {
-    padding: 20px;
-  }
-
-  /* 시뮬레이션 */
-  .simulation-body {
-    padding: 20px;
-  }
-
-  .simulation-header h2 {
-    font-size: 20px;
-  }
-
-  .text-block {
-    font-size: 14px;
-    padding: 15px;
-  }
-
-  .control-buttons {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .control-btn {
-    width: 50px;
-    height: 50px;
-  }
-
-  .control-btn svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* 대화 */
-  .dialogue-item {
-    gap: 12px;
-  }
-
-  .character-avatar img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .character-name {
-    font-size: 11px;
-    padding: 4px 10px;
-  }
-
-  .dialogue-bubble {
-    max-width: calc(100% - 90px);
-    padding: 15px 18px;
-    font-size: 14px;
-  }
-
-  .dialogue-container {
-    padding: 20px;
-    gap: 20px;
-  }
-
-  /* 전화 */
-  .phone-container {
-    padding: 20px;
-  }
-
-  .phone-device {
-    transform: scale(0.75);
-  }
-
-  .phone-content {
-    padding: 0 10px;
-  }
-
-  .phone-content h3 {
-    font-size: 18px;
-  }
-
-  .content-text {
-    font-size: 14px;
-    padding: 15px;
-  }
-
-  /* 메일 */
-  .mail-container {
-    padding: 20px;
-  }
-
-  .mail-window {
-    border-radius: 4px;
-  }
-
-  .mail-header {
-    padding: 10px 15px;
-  }
-
-  .mail-title {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .mail-info-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .mail-field {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    padding: 10px 15px;
-  }
-
-  .field-label {
-    width: auto;
-  }
-
-  .mail-attachment {
-    flex-wrap: wrap;
-  }
-
-  .mail-body {
-    padding: 20px 15px;
-    font-size: 14px;
-  }
-
-  .mail-footer {
-    flex-wrap: wrap;
-  }
-
-  .mail-btn {
-    flex: 1;
-    min-width: 100px;
-  }
-
-  /* 게시판 */
-  .board-container {
-    padding: 20px;
-  }
-
-  .board-window {
-    flex-direction: column;
-  }
-
-  .board-sidebar {
-    width: 100%;
-    display: flex;
-    overflow-x: auto;
-    border-right: none;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 0;
-  }
-
-  .sidebar-menu {
-    padding: 15px 20px;
-    white-space: nowrap;
-    border-left: none;
-    border-bottom: 3px solid transparent;
-  }
-
-  .sidebar-menu.active {
-    border-left: none;
-    border-bottom-color: var(--primary-color);
-  }
-
-  .board-main {
-    min-width: auto;
-    width: 100%;
-  }
-
-  .post-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .post-title {
-    font-size: 16px;
-  }
-
-  .post-content {
-    padding: 20px 15px;
-    font-size: 14px;
-  }
-
-  /* 의사결정 */
-  .question-container {
-    padding: 20px;
-  }
-
-  .question-text {
-    font-size: 16px;
-  }
-
-  .answer-option {
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .option-number {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-
-  .option-title {
-    font-size: 15px;
-  }
-
-  .option-desc {
-    font-size: 13px;
-  }
-
-  .answer-option:hover {
-    transform: none;
-  }
-
-  /* 라운드 종료 */
-  .round-end-container {
-    padding: 40px 20px;
-  }
-
-  .end-message-box {
-    padding: 40px 30px;
-  }
-
-  .end-title {
-    font-size: 26px;
-  }
-
-  .end-message p {
-    font-size: 15px;
-  }
-
-  .btn-feedback {
-    padding: 14px 40px;
-    font-size: 16px;
-  }
-
-  /* 점수 */
-  .score-header {
-    padding: 20px;
-  }
-
-  .score-header h2 {
-    font-size: 22px;
-  }
-
-  .score-body {
-    padding: 30px 20px;
-  }
-
-  .score-item {
-    padding: 20px;
-  }
-
-  .label-text {
-    font-size: 15px;
-  }
-
-  .score-value {
-    font-size: 18px;
-    min-width: 100px;
   }
 }
