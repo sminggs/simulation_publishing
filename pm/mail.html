@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메일 - 프로젝트 리더십 시뮬레이션</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="pm-template">
+    <div class="bg-office"></div>
+
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header-left">
+            <button class="home-btn" onclick="location.href='intro.html'">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header-nav">
+            <a href="simulation.html" class="active">
+                <span>시뮬레이션</span>
+                <small>Simulation</small>
+            </a>
+            <a href="score.html">
+                <span>점수</span>
+                <small>Score</small>
+            </a>
+            <a href="feedback.html">
+                <span>피드백</span>
+                <small>Feedback</small>
+            </a>
+        </div>
+        <div class="header-title">
+            <h1>프로젝트 리더십 시뮬레이션</h1>
+            <p>Project Leadership Simulation</p>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="main-content">
+        <div class="simulation-container">
+            <div class="simulation-card">
+                <div class="simulation-header">
+                    <h2>홍현주 이사의 메일</h2>
+                </div>
+                
+                <div class="simulation-body mail-container">
+                    <div class="mail-window">
+                        <div class="mail-header">
+                            <div class="mail-title">
+                                <span class="new-badge">New mail</span>
+                                <span class="mail-time">25-09-11 11:21</span>
+                            </div>
+                            <div class="mail-controls">
+                                <button class="mail-control-btn">−</button>
+                                <button class="mail-control-btn">□</button>
+                                <button class="mail-control-btn">×</button>
+                            </div>
+                        </div>
+
+                        <div class="mail-info-bar">
+                            <div class="mail-tag">제목</div>
+                            <div class="mail-subject">SMART-내비게이션 프로젝트 요구명세서 근거 자료</div>
+                        </div>
+
+                        <div class="mail-field">
+                            <div class="field-label">보낸 사람</div>
+                            <div class="field-value">홍길동</div>
+                        </div>
+
+                        <div class="mail-field">
+                            <div class="field-label">받는 사람</div>
+                            <div class="field-value">홍현주 이사</div>
+                        </div>
+
+                        <div class="mail-attachment">
+                            <div class="attachment-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M13 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V9L13 2Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M13 2V9H20" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <a href="#" class="attachment-link">SMART-내비게이션 프로젝트 참고자료(홍현).zip</a>
+                            <button class="download-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 15V19C21 19.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V15" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 15V3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                다운로드
+                            </button>
+                        </div>
+
+                        <div class="mail-body">
+                            <p>사장님께서 담장님이 SMART-내비게이션 프로젝트 요구명세서의 근거자료를 요청했다고 말씀하셨습니다.<br>
+                            저희가 이번 프로젝트를 위해하기 위해 모든 모든 관련자료들을 유첨으로 송부하오니 검토에 참조하기 바랍니다.</p>
+
+                            <p>감사합니다.</p>
+                        </div>
+
+                        <div class="mail-footer">
+                            <button class="mail-btn">전달</button>
+                            <button class="mail-btn primary">전체회신</button>
+                            <button class="mail-btn primary">회신</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-buttons">
+                    <button class="control-btn pause">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <rect x="6" y="4" width="4" height="16" rx="1"/>
+                            <rect x="14" y="4" width="4" height="16" rx="1"/>
+                        </svg>
+                    </button>
+                    <button class="control-btn next" onclick="location.href='board.html'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M5 4L19 12L5 20V4Z"/>
+                            <rect x="19" y="4" width="2" height="16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 진행률 -->
+    <div class="progress-wrapper">
+        <div class="progress-info">
+            <span class="progress-label">진행률(20%)</span>
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 20%"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

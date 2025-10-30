@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화 - 프로젝트 리더십 시뮬레이션</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="pm-template">
+    <div class="bg-office"></div>
+
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header-left">
+            <button class="home-btn" onclick="location.href='intro.html'">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header-nav">
+            <a href="simulation.html" class="active">
+                <span>시뮬레이션</span>
+                <small>Simulation</small>
+            </a>
+            <a href="score.html">
+                <span>점수</span>
+                <small>Score</small>
+            </a>
+            <a href="feedback.html">
+                <span>피드백</span>
+                <small>Feedback</small>
+            </a>
+        </div>
+        <div class="header-title">
+            <h1>프로젝트 리더십 시뮬레이션</h1>
+            <p>Project Leadership Simulation</p>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="main-content">
+        <div class="simulation-container">
+            <div class="simulation-card">
+                <div class="simulation-header">
+                    <h2>고영길 사장의 전화</h2>
+                </div>
+                
+                <div class="simulation-body phone-container">
+                    <div class="phone-device">
+                        <div class="phone-screen">
+                            <div class="phone-status-bar">
+                                <span class="time">오후 1:32</span>
+                                <div class="icons">
+                                    <span class="signal">●●●●</span>
+                                    <span class="wifi">📶</span>
+                                    <span class="battery">🔋 85%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="phone-call-info">
+                                <div class="caller-avatar">
+                                    <img src="images/ceo.png" alt="고영길 사장" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'120\' viewBox=\'0 0 120 120\'%3E%3Ccircle fill=\'%23e3f2fd\' cx=\'60\' cy=\'60\' r=\'60\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'40\' fill=\'%231E88E5\'%3E고%3C/text%3E%3C/svg%3E'">
+                                </div>
+                                <h3 class="caller-name">고영길 사장</h3>
+                                <p class="call-status">통화 중...</p>
+                            </div>
+                            
+                            <div class="phone-keypad">
+                                <div class="keypad-row">
+                                    <button class="keypad-btn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                        </svg>
+                                        <span>음소거</span>
+                                    </button>
+                                    <button class="keypad-btn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/>
+                                        </svg>
+                                        <span>키패드</span>
+                                    </button>
+                                    <button class="keypad-btn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"/>
+                                        </svg>
+                                        <span>스피커</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="phone-end-call">
+                                <button class="end-call-btn">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                                        <path d="M12 9C10.5 9 8.5 9.5 6.5 10.5L3 8.5C5.5 7 9 6 12 6C15 6 18.5 7 21 8.5L17.5 10.5C15.5 9.5 13.5 9 12 9ZM8 11C8 9.34 9.79 8 12 8C14.21 8 16 9.34 16 11V15C16 16.66 14.21 18 12 18C9.79 18 8 16.66 8 15V11Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phone-content">
+                        <h3>아니 또대체 왜 프로젝트를 하지 못하겠다는 건가?</h3>
+                        
+                        <p class="content-text">
+                            나도 지내가 내비게이션 Up-grade 작업으로 바쁜 것은 아네.<br>
+                            하지만 이번 일은 우리 회사의 사활이 달린 중요한 프로젝트야.<br>
+                            언제까지나 2위 업체로 머물러있을 수만은 없지 않은가!
+                        </p>
+                        
+                        <p class="content-text">
+                            내 목표는 이번 프로젝트를 성공적으로 마무리해서 내후년에는 
+                            경쟁사를 따돌리고 업계 1위 업체로 발돋움하는 것이라네. 그래야지만 
+                            진정한 강자가 될 수 있다고.
+                        </p>
+                        
+                        <p class="content-text">
+                            이번 프로젝트를 말아주게.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="control-buttons">
+                    <button class="control-btn pause">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <rect x="6" y="4" width="4" height="16" rx="1"/>
+                            <rect x="14" y="4" width="4" height="16" rx="1"/>
+                        </svg>
+                    </button>
+                    <button class="control-btn next" onclick="location.href='mail.html'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M5 4L19 12L5 20V4Z"/>
+                            <rect x="19" y="4" width="2" height="16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 진행률 -->
+    <div class="progress-wrapper">
+        <div class="progress-info">
+            <span class="progress-label">진행률(20%)</span>
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 20%"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 리더십 시뮬레이션 - 로그인</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            --primary-color: #1e88e5;
+            --primary-dark: #1565c0;
+            --primary-light: #42a5f5;
+        }
+    </style>
+</head>
+<body class="pm-template">
+    <div class="login-bg"></div>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>프로젝트 리더십 시뮬레이션</h1>
+                <p>Project Leadership Simulation</p>
+            </div>
+            
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="password">패스워드</label>
+                    <input type="password" id="password" placeholder="패스워드를 입력하세요" autocomplete="off">
+                </div>
+                
+                <button type="button" class="btn-enter" onclick="handleLogin()">ENTER</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // 엔터키로 로그인
+            $('#password').on('keypress', function(e) {
+                if (e.which === 13) {
+                    handleLogin();
+                }
+            });
+
+            // 입력 필드 포커스 효과
+            $('#password').on('focus', function() {
+                $(this).parent().addClass('focused');
+            }).on('blur', function() {
+                $(this).parent().removeClass('focused');
+            });
+        });
+
+        function handleLogin() {
+            const password = $('#password').val();
+            
+            if (!password) {
+                alert('패스워드를 입력하세요.');
+                return;
+            }
+
+            // 실제로는 서버 인증 필요
+            // 여기서는 바로 인트로 페이지로 이동
+            $('.login-box').addClass('login-success');
+            
+            setTimeout(function() {
+                window.location.href = 'intro.html';
+            }, 800);
+        }
+    </script>
+</body>
+</html>
+
