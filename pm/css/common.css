@@ -111,6 +111,10 @@
     BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   cursor: pointer;
 }

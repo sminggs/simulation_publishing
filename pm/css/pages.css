@@ -14,7 +14,7 @@
 }
 
 /* 인트로 로그인 컨테이너 */
-.intro-container {
+.login-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,6 +103,49 @@
   color: #858585;
 }
 
+.start-form {
+  max-width: 580px;
+  margin: 0 auto;
+  margin-top: 72px;
+  padding: 0 20px;
+}
+
+.start-form a + a {
+  margin-top: 40px;
+}
+
+.start-form a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 210px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 16px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.start-form a span {
+  display: block;
+  font-size: 43px;
+  font-weight: 800;
+  color: #1d7fff;
+}
+
+.start-form .btn-start-bg span {
+  padding-left: 150px;
+  background: url("../images/icons/book.png") no-repeat left center;
+  background-size: 120px;
+}
+.start-form .btn-start-simulation {
+  background: #1d7fff;
+}
+
+.start-form .btn-start-simulation span {
+  color: #fff;
+  padding-left: 150px;
+  background: url("../images/icons/play.png") no-repeat left center;
+  background-size: 120px;
+}
 .btn-enter {
   display: flex;
   align-items: center;
@@ -125,6 +168,17 @@
    2. 인트로 페이지
    ======================================== */
 
+.bg-office {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/layout/background_info_bg.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
 .main-content {
   padding-top: 80px;
   min-height: 100vh;
@@ -134,7 +188,7 @@
   padding-bottom: 30px;
 }
 
-.intro-container {
+.background_info-container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
