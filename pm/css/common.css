@@ -21,17 +21,17 @@ button {
 body {
   font-family: "NanumSquare Neo", "Pretendard", -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #1a1a2e;
-  color: #333;
+  background: linear-gradient(0deg, #F4F4F4 0%, #F4F4F4 100%), #010102;;
+  color: #000;
   overflow-x: hidden;
 }
 
 /* PM 템플릿 색상 */
 body.pm-template {
-  --primary-color: #1d7fff;
+  --primary-color: #1D7FFF;
   --primary-dark: #1565c0;
   --primary-light: #42a5f5;
-  --secondary-color: #26c6da;
+  --secondary-color: #0050B9;
   --background-dark: #0d47a1;
   --text-on-primary: #ffffff;
 }
@@ -48,7 +48,7 @@ body.hp-template {
 
 /* 인트로 레이아웃 */
 
-<style > .dashboard-container {
+.dashboard-container {
   min-height: 100vh;
   padding: 100px 20px 80px;
 }
@@ -237,8 +237,6 @@ body.hp-template {
     padding: 12px 10px;
   }
 }
-</style>
-
 /* 배경 이미지 */
 .bg-office {
   position: fixed;
@@ -288,24 +286,44 @@ body.hp-template {
 
 .header-nav {
   display: flex;
+  flex: 1;
   gap: 30px;
+  justify-content: center;
 }
 
 .header-nav a {
-  color: #fff;
+  width: 246px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #000;
   text-decoration: none;
   font-size: 14px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
   transition: color 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
-.header-nav a:hover {
-  color: var(--primary-light);
+.header-nav a.active span, 
+.header-nav a.active em {
+  color: #1D7FFF;
+} 
+
+
+.header-nav a span {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
 }
 
+.header-nav a em {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 13px */
+  letter-spacing: -0.26px;
+}
 .header-nav .icon {
   width: 30px;
   height: 30px;
@@ -342,6 +360,34 @@ body.hp-template {
   background-size: 33px auto;
   color: #fff;
 }
+
+.simulation-header {
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simulation-header .header-inner {
+  max-width: 1240px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.simulation-header .header-left {margin-left: 32px;}
+.simulation-header .header-left .home_btn {
+  display: block;
+  width: 60px;
+  height: 80px;
+  background: url("../images/layout/home_black.png") no-repeat center;
+  background-size: 32px auto;
+
+}
+
 /* 버튼 */
 .btn {
   display: flex;
@@ -414,43 +460,80 @@ body.hp-template {
 
 /* 진행률 바 */
 .progress-wrapper {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 15px 30px;
-  z-index: 999;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 12px;
+  height: 48px;
 }
 
 .progress-info {
+  overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 15px;
-  max-width: 1400px;
-  margin: 0 auto;
+  height: 100%;
 }
 
 .progress-label {
+  display: block;
+  width: 130px;
+  background: #000;
   color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.progress-bar-container {
-  flex: 1;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress-bar {
+  text-align: center;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; 
+  letter-spacing: -0.64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  background: var(--secondary-color);
-  border-radius: 10px;
-  transition: width 0.5s ease;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.progress-bar-wrap {
+  flex: 1;
+  height: 100%;
+  padding:0 16px;
+  background-color: #fff;
+  border: 1px solid #D3D3D3;
+  border-radius: 12px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  display: flex;
+}
+
+.processbar {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  border-right: 1px solid #D3D3D3;
+}
+
+.processbar:last-child {
+  border-right: none;
+}
+
+.processbar:first-child.active::before {
+  border-radius: 50px 0 0 50px;
+}
+
+.processbar:last-child.active::before {
+  border-radius: 0 50px 50px 0;
+}
+
+.processbar.active::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: #26D0CE;
 }
 
 /* 애니메이션 */
@@ -496,8 +579,4 @@ body.hp-template {
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-dark);
 }

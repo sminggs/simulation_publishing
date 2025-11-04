@@ -63,7 +63,11 @@
       }
 
       .page-table thead {
-        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--primary-dark)
+        );
       }
 
       .page-table thead th {
@@ -157,6 +161,11 @@
         color: #6a1b9a;
       }
 
+      .category-bg {
+        background: #f3e5f5;
+        color: #000;
+      }
+
       .category-simulation {
         background: #e8f5e9;
         color: #2e7d32;
@@ -205,16 +214,19 @@
       <div class="page-table-wrapper slide-up">
         <div class="page-table-header">
           <h2>📋 전체 페이지 목록</h2>
-          <p>총 10개의 페이지가 있습니다. 각 페이지를 클릭하여 바로 이동할 수 있습니다.</p>
+          <p>
+            총 10개의 페이지가 있습니다. 각 페이지를 클릭하여 바로 이동할 수
+            있습니다.
+          </p>
         </div>
 
         <table class="page-table">
           <thead>
             <tr>
-              <th style="width: 60px; text-align: center;">No.</th>
-              <th style="width: 35%;">페이지명</th>
-              <th style="width: 35%;">설명</th>
-              <th style="width: 20%; text-align: center;">바로가기</th>
+              <th style="width: 60px; text-align: center">No.</th>
+              <th style="width: 35%">페이지명</th>
+              <th style="width: 35%">설명</th>
+              <th style="width: 20%; text-align: center">바로가기</th>
             </tr>
           </thead>
           <tbody>
@@ -224,9 +236,13 @@
                 <span class="category-badge category-auth">인트로</span>
                 <span class="page-title">시뮬레이션 접속</span>
               </td>
-              <td class="page-description">시뮬레이션 접속을 위한 패스워드 입력 페이지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="intro_password.html" class="page-link">이동 →</a>
+              <td class="page-description">
+                시뮬레이션 접속을 위한 패스워드 입력 페이지
+              </td>
+              <td style="text-align: center">
+                <a target="_blank" href="intro_password.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
             <tr>
@@ -236,65 +252,101 @@
                 <span class="page-title">시뮬레이션 기능</span>
               </td>
               <td class="page-description"></td>
-              <td style="text-align: center;">
-                <a target="_blank" href="intro_simulation.html" class="page-link">이동 →</a>
+              <td style="text-align: center">
+                <a
+                  target="_blank"
+                  href="intro_simulation.html"
+                  class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
             <tr>
               <td class="page-number">3</td>
               <td>
-                <span class="category-badge category-info">소개</span>
+                <span class="category-badge category-bg">배경 정보</span>
                 <span class="page-title">배경 정보</span>
               </td>
-              <td class="page-description">회사 정보, 조직도, 통장인물 등 시뮬레이션 배경 정보</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="background_info.html" class="page-link">이동 →</a>
+              <td class="page-description"></td>
+              <td style="text-align: center">
+                <a target="_blank" href="background_info.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
             <tr>
               <td class="page-number">4</td>
               <td>
-                <span class="category-badge category-info">소개</span>
+                <span class="category-badge category-simulation"
+                  >시뮬레이션</span
+                >
                 <span class="page-title">환영 페이지</span>
               </td>
-              <td class="page-description">시뮬레이션 개요 및 역할 안내 페이지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="welcome.html" class="page-link">이동 →</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="page-number">4</td>
-              <td>
-                <span class="category-badge category-simulation">시뮬레이션</span>
-                <span class="page-title">공지사항 게시판</span>
-              </td>
-              <td class="page-description">프로젝트 관련 공지사항 및 여름휴가 계획 제출 공지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="board.html" class="page-link">이동 →</a>
+              <td class="page-description"></td>
+              <td style="text-align: center">
+                <a target="_blank" href="welcome.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
 
             <tr>
               <td class="page-number">5</td>
               <td>
-                <span class="category-badge category-interaction">상호작용</span>
-                <span class="page-title">대화/채팅</span>
+                <span class="category-badge category-simulation"
+                  >시뮬레이션</span
+                >
+                <span class="page-title">대화</span>
               </td>
-              <td class="page-description">서민준 과장과 안성호 과장의 채팅 대화 페이지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="dialogue.html" class="page-link">이동 →</a>
+              <td class="page-description"></td>
+              <td style="text-align: center">
+                <a target="_blank" href="dialogue.html" class="page-link"
+                  >이동 →</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="page-number">5</td>
+              <td>
+                <span class="category-badge category-simulation"
+                  >시뮬레이션</span
+                >
+                <span class="page-title">채팅</span>
+              </td>
+              <td class="page-description"></td>
+              <td style="text-align: center">
+                <a target="_blank" href="chat.html" class="page-link">이동 →</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="page-number">5</td>
+              <td>
+                <span class="category-badge category-simulation"
+                  >시뮬레이션</span
+                >
+                <span class="page-title">공지사항 게시판</span>
+              </td>
+              <td class="page-description"></td>
+              <td style="text-align: center">
+                <a target="_blank" href="board.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
 
             <tr>
               <td class="page-number">6</td>
               <td>
-                <span class="category-badge category-interaction">상호작용</span>
+                <span class="category-badge category-interaction"
+                  >상호작용</span
+                >
                 <span class="page-title">메일</span>
               </td>
-              <td class="page-description">홍현주 이사의 메일 - 프로젝트 요구명세서 근거 자료</td>
-              <td style="text-align: center;">
+              <td class="page-description">
+                홍현주 이사의 메일 - 프로젝트 요구명세서 근거 자료
+              </td>
+              <td style="text-align: center">
                 <a target="_blank" href="mail.html" class="page-link">이동 →</a>
               </td>
             </tr>
@@ -302,24 +354,34 @@
             <tr>
               <td class="page-number">7</td>
               <td>
-                <span class="category-badge category-interaction">상호작용</span>
+                <span class="category-badge category-interaction"
+                  >상호작용</span
+                >
                 <span class="page-title">전화</span>
               </td>
-              <td class="page-description">고영길 사장과의 전화 대화 페이지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="phone.html" class="page-link">이동 →</a>
+              <td class="page-description">고영길사장과의 전화 대화 페이지</td>
+              <td style="text-align: center">
+                <a target="_blank" href="phone.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
 
             <tr>
               <td class="page-number">8</td>
               <td>
-                <span class="category-badge category-simulation">시뮬레이션</span>
+                <span class="category-badge category-simulation"
+                  >시뮬레이션</span
+                >
                 <span class="page-title">의사결정 문제</span>
               </td>
-              <td class="page-description">여러 상황에 대한 선택지 제시 및 의사결정 페이지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="question.html" class="page-link">이동 →</a>
+              <td class="page-description">
+                여러 상황에 대한 선택지 제시 및 의사결정 페이지
+              </td>
+              <td style="text-align: center">
+                <a target="_blank" href="question.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
 
@@ -329,9 +391,13 @@
                 <span class="category-badge category-result">결과</span>
                 <span class="page-title">점수 현황</span>
               </td>
-              <td class="page-description">팀개발, 리더십, 내외부 이해관계자 등 점수 확인 페이지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="score.html" class="page-link">이동 →</a>
+              <td class="page-description">
+                팀개발, 리더십, 내외부 이해관계자 등 점수 확인 페이지
+              </td>
+              <td style="text-align: center">
+                <a target="_blank" href="score.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
 
@@ -341,16 +407,18 @@
                 <span class="category-badge category-result">결과</span>
                 <span class="page-title">라운드 종료</span>
               </td>
-              <td class="page-description">1라운드 종료 메시지 및 피드백 확인 안내 페이지</td>
-              <td style="text-align: center;">
-                <a target="_blank" href="round-end.html" class="page-link">이동 →</a>
+              <td class="page-description">
+                1라운드 종료 메시지 및 피드백 확인 안내 페이지
+              </td>
+              <td style="text-align: center">
+                <a target="_blank" href="round-end.html" class="page-link"
+                  >이동 →</a
+                >
               </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-
   </body>
 </html>
-
