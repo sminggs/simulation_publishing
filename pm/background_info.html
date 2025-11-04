@@ -1,257 +1,585 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>배경 정보 - 프로젝트 리더십 시뮬레이션</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/common.js"></script>
-</head>
-<body class="pm-template">
+  </head>
+  <body class="pm-template">
     <div class="bg-office"></div>
 
     <!-- 헤더 -->
-    <header class="header">
-        <div class="header-left">
-            <button class="home-btn" onclick="location.href='intro.html'">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>INTRO</span>
-            </button>
-        </div>
-        <div class="header-title">
-            <h1>프로젝트 리더십 시뮬레이션</h1>
-            <p>Project Leadership Simulation</p>
-        </div>
+    <header class="background-header">
+      <div class="header-left">
+        <a href="intro_simulation.html" class="home_btn">
+          <span>INTRO</span>
+        </a>
+      </div>
+      <div class="header-title">
+        <h1>프로젝트 리더십 시뮬레이션</h1>
+        <p>Project Leadership Simulation</p>
+      </div>
     </header>
 
     <!-- 메인 컨텐츠 -->
     <div class="main-content">
-        <div class="background_info-container">
-            <!-- 탭 메뉴 -->
-            <div class="tabs">
-                <button class="tab active" data-tab="company-profile">Company Profile</button>
-                <button class="tab" data-tab="organization">조직도</button>
-                <button class="tab" data-tab="team-members">통장인물</button>
-            </div>
-
-            <!-- Company Profile 탭 -->
-            <div class="tab-content active" id="company-profile">
-                <div class="profile-content">
-                    <div class="company-image">
-                        <img src="images/assets/building.jpg" alt="PSI Building">
-                    </div>
-                    <div class="company-info">
-                        <div class="info-item">
-                            <span class="info-label">회사명</span>
-                            <span class="info-value">PSI</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">업종</span>
-                            <span class="info-value">IT서비스/소프트웨어 개발</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">매출액</span>
-                            <span class="info-value">국내 2,500억원, 글로벌 1.2조원</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">주요상품</span>
-                            <div class="info-value">
-                                <ul>
-                                    <li>클라우드 기반 ERP 솔루션</li>
-                                    <li>AI 기반 데이터 분석 플랫폼</li>
-                                    <li>모바일 앱 개발 서비스</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">미션</span>
-                            <span class="info-value">혁신적인 기술로 기업의 디지털 전환을 가속화하여<br>고객의 비즈니스 성장을 지원합니다.</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">비전</span>
-                            <span class="info-value">2030년까지 아시아 태평양 지역 최고의 디지털<br>솔루션 파트너가 되어 지속가능한 미래를<br>만들어갑니다.</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">비전</span>
-                            <span class="info-value">2030년까지 아시아 태평양 지역 최고의 디지털</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 조직도 탭 -->
-            <div class="tab-content" id="organization">
-                <div class="org-chart">
-                    <div class="org-title">PSI Electronics</div>
-                    
-                    <div class="org-level-1">
-                        <div class="org-box ceo">
-                            <div class="position">고영길 사장</div>
-                            <div class="team">CEO</div>
-                        </div>
-                    </div>
-
-                    <div class="org-level-2">
-                        <div class="org-group left-group">
-                            <div class="org-box director">
-                                <div class="position">허은정 수석</div>
-                                <div class="team">신사업추진</div>
-                            </div>
-                            <div class="org-box manager">
-                                <div class="position">나영호 반장</div>
-                                <div class="team">재무회계팀</div>
-                            </div>
-                            <div class="org-box project">
-                                <div class="position">SMART-<br>Navigation<br>Project</div>
-                            </div>
-                            <div class="org-box sub">Project Office</div>
-                        </div>
-
-                        <div class="org-box director center">
-                            <div class="position">홍현주 이사</div>
-                            <div class="team">경영지원 본부</div>
-                        </div>
-
-                        <div class="org-box assistant right">
-                            <div class="position">전국 선임연 연락원</div>
-                            <div class="position2">철영일 회장</div>
-                        </div>
-                    </div>
-
-                    <div class="org-level-3">
-                        <div class="org-box team-leader">
-                            <div class="position">한준호 상무</div>
-                            <div class="team">개발 본부</div>
-                        </div>
-                        <div class="org-box team-leader">
-                            <div class="position">민광수 상무</div>
-                            <div class="team">영업/마케팅 본부</div>
-                        </div>
-                        <div class="org-box team-leader">
-                            <div class="position">미상현 상무</div>
-                            <div class="team">영업본부</div>
-                        </div>
-                    </div>
-
-                    <div class="org-level-4">
-                        <div class="org-group">
-                            <div class="org-box manager">
-                                <div class="position">김성진 수석</div>
-                                <div class="team">Database 기술팀</div>
-                            </div>
-                            <div class="member">최정훈 과장</div>
-                        </div>
-
-                        <div class="org-group">
-                            <div class="org-box manager">
-                                <div class="position">양정호 반장</div>
-                                <div class="team">기술팀</div>
-                            </div>
-                            <div class="member">미학정</div>
-                            <div class="member">강사연 선임</div>
-                        </div>
-
-                        <div class="org-group">
-                            <div class="org-box manager">
-                                <div class="position">김성호 반장</div>
-                                <div class="team">Navi 영업팀</div>
-                            </div>
-                        </div>
-
-                        <div class="org-group">
-                            <div class="org-box manager">
-                                <div class="position">이정호 반장</div>
-                                <div class="team">디자인팀</div>
-                            </div>
-                            <div class="member">서민준 책임</div>
-                        </div>
-
-                        <div class="org-group">
-                            <div class="org-box manager">
-                                <div class="position">황준영 반장</div>
-                                <div class="team">A/S팀</div>
-                            </div>
-                        </div>
-
-                        <div class="org-group">
-                            <div class="org-box manager">
-                                <div class="position">신재민 반장</div>
-                                <div class="team">품질관리팀</div>
-                            </div>
-                            <div class="member">박영진 수석</div>
-                        </div>
-
-                        <div class="org-group">
-                            <div class="org-box manager">
-                                <div class="position">도영석 반장</div>
-                                <div class="team">제조팀</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="org-level-5">
-                        <div class="org-box cloud">클로그래피아</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 통장인물 탭 -->
-            <div class="tab-content" id="team-members">
-                <div class="members-list">
-                    <h3 class="section-title">영업마케팅 1팀</h3>
-                    
-                    <div class="member-card">
-                        <div class="member-avatar">
-                            <img src="images/character1.png" alt="박영진">
-                        </div>
-                        <div class="member-info">
-                            <h4 class="member-name">박영진 <span class="member-position">차장</span></h4>
-                            <p class="member-desc">
-                                영업마케팅1팀의 팀장으로 새롭게 부임하였다. 뛰어난 업무역량을 바탕으로 
-                                조직내에서 인정받아왔으며, 이번에 생애처음으로 팀장역할에 도전하게 되었다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="member-card">
-                        <div class="member-avatar">
-                            <img src="images/character1.png" alt="박영진">
-                        </div>
-                        <div class="member-info">
-                            <h4 class="member-name">박영진 <span class="member-position">차장</span></h4>
-                            <p class="member-desc">
-                                영업마케팅1팀의 팀장으로 새롭게 부임하였다. 뛰어난 업무역량을 바탕으로 
-                                조직내에서 인정받아왔으며, 이번에 생애처음으로 팀장역할에 도전하게 되었다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="member-card">
-                        <div class="member-avatar">
-                            <img src="images/character1.png" alt="박영진">
-                        </div>
-                        <div class="member-info">
-                            <h4 class="member-name">박영진 <span class="member-position">차장</span></h4>
-                            <p class="member-desc">
-                                영업마케팅1팀의 팀장으로 새롭게 부임하였다. 뛰어난 업무역량을 바탕으로 
-                                조직내에서 인정받아왔으며, 이번에 생애처음으로 팀장역할에 도전하게 되었다.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 하단 버튼 -->
-            <div class="bottom-buttons">
-                <button class="btn btn-secondary">이전</button>
-                <button class="btn btn-primary" onclick="location.href='welcome.html'">다음</button>
-            </div>
+      <div class="background_info-container">
+        <!-- 탭 메뉴 -->
+        <div class="tabs">
+          <button class="tab active" data-tab="company-profile">
+            Company Profile
+          </button>
+          <button class="tab" data-tab="organization">조직도</button>
+          <button class="tab" data-tab="team-members">등장인물</button>
         </div>
-    </div>
-</body>
-</html>
 
+        <!-- Company Profile 탭 -->
+        <div class="tab-content active" id="company-profile">
+          <div class="tab-content-inner">
+            <div class="profile-content">
+              <div class="company-image">
+                <img src="images/assets/building.jpg" alt="" />
+              </div>
+              <div class="company-info">
+                <div class="info-item">
+                  <span class="info-label">회사명</span>
+                  <span class="info-value">PSI</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">업종</span>
+                  <span class="info-value">IT서비스/소프트웨어 개발</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">매출액</span>
+                  <span class="info-value">국내 2,500억원, 글로벌 1.2조원</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">주요상품</span>
+                  <div class="info-value">
+                    <ul>
+                      <li>클라우드 기반 ERP 솔루션</li>
+                      <li>AI 기반 데이터 분석 플랫폼</li>
+                      <li>모바일 앱 개발 서비스</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">미션</span>
+                  <span class="info-value"
+                    >혁신적인 기술로 기업의 디지털 전환을 가속화하여<br />고객의
+                    비즈니스 성장을 지원합니다.</span
+                  >
+                </div>
+                <div class="info-item">
+                  <span class="info-label">비전</span>
+                  <span class="info-value"
+                    >2030년까지 아시아 태평양 지역 최고의 디지털<br />솔루션
+                    파트너가 되어 지속가능한 미래를<br />만들어갑니다.</span
+                  >
+                </div>
+                <div class="info-item">
+                  <span class="info-label">비전</span>
+                  <span class="info-value"
+                    >2030년까지 아시아 태평양 지역 최고의 디지털</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 조직도 탭 -->
+        <div class="tab-content" id="organization">
+          <div class="tab-content-inner">
+            <div class="org-chart">
+              <!-- PSI Electronics 제목 -->
+              <div class="org-title-box">PSI Electronics</div>
+
+              <!-- Level 1: CEO -->
+              <div class="org-level-1">
+                <div class="vertical-line"></div>
+                <div class="org-box ceo">
+                  <div class="position">고영길 사장</div>
+                  <div class="team">CEO</div>
+                </div>
+              </div>
+
+              <!-- Level 2: 중간 관리층 -->
+              <div class="org-level-2">
+                <div class="horizontal-line"></div>
+                <div class="org-level-2-container">
+                  <!-- 왼쪽 그룹 -->
+                  <div class="left-section">
+                    <div class="vertical-line short"></div>
+                    <div class="left-group">
+                      <div class="org-box director">
+                        <div class="position">허은정 수석</div>
+                        <div class="team">인사교육팀</div>
+                      </div>
+                      <div class="org-box manager green">
+                        <div class="position">나영호 팀장</div>
+                        <div class="team">재무회계팀</div>
+                      </div>
+                      <div class="left-bottom">
+                        <div class="org-box project">
+                          SMART-<br />Navigation<br />Project
+                        </div>
+                        <div class="org-box sub">Project Office</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 중앙 -->
+                  <div class="center-section">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box director">
+                      <div class="position">홍현주 이사</div>
+                      <div class="team">경영지원 본부</div>
+                    </div>
+                  </div>
+
+                  <!-- 오른쪽 -->
+                  <div class="right-section">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box assistant">
+                      <div class="position">전국 산업별 연합회</div>
+                      <div class="position2">황영일 회장</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Level 3: 본부장 -->
+              <div class="org-level-3">
+                <div class="horizontal-line wide"></div>
+                <div class="org-level-3-container">
+                  <div class="vertical-line short"></div>
+                  <div class="org-box team-leader">
+                    <div class="position">한준호 상무</div>
+                    <div class="team">개발 본부</div>
+                  </div>
+
+                  <div class="vertical-line short"></div>
+                  <div class="org-box team-leader">
+                    <div class="position">민광수 상무</div>
+                    <div class="team">영업/마케팅 본부</div>
+                  </div>
+
+                  <div class="vertical-line short"></div>
+                  <div class="org-box team-leader">
+                    <div class="position">마상현 상무</div>
+                    <div class="team">생산본부</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Level 4: 팀장 및 팀원 -->
+              <div class="org-level-4">
+                <div class="horizontal-line full"></div>
+                <div class="org-level-4-container">
+                  <!-- 개발 본부 팀들 -->
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager">
+                      <div class="position">김성진 수석</div>
+                      <div class="team">Database 기획팀</div>
+                    </div>
+                    <div class="member">최정훈 책임</div>
+                  </div>
+
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager green">
+                      <div class="position">양정호 팀장</div>
+                      <div class="team">기술팀</div>
+                    </div>
+                    <div class="member">미학정</div>
+                    <div class="member">강서연 선임</div>
+                  </div>
+
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager green">
+                      <div class="position">이정훈 팀장</div>
+                      <div class="team">디자인팀</div>
+                    </div>
+                  </div>
+
+                  <!-- 영업/마케팅 본부 팀들 -->
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager green">
+                      <div class="position">김성호 팀장</div>
+                      <div class="team">Navi 영업팀</div>
+                    </div>
+                  </div>
+
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager green">
+                      <div class="position">차동현 팀장</div>
+                      <div class="team">마케팅팀</div>
+                    </div>
+                    <div class="member">서민준 책임</div>
+                  </div>
+
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager green">
+                      <div class="position">황준영 팀장</div>
+                      <div class="team">A/S팀</div>
+                    </div>
+                  </div>
+
+                  <!-- 생산본부 팀들 -->
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager green">
+                      <div class="position">신재민 팀장</div>
+                      <div class="team">품질관리팀</div>
+                    </div>
+                  </div>
+
+                  <div class="org-group">
+                    <div class="vertical-line short"></div>
+                    <div class="org-box manager green">
+                      <div class="position">도영식 팀장</div>
+                      <div class="team">제조팀</div>
+                    </div>
+                    <div class="member">박영진 수석</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Level 5: 클로그래피아 -->
+              <div class="org-level-5">
+                <div class="vertical-line short"></div>
+                <div class="org-box cloud">클로그래피아</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 통장인물 탭 -->
+        <div class="tab-content" id="team-members">
+          <div class="tab-content-inner">
+            <div class="members-list">
+              <!-- 경영진 -->
+              <h3 class="section-title">경영진</h3>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="고영길" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    고영길 <span class="member-position">사장 (CEO)</span>
+                  </h4>
+                  <p class="member-desc">
+                    PSI Electronics의 대표이사로 회사 전반을 총괄하고 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="홍현주" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    홍현주
+                    <span class="member-position">이사 (경영지원 본부)</span>
+                  </h4>
+                  <p class="member-desc">
+                    경영지원 본부를 담당하며 회사의 경영 전반을 지원합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="황정일" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    황정일
+                    <span class="member-position"
+                      >회장 (전국 산업별 연합회)</span
+                    >
+                  </h4>
+                  <p class="member-desc">
+                    전국 산업별 연합회 회장으로 활동하고 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 신사업추진 -->
+              <h3 class="section-title">신사업추진</h3>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="허은정" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    허은정
+                    <span class="member-position">소장 (전략교육팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    신사업추진 부서를 이끌며 SMART-Navigation Project를 담당하고
+                    있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="나영호" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    나영호
+                    <span class="member-position">팀장 (재무회계팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    재무회계팀을 담당하며 회사의 재무 업무를 총괄합니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 개발 본부 -->
+              <h3 class="section-title">개발 본부</h3>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="한준호" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    한준호
+                    <span class="member-position">상무 (개발 본부장)</span>
+                  </h4>
+                  <p class="member-desc">
+                    개발 본부를 총괄하며 기술 개발 전략을 수립합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="김성진" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    김성진
+                    <span class="member-position">소장 (Database 기획팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    Database 기획팀을 이끌며 데이터베이스 시스템을 설계하고
+                    관리합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="최정훈" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    최정훈
+                    <span class="member-position">책임 (Database 기획팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    Database 기획팀에서 주요 프로젝트를 담당하고 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="양정호" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    양정호 <span class="member-position">팀장 (기술팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    기술팀을 이끌며 핵심 기술 개발을 담당합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="강서연" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    강서연 <span class="member-position">선임 (기술팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    기술팀에서 주요 개발 업무를 담당하고 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="이정훈" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    이정훈 <span class="member-position">팀장 (디자인팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    디자인팀을 이끌며 제품 UI/UX 디자인을 담당합니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 영업/마케팅 본부 -->
+              <h3 class="section-title">영업/마케팅 본부</h3>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="민관수" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    민관수
+                    <span class="member-position"
+                      >상무 (영업/마케팅 본부장)</span
+                    >
+                  </h4>
+                  <p class="member-desc">
+                    영업/마케팅 본부를 총괄하며 영업 전략을 수립합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="김성은" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    김성은
+                    <span class="member-position">팀장 (Navi 영업팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    Navi 영업팀을 이끌며 네비게이션 제품 영업을 담당합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="차동현" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    차동현 <span class="member-position">팀장 (마케팅팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    마케팅팀을 이끌며 제품 마케팅 전략을 수립하고 실행합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="서민준" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    서민준 <span class="member-position">책임 (마케팅팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    마케팅팀에서 주요 마케팅 캠페인을 담당하고 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 생산본부 -->
+              <h3 class="section-title">생산본부</h3>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="마상현" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    마상현
+                    <span class="member-position">상무 (생산본부장)</span>
+                  </h4>
+                  <p class="member-desc">
+                    생산본부를 총괄하며 제품 생산 전반을 관리합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="신재민" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    신재민
+                    <span class="member-position">팀장 (품질관리팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    품질관리팀을 이끌며 제품 품질 관리를 담당합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="도영식" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    도영식 <span class="member-position">팀장 (제조팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    제조팀을 이끌며 제품 제조 공정을 관리합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="member-card">
+                <div class="member-avatar">
+                  <img src="images/member/youngjin_default.png" alt="박영진" />
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">
+                    박영진 <span class="member-position">수석 (제조팀)</span>
+                  </h4>
+                  <p class="member-desc">
+                    제조팀에서 생산 관리 업무를 담당하고 있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 버튼 -->
+        <div class="bottom-buttons">
+          <button class="btn btn-secondary">이전</button>
+          <button
+            class="btn btn-primary"
+            onclick="location.href='welcome.html'"
+          >
+            다음
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
