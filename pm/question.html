@@ -1,138 +1,130 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>의사결정 문제 - 프로젝트 리더십 시뮬레이션</title>
-		<link rel="stylesheet" href="css/common.css">
-		<link rel="stylesheet" href="css/pages.css">
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="js/common.js"></script>
-</head>
-<body class="pm-template">
-		<div class="bg-office"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>의사결정 문제 - 프로젝트 리더십 시뮬레이션</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body class="pm-template">
+    <!-- 헤더 -->
+    <header class="simulation-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="intro_simulation.html" class="home_btn"></a>
+        </div>
+        <div class="header-nav">
+          <a href="simulation.html" class="active">
+            <span>시뮬레이션</span>
+            <em>Simulation</em>
+          </a>
+          <a href="score.html">
+            <span>점수</span>
+            <em>Score</em>
+          </a>
+          <a href="feedback.html">
+            <span>피드백</span>
+            <em>Feedback</em>
+          </a>
+        </div>
+      </div>
+    </header>
 
-		<!-- 헤더 -->
-		<header class="header">
-				<div class="header-left">
-						<a href="intro_simulation.html" class="home_btn">
-								<svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-										<path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-						</button>
-				</div>
-				<div class="header-nav">
-						<a href="simulation.html" class="active">
-								<span>시뮬레이션</span>
-								<small>Simulation</small>
-						</a>
-						<a href="score.html">
-								<span>점수</span>
-								<small>Score</small>
-						</a>
-						<a href="feedback.html">
-								<span>피드백</span>
-								<small>Feedback</small>
-						</a>
-				</div>
-				<div class="header-title">
-						<h1>프로젝트 리더십 시뮬레이션</h1>
-						<p>Project Leadership Simulation</p>
-				</div>
-		</header>
+    <!-- 메인 컨텐츠 -->
+    <div class="main-content">
+      <div class="simulation-container">
+        <div class="simulation-card">
+          <div class="simulation-top">
+            <h2>의사결정 문제</h2>
+          </div>
 
-		<!-- 메인 컨텐츠 -->
-		<div class="main-content">
-				<div class="simulation-container">
-						<div class="simulation-card">
-								<div class="simulation-header">
-										<h2>의사결정 문제</h2>
-								</div>
-								
-								<div class="simulation-body question-container">
-										<div class="question-box">
-												<div class="question-number">1R-Q1</div>
-												<div class="question-text">
-														홍현주 이사는 여러분이 직접 의사결정하기를 바라고 있습니다. 어떻게 하시겠습니까?
-												</div>
+          <div class="simulation-body question-container">
+            <div class="question-box">
+              <div class="question-number">1R-Q1</div>
+              <div class="question-text">
+                홍현주 이사는 여러분이 직접 의사결정하기를 바라고 있습니다.
+                어떻게 하시겠습니까?
+              </div>
 
-												<div class="answer-options">
-														<div class="answer-option" data-answer="1">
-																<div class="option-number">1</div>
-																<div class="option-content">
-																		<p class="option-title">예선이 부족하므로 회식으로 대체한다.</p>
-																		<p class="option-desc">
-																				프로젝트 예산에 팀 밤낮비는 반영되어 있지 않습니다. 회의비 등을 사용하여 회식을 하는 것이 프로젝트 일정 및 
-																				예산의 입장에서 보여날 수 있는 현실적 대안입니다.
-																		</p>
-																</div>
-														</div>
+              <div class="answer-options">
+                <div class="answer-option" data-answer="1">
+                  <div class="option-number">1</div>
+                  <div class="option-content">
+                    <p class="option-title">
+                      예선이 부족하므로 회식으로 대체한다.
+                    </p>
+                    <p class="option-desc">
+                      프로젝트 예산에 팀 밤낮비는 반영되어 있지 않습니다. 회의비
+                      등을 사용하여 회식을 하는 것이 프로젝트 일정 및 예산의
+                      입장에서 보여날 수 있는 현실적 대안입니다.
+                    </p>
+                  </div>
+                </div>
 
-														<div class="answer-option" data-answer="2">
-																<div class="option-number">2</div>
-																<div class="option-content">
-																		<p class="option-title">요구를 받아들여 1박2일로 팀 밤낮 행사를 간다.</p>
-																		<p class="option-desc">
-																				비록 예산에 잠하있지는 않다라도 프로젝트 한 팀이라는 소속감과 응집력을 높이기 위해 팀 밤낮 행사를 갑니다.
-																		</p>
-																</div>
-														</div>
+                <div class="answer-option" data-answer="2">
+                  <div class="option-number">2</div>
+                  <div class="option-content">
+                    <p class="option-title">
+                      요구를 받아들여 1박2일로 팀 밤낮 행사를 간다.
+                    </p>
+                    <p class="option-desc">
+                      비록 예산에 잠하있지는 않다라도 프로젝트 한 팀이라는
+                      소속감과 응집력을 높이기 위해 팀 밤낮 행사를 갑니다.
+                    </p>
+                  </div>
+                </div>
 
-														<div class="answer-option" data-answer="3">
-																<div class="option-number">3</div>
-																<div class="option-content">
-																		<p class="option-title">프로젝트 일정이 촉박하므로 행사를 개최하지 않는다</p>
-																		<p class="option-desc">
-																				예산이 책정되어 있지 않고 프로젝트일 정도 계획보다 조금식 늦어지고 있습니다. 지금은 팀 밤낮 행사보다는 
-																				프로젝트에 더욱 몰입해야 할 때입니다.
-																		</p>
-																</div>
-														</div>
-												</div>
-										</div>
-								</div>
+                <div class="answer-option" data-answer="3">
+                  <div class="option-number">3</div>
+                  <div class="option-content">
+                    <p class="option-title">
+                      프로젝트 일정이 촉박하므로 행사를 개최하지 않는다
+                    </p>
+                    <p class="option-desc">
+                      예산이 책정되어 있지 않고 프로젝트일 정도 계획보다 조금식
+                      늦어지고 있습니다. 지금은 팀 밤낮 행사보다는 프로젝트에
+                      더욱 몰입해야 할 때입니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-								<div class="control-buttons">
-										<button class="control-btn play">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-														<path d="M8 5L19 12L8 19V5Z"/>
-												</svg>
-										</button>
-										<button class="control-btn next" onclick="location.href='round-end.html'">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-														<path d="M5 4L19 12L5 20V4Z"/>
-														<rect x="19" y="4" width="2" height="16"/>
-												</svg>
-										</button>
-								</div>
-						</div>
-				</div>
+          <div class="control-buttons">
+            <button class="control-btn pause"></button>
+            <button class="control-btn next"></button>
+          </div>
+        </div>
+      </div>
 
-				<!-- 진행률 -->
-				<div class="progress-wrapper">
-					<div class="progress-info">
-						<span class="progress-label">진행률(20%)</span>
-						<div class="progress-bar-wrap">
-							<!--진행 정도마다 active 클래스 추가 -->
-							<div class="processbar active"></div>
-							<div class="processbar"></div>
-							<div class="processbar"></div>
-							<div class="processbar"></div>
-							<div class="processbar"></div>
-						</div>
-					</div>
-				</div>
-		</div>
+      <!-- 진행률 -->
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span class="progress-label">진행률(20%)</span>
+          <div class="progress-bar-wrap">
+            <!--진행 정도마다 active 클래스 추가 -->
+            <div class="processbar active"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<script>
-				$(document).ready(function() {
-						// 답변 선택
-						$('.answer-option').on('click', function() {
-								$('.answer-option').removeClass('selected');
-								$(this).addClass('selected');
-						});
-				});
-		</script>
-</body>
+    <script>
+      $(document).ready(function () {
+        // 답변 선택
+        $(".answer-option").on("click", function () {
+          $(".answer-option").removeClass("selected");
+          $(this).addClass("selected");
+        });
+      });
+    </script>
+  </body>
 </html>
-

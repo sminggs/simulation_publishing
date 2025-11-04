@@ -1,6 +1,7 @@
 /* 폰트 설정 */
 /* NanumSquare Neo */
 @import url("https://fonts.cdnfonts.com/css/nanumsquare-neo");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
 /* 공통 스타일 */
 * {
   margin: 0;
@@ -351,7 +352,7 @@ body.hp-template {
 }
 
 .background-header .home_btn span {
-  font-family: "Pretendard", sans-serif;
+  font-family:  "Pretendard Variable", Pretendard;
   font-size: 14px;
   font-weight: 400;
   padding-top: 36px;
@@ -480,7 +481,7 @@ body.hp-template {
   background: #000;
   color: #fff;
   text-align: center;
-  font-family: 'Pretendard', sans-serif;
+  font-family:  "Pretendard Variable", Pretendard;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
