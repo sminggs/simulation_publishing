@@ -861,7 +861,7 @@
   }
 
   .member-desc {
-    font-size: 22px;
+    font-size: 22px !important;
   }
 }
 
@@ -994,7 +994,7 @@
   }
 
   .member-desc {
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 140%;
   }
 }
@@ -1098,7 +1098,7 @@
   }
 
   .member-desc {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 }
 
@@ -1189,6 +1189,17 @@
 
 .bottom-buttons .btn {
   min-width: 208px;
+}
+
+/* 배경정보 페이지 하단 버튼 반응형 */
+@media (max-width: 1024px) {
+  .bottom-buttons {
+    gap: 20px;
+  }
+
+  .bottom-buttons .btn {
+    min-width: 180px;
+  }
 }
 
 /* ========================================
@@ -1699,6 +1710,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.input-send span {
+  margin-top: 10px;
 }
 
 /* ========================================
@@ -3013,21 +3028,21 @@
 
   /* 컨트롤 버튼 */
   .control-buttons {
-    position: relative;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
     justify-content: center;
     margin-top: 20px;
     gap: 12px;
   }
 
   .control-btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    background-size: 15px auto !important;
   }
 
   .control-btn.play {
-    background-position: left 20px top 50%;
+    background-position: left 15px top 50%;
   }
 }
 
@@ -3092,21 +3107,6 @@
     margin-top: 16px;
     gap: 10px;
   }
-
-  .control-btn {
-    width: 46px;
-    height: 46px;
-  }
-
-  .control-btn.play {
-    background-position: left 18px top 50%;
-    background-size: 12px;
-  }
-
-  .control-btn.pause,
-  .control-btn.next {
-    background-size: 14px;
-  }
 }
 
 /* ========================================
@@ -3147,6 +3147,10 @@
 
   .message-sender {
     font-size: 14px;
+  }
+
+  .message-group {
+    margin-bottom: 20px;
   }
 
   .message-bubble {
@@ -3195,7 +3199,7 @@
     padding: 0 20px 8px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 0;
   }
 
   .chat-participant {
@@ -3292,6 +3296,10 @@
   .input-send {
     width: 60px;
     height: 60px;
+  }
+
+  .input-send img {
+    height: 35px;
   }
 }
 
@@ -4357,15 +4365,6 @@
 
 /* 모바일 */
 @media (max-width: 768px) {
-  .bottom-buttons {
-    gap: 16px;
-    margin-top: 20px;
-  }
-
-  .bottom-buttons .btn {
-    min-width: 160px;
-  }
-
   .feedback-container {
     padding: 12px 20px 0;
   }
