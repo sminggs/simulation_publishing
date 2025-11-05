@@ -220,13 +220,49 @@ body.hp-template {
 }
 
 /* 반응형 */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .dashboard-container {
+    padding: 60px 15px 60px;
+  }
+
   .dashboard-header h1 {
-    font-size: 28px;
+    font-size: 32px;
+  }
+
+  .dashboard-header p {
+    font-size: 16px;
   }
 
   .page-table-wrapper {
-    padding: 20px;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 40px 15px 50px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+  }
+
+  .page-table-wrapper {
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+
+  .page-table-header h2 {
+    font-size: 20px;
+  }
+
+  .page-table-header p {
+    font-size: 13px;
   }
 
   .page-table {
@@ -236,6 +272,79 @@ body.hp-template {
   .page-table thead th,
   .page-table tbody td {
     padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .page-number {
+    font-size: 16px;
+  }
+
+  .page-title {
+    font-size: 14px;
+  }
+
+  .page-description {
+    font-size: 12px;
+  }
+
+  .page-link {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
+  .category-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 30px 10px 40px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 20px;
+  }
+
+  .page-table-wrapper {
+    padding: 15px 10px;
+  }
+
+  .page-table-header {
+    padding-bottom: 15px;
+  }
+
+  .page-table-header h2 {
+    font-size: 18px;
+  }
+
+  /* 테이블을 카드 형식으로 변경 */
+  .page-table thead {
+    display: none;
+  }
+
+  .page-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .page-table tbody td {
+    display: block;
+    padding: 8px 0;
+    border-bottom: none;
+    text-align: left !important;
+  }
+
+  .page-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    color: var(--primary-color);
   }
 }
 /* 배경 이미지 */
@@ -247,6 +356,13 @@ body.hp-template {
   height: 100%;
   background: url("../images/office-bg.jpg") center/cover no-repeat;
   z-index: -2;
+}
+
+@media (max-width: 768px) {
+  .bg-office {
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /* 컨테이너 */
@@ -580,4 +696,259 @@ body.hp-template {
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
+}
+
+/* ========================================
+   공통 반응형 스타일
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+
+  .simulation-header {
+    height: 70px;
+  }
+
+  .simulation-header .header-nav a {
+    width: 200px;
+    font-size: 13px;
+  }
+
+  .simulation-header .header-nav a span {
+    font-size: 16px;
+  }
+
+  .simulation-header .header-nav a em {
+    font-size: 12px;
+  }
+
+  .btn {
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .tabs {
+    margin-bottom: 8px;
+  }
+
+  .tab {
+    padding: 18px;
+    font-size: 22px;
+  }
+
+  .progress-wrapper {
+    padding: 0 15px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  /* 헤더 */
+  .simulation-header {
+    height: 60px;
+  }
+
+  .simulation-header .header-inner {
+    padding: 0 15px;
+  }
+
+  .simulation-header .header-left {
+    margin-left: 0;
+  }
+
+  .simulation-header .header-left .home_btn {
+    width: 50px;
+    height: 60px;
+    background-size: 28px auto;
+  }
+
+  .simulation-header .header-nav {
+    gap: 15px;
+  }
+
+  .simulation-header .header-nav a {
+    width: auto;
+    min-width: 80px;
+    gap: 4px;
+  }
+
+  .simulation-header .header-nav a span {
+    font-size: 14px;
+  }
+
+  .simulation-header .header-nav a em {
+    font-size: 10px;
+  }
+
+  .simulation-header .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* 배경정보 헤더 */
+  .background-header {
+    padding: 0 15px;
+  }
+
+  .background-header .home_btn span {
+    font-size: 12px;
+    padding-top: 30px;
+    background-size: 28px auto;
+  }
+
+  /* 버튼 */
+  .btn {
+    height: 54px;
+    font-size: 18px;
+    border-radius: 50px;
+  }
+
+  .btn-enter {
+    max-width: 200px;
+    height: 60px;
+    font-size: 26px;
+  }
+
+  /* 카드 */
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  /* 탭 */
+  .tabs {
+    border-radius: 10px;
+    margin-bottom: 7px;
+  }
+
+  .tab {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  /* 진행률 바 */
+  .progress-wrapper {
+    margin-top: 10px;
+    height: 40px;
+    padding: 0 10px;
+  }
+
+  .progress-label {
+    width: 100px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .progress-bar-wrap {
+    padding: 0 12px;
+    border-radius: 10px;
+  }
+
+  .processbar.active::before {
+    top: 14px;
+    height: 10px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* 헤더 */
+  .simulation-header {
+    height: 56px;
+  }
+
+  .simulation-header .header-inner {
+    padding: 0 10px;
+  }
+
+  .simulation-header .header-left .home_btn {
+    width: 45px;
+    height: 56px;
+    background-size: 24px auto;
+  }
+
+  .simulation-header .header-nav {
+    gap: 8px;
+  }
+
+  .simulation-header .header-nav a {
+    min-width: 70px;
+    padding: 5px;
+  }
+
+  .simulation-header .header-nav a span {
+    font-size: 12px;
+  }
+
+  .simulation-header .header-nav a em {
+    font-size: 9px;
+  }
+
+  /* 배경정보 헤더 */
+  .background-header .home_btn span {
+    font-size: 11px;
+    padding-top: 28px;
+    background-size: 24px auto;
+  }
+
+  /* 버튼 */
+  .btn {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .btn-enter {
+    max-width: 180px;
+    height: 56px;
+    font-size: 22px;
+  }
+
+  /* 탭 */
+  .tab {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  /* 진행률 바 */
+  .progress-wrapper {
+    height: 36px;
+  }
+
+  .progress-label {
+    width: 85px;
+    font-size: 12px;
+  }
+
+  .progress-bar-wrap {
+    padding: 0 10px;
+  }
+
+  .processbar.active::before {
+    top: 12px;
+    height: 8px;
+  }
+
+  .bottom-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bottom-buttons .btn {
+    min-width: 100%;
+  }
 }

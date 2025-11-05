@@ -228,6 +228,7 @@
   padding: 24px 27px;
   height: 646px;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .tab-content-inner {
@@ -329,9 +330,12 @@
    ======================================== */
 
 .org-chart {
-  padding: 30px;
   position: relative;
-  min-width: 1200px;
+  max-width: 100%;
+}
+
+.org-chart img {
+  max-width: 100%;
 }
 
 /* PSI Electronics 제목 박스 */
@@ -565,6 +569,536 @@
 @media (max-width: 1200px) {
   .tab-content-inner {
     overflow-x: auto;
+  }
+}
+
+/* ========================================
+   인트로 페이지 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .login-header h1 {
+    font-size: 64px;
+    letter-spacing: -3.84px;
+  }
+
+  .login-header p {
+    font-size: 38px;
+  }
+
+  .login-form {
+    max-width: 320px;
+    margin-top: 36px;
+  }
+
+  .form-group {
+    margin-bottom: 36px;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .form-group input {
+    height: 72px;
+    font-size: 22px;
+    padding: 20px 18px;
+  }
+
+  .start-form {
+    max-width: 520px;
+    margin-top: 60px;
+  }
+
+  .start-form a {
+    height: 180px;
+  }
+
+  .start-form a span {
+    font-size: 36px;
+  }
+
+  .start-form .btn-start-bg span {
+    padding-left: 130px;
+    background-size: 100px;
+  }
+
+  .start-form .btn-start-simulation span {
+    padding-left: 130px;
+    background-size: 100px;
+  }
+
+  .btn-enter {
+    max-width: 220px;
+    height: 72px;
+    font-size: 30px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .login-bg {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .login-container {
+    padding: 15px;
+    min-height: 100vh;
+  }
+
+  .login-header h1 {
+    font-size: 42px;
+    letter-spacing: -2.52px;
+  }
+
+  .login-header p {
+    font-size: 28px;
+  }
+
+  .login-form {
+    max-width: 100%;
+    margin-top: 28px;
+  }
+
+  .form-group {
+    margin-bottom: 28px;
+  }
+
+  .form-group label {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  .form-group input {
+    height: 64px;
+    font-size: 20px;
+    padding: 18px 16px;
+    border-radius: 8px;
+  }
+
+  .start-form {
+    max-width: 100%;
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+
+  .start-form a + a {
+    margin-top: 30px;
+  }
+
+  .start-form a {
+    height: 150px;
+    border-radius: 16px;
+  }
+
+  .start-form a span {
+    font-size: 28px;
+  }
+
+  .start-form .btn-start-bg span {
+    padding-left: 110px;
+    background-size: 85px;
+  }
+
+  .start-form .btn-start-simulation span {
+    padding-left: 110px;
+    background-size: 85px;
+  }
+
+  .btn-enter {
+    max-width: 200px;
+    height: 64px;
+    font-size: 26px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-header h1 {
+    font-size: 32px;
+    word-break: keep-all;
+    letter-spacing: -1.92px;
+  }
+
+  .login-header p {
+    font-size: 22px;
+  }
+
+  .login-form {
+    margin-top: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .form-group input {
+    height: 56px;
+    font-size: 18px;
+    padding: 16px 14px;
+  }
+
+  .start-form {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .start-form a + a {
+    margin-top: 24px;
+  }
+
+  .start-form a {
+    height: 130px;
+    border-radius: 14px;
+  }
+
+  .start-form a span {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .start-form .btn-start-bg span {
+    padding-left: 95px;
+    background-size: 75px;
+  }
+
+  .start-form .btn-start-simulation span {
+    padding-left: 95px;
+    background-size: 75px;
+  }
+
+  .btn-enter {
+    max-width: 180px;
+    height: 56px;
+    font-size: 22px;
+  }
+}
+
+/* ========================================
+   배경정보 페이지 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .bg-office {
+    background-size: cover;
+  }
+
+  .main-content {
+    padding-top: 70px;
+    padding-bottom: 25px;
+  }
+
+  .background-header ~ .main-content {
+  }
+
+  .background_info-container {
+    padding: 0 15px;
+  }
+
+  /* 탭 */
+  .tab-content {
+    height: 550px;
+    padding: 20px 24px;
+  }
+
+  /* Company Profile */
+  .profile-content {
+    gap: 24px;
+  }
+
+  .company-image {
+    width: 260px;
+    height: 320px;
+  }
+
+  .info-item {
+    padding-left: 20px;
+  }
+
+  .info-label {
+    font-size: 22px;
+    min-width: 100px;
+  }
+
+  .info-value {
+    font-size: 22px;
+  }
+
+  /* 인물 카드 */
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .member-card {
+    gap: 24px;
+    padding: 20px 28px;
+  }
+
+  .member-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .member-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .member-position {
+    font-size: 16px;
+  }
+
+  .member-desc {
+    font-size: 22px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .background_info-container {
+    padding: 0 10px;
+  }
+
+  /* 탭 */
+  .tabs {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .tab {
+    font-size: 16px;
+    padding: 16px 12px;
+  }
+
+  .tab-content {
+    height: auto;
+    min-height: 400px;
+    max-height: 500px;
+    padding: 16px 20px;
+    border-radius: 12px;
+  }
+
+  /* Company Profile */
+  .profile-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .company-image {
+    width: 100%;
+    max-width: 300px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .company-info {
+    width: 100%;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-left: 18px;
+  }
+
+  .info-item::before {
+    top: 8px;
+    transform: none;
+    width: 8px;
+    height: 8px;
+  }
+
+  .info-item + .info-item {
+    margin-top: 12px;
+  }
+
+  .info-label {
+    font-size: 18px;
+    min-width: auto;
+    line-height: 140%;
+  }
+
+  .info-value {
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  .info-value ul {
+    padding-left: 20px;
+  }
+
+  /* 조직도 */
+  .org-chart img {
+    max-width: 100%;
+  }
+
+  .org-title-box {
+    font-size: 18px;
+    padding: 10px 24px;
+    margin-bottom: 24px;
+  }
+
+  /* 인물 카드 */
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .section-title:nth-child(n + 2) {
+    margin-top: 32px;
+  }
+
+  .member-card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    text-align: center;
+  }
+
+  .member-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .member-info {
+    width: 100%;
+  }
+
+  .member-name {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .member-position {
+    font-size: 15px;
+  }
+
+  .member-desc {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 56px;
+  }
+
+  .background_info-container {
+    padding: 0 8px;
+  }
+
+  /* 탭 */
+  .tab {
+    font-size: 14px;
+    padding: 14px 8px;
+  }
+
+  .tab-content {
+    min-height: 350px;
+    max-height: 450px;
+    padding: 14px 16px;
+  }
+
+  /* Company Profile */
+  .company-image {
+    max-width: 100%;
+    height: 240px;
+  }
+
+  .info-item {
+    padding-left: 16px;
+  }
+
+  .info-item::before {
+    width: 7px;
+    height: 7px;
+  }
+
+  .info-label {
+    font-size: 16px;
+  }
+
+  .info-value {
+    font-size: 16px;
+  }
+
+  /* 조직도 */
+  .org-chart {
+    overflow-x: auto;
+  }
+
+  .org-title-box {
+    font-size: 16px;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+  }
+
+  .org-box {
+    padding: 6px 12px;
+  }
+
+  .org-box .position {
+    font-size: 11px;
+  }
+
+  .org-box .team {
+    font-size: 9px;
+  }
+
+  /* 인물 카드 */
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .section-title:nth-child(n + 2) {
+    margin-top: 28px;
+  }
+
+  .member-card {
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 16px;
+  }
+
+  .member-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .member-name {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .member-position {
+    font-size: 14px;
+  }
+
+  .member-desc {
+    font-size: 16px;
   }
 }
 
@@ -2297,6 +2831,1820 @@
   font-weight: 500;
   cursor: pointer;
   color: #fff;
+}
+
+/* ========================================
+   시뮬레이션 페이지 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .simulation-container {
+    padding: 0 15px;
+    margin-top: 14px;
+  }
+
+  .simulation-card {
+    border-radius: 10px;
+  }
+
+  .simulation-header ~ .main-content {
+    min-height: calc(100dvh - 86px);
+  }
+
+  .simulation-top {
+    height: 56px;
+  }
+
+  .simulation-top h2 {
+    font-size: 26px;
+  }
+
+  .simulation-body {
+    padding: 32px;
+    height: 550px;
+  }
+
+  /* Welcome 화면 */
+  .text-block {
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 22px;
+  }
+
+  /* 대화 화면 */
+  .dialogue-container {
+    gap: 22px;
+    padding: 32px;
+  }
+
+  .character-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .character-name {
+    font-size: 16px;
+    padding: 7px 0 16px 0;
+  }
+
+  .character-name em {
+    font-size: 8px;
+  }
+
+  .dialogue-bubble {
+    max-width: 500px;
+    padding: 20px 36px;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 52px;
+    margin-top: 52px;
+  }
+
+  .dialogue-item.right .dialogue-bubble {
+    padding-left: 36px;
+    padding-right: 52px;
+    margin-top: 28px;
+  }
+
+  /* 컨트롤 버튼 */
+  .control-buttons {
+    bottom: 20px;
+    right: 32px;
+    gap: 14px;
+  }
+
+  .control-btn {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .simulation-container {
+    padding: 0 10px;
+    margin-top: 12px;
+  }
+
+  .simulation-header ~ .main-content {
+    min-height: calc(100dvh - 76px);
+  }
+
+  .simulation-top {
+    height: 50px;
+  }
+
+  .simulation-top h2 {
+    font-size: 20px;
+  }
+
+  .simulation-body {
+    padding: 24px 20px;
+    height: auto;
+    min-height: 400px;
+    max-height: 500px;
+  }
+
+  .main-content.welcome .simulation-body,
+  .main-content.dialogue .simulation-body {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Welcome 화면 */
+  .welcome-text {
+    max-width: 100%;
+  }
+
+  .text-block {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 18px;
+  }
+
+  /* 대화 화면 */
+  .dialogue-container {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .dialogue-item {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .dialogue-item.left,
+  .dialogue-item.right {
+    flex-direction: column;
+  }
+
+  .character-avatar {
+    width: 110px;
+    height: 110px;
+    border: 4px solid #fff;
+  }
+
+  .character-name {
+    font-size: 14px;
+    padding: 6px 0 14px 0;
+  }
+
+  .character-name em {
+    font-size: 7px;
+  }
+
+  .dialogue-bubble {
+    max-width: 100%;
+    padding: 16px 24px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 24px;
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .dialogue-item.right .dialogue-bubble {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-right: 0;
+    margin-top: 12px;
+  }
+
+  /* 컨트롤 버튼 */
+  .control-buttons {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .control-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .control-btn.play {
+    background-position: left 20px top 50%;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .simulation-container {
+    padding: 0 8px;
+    margin-top: 10px;
+  }
+
+  .simulation-header ~ .main-content {
+    min-height: calc(100dvh - 72px);
+  }
+
+  .simulation-top {
+    height: 46px;
+  }
+
+  .simulation-top h2 {
+    font-size: 18px;
+  }
+
+  .simulation-body {
+    padding: 20px 16px;
+    min-height: 350px;
+    max-height: 450px;
+  }
+
+  /* Welcome 화면 */
+  .text-block {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 16px;
+  }
+
+  /* 대화 화면 */
+  .dialogue-container {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .character-avatar {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #fff;
+  }
+
+  .character-name {
+    font-size: 12px;
+    padding: 5px 0 12px 0;
+  }
+
+  .dialogue-bubble {
+    padding: 14px 20px;
+    font-size: 13px;
+    line-height: 18px;
+    border-radius: 10px;
+  }
+
+  /* 컨트롤 버튼 */
+  .control-buttons {
+    margin-top: 16px;
+    gap: 10px;
+  }
+
+  .control-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .control-btn.play {
+    background-position: left 18px top 50%;
+    background-size: 12px;
+  }
+
+  .control-btn.pause,
+  .control-btn.next {
+    background-size: 14px;
+  }
+}
+
+/* ========================================
+   채팅 화면 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .chat-container {
+    padding: 20px 40px;
+  }
+
+  .chat-window {
+    border-radius: 20px;
+  }
+
+  .chat-header {
+    padding: 0 32px 10px;
+  }
+
+  .participant-avatar img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .participant-status {
+    font-size: 22px;
+  }
+
+  .participant-status span {
+    font-size: 15px;
+  }
+
+  .chat-messages {
+    height: 300px;
+    padding: 10px 32px;
+  }
+
+  .message-sender {
+    font-size: 14px;
+  }
+
+  .message-bubble {
+    padding: 14px 20px;
+    max-width: 480px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .message-time {
+    font-size: 14px;
+  }
+
+  .chat-input-area {
+    padding: 10px 30px;
+    padding-bottom: 24px;
+  }
+
+  .chat-input-design .input-area {
+    padding: 16px 20px;
+  }
+
+  .input-placeholder {
+    font-size: 20px;
+    padding-left: 48px;
+  }
+
+  .input-send {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .chat-container {
+    padding: 16px 20px;
+  }
+
+  .chat-window {
+    border-radius: 16px;
+    padding: 12px 0 0;
+  }
+
+  .chat-header {
+    padding: 0 20px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .chat-participant {
+    gap: 16px;
+  }
+
+  .participant-avatar img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .participant-avatar .online-status {
+    width: 14px;
+    height: 14px;
+    border: 3px solid #fff;
+  }
+
+  .participant-status {
+    font-size: 18px;
+  }
+
+  .participant-status span {
+    font-size: 13px;
+  }
+
+  .chat-menu {
+    width: 100%;
+    text-align: right;
+  }
+
+  .chat-menu .menu-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-messages {
+    height: 280px;
+    padding: 10px 20px;
+  }
+
+  .message-sender {
+    font-size: 13px;
+  }
+
+  .message-bubble {
+    padding: 12px 18px;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 18px;
+  }
+
+  .left-bubble {
+    margin-left: 14px;
+  }
+
+  .left-bubble::before,
+  .right-bubble::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  .left-bubble::before {
+    left: -14px;
+  }
+
+  .right-bubble::before {
+    right: -14px;
+  }
+
+  .message-time {
+    font-size: 12px;
+  }
+
+  .chat-input-area {
+    padding: 10px 20px;
+    padding-bottom: 20px;
+  }
+
+  .chat-input-design {
+    gap: 12px;
+  }
+
+  .chat-input-design .input-area {
+    padding: 14px 18px;
+    border-radius: 20px;
+  }
+
+  .input-placeholder {
+    font-size: 16px;
+    padding-left: 40px;
+  }
+
+  .input-send {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .chat-container {
+    padding: 14px 16px;
+  }
+
+  .chat-window {
+    border-radius: 14px;
+  }
+
+  .chat-header {
+    padding: 0 16px 8px;
+  }
+
+  .chat-participant {
+    gap: 12px;
+  }
+
+  .participant-avatar img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .participant-avatar .online-status {
+    width: 12px;
+    height: 12px;
+  }
+
+  .participant-status {
+    font-size: 16px;
+  }
+
+  .participant-status span {
+    font-size: 12px;
+  }
+
+  .chat-messages {
+    height: 240px;
+    padding: 8px 16px;
+  }
+
+  .message-sender {
+    font-size: 12px;
+  }
+
+  .message-bubble {
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 16px;
+  }
+
+  .left-bubble {
+    margin-left: 12px;
+  }
+
+  .left-bubble::before,
+  .right-bubble::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .left-bubble::before {
+    left: -12px;
+  }
+
+  .right-bubble::before {
+    right: -12px;
+  }
+
+  .message-time {
+    font-size: 11px;
+  }
+
+  .chat-input-area {
+    padding: 8px 16px;
+    padding-bottom: 16px;
+  }
+
+  .chat-input-design {
+    gap: 10px;
+  }
+
+  .chat-input-design .input-area {
+    padding: 12px 16px;
+    border-radius: 18px;
+  }
+
+  .input-placeholder {
+    font-size: 14px;
+    padding-left: 35px;
+  }
+
+  .input-send {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+  }
+}
+
+/* ========================================
+   전화 화면 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .phone-container {
+    padding-top: 54px;
+  }
+
+  .phone-device {
+    width: 300px;
+    height: 413px;
+  }
+
+  .content-text {
+    font-size: 22px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+
+  .content-text:first-child {
+    margin-top: 28px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .phone-container {
+    padding-top: 44px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .phone-device {
+    width: 260px;
+    height: 358px;
+    margin-top: -20px;
+  }
+
+  .content-text {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 18px;
+  }
+
+  .content-text:first-child {
+    margin-top: 24px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .phone-container {
+    padding-top: 36px;
+  }
+
+  .phone-device {
+    width: 220px;
+    height: 303px;
+    margin-top: -16px;
+  }
+
+  .content-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .content-text:first-child {
+    margin-top: 20px;
+  }
+}
+
+/* ========================================
+   메일/게시판 화면 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .mail-container {
+    padding: 14px 36px 26px;
+  }
+
+  .mail-window {
+    border-radius: 18px;
+  }
+
+  .mail-header,
+  .board-header {
+    padding: 10px 20px;
+  }
+
+  .new-badge,
+  .board-title {
+    font-size: 18px;
+  }
+
+  .mail-time,
+  .board-time {
+    font-size: 20px;
+  }
+
+  .mail-inner,
+  .board-inner {
+    padding: 7px 20px;
+  }
+
+  .mail-tag,
+  .field-label {
+    padding: 5px 18px;
+    font-size: 22px;
+  }
+
+  .mail-subject,
+  .field-value {
+    font-size: 22px;
+  }
+
+  .attachment-link {
+    font-size: 22px;
+  }
+
+  .mail-body {
+    padding: 26px 18px;
+    min-height: 160px;
+  }
+
+  .mail-body p {
+    font-size: 22px;
+  }
+
+  .mail-btn {
+    padding: 10px 20px;
+    font-size: 22px;
+  }
+
+  /* 게시판 */
+  .board-sidebar {
+    width: 220px;
+  }
+
+  .board-sidebar li {
+    padding: 14px 20px;
+    font-size: 22px;
+  }
+
+  .board-content {
+    padding: 20px 28px;
+  }
+
+  .search-box {
+    max-width: 280px;
+    height: 38px;
+    padding: 0 18px;
+    background-size: 18px auto;
+  }
+
+  .board-article h3 {
+    font-size: 26px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+  }
+
+  .board-body p {
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 22px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .mail-container {
+    padding: 12px 20px 20px;
+  }
+
+  .mail-window {
+    border-radius: 14px;
+  }
+
+  .mail-header,
+  .board-header {
+    padding: 10px 16px;
+  }
+
+  .mail-title,
+  .board-title {
+    gap: 12px;
+  }
+
+  .new-badge,
+  .board-title {
+    font-size: 16px;
+  }
+
+  .mail-time,
+  .board-time {
+    font-size: 16px;
+  }
+
+  .mail-inner,
+  .board-inner {
+    padding: 6px 16px;
+  }
+
+  .mail-info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mail-tag,
+  .field-label {
+    padding: 4px 16px;
+    font-size: 16px;
+  }
+
+  .mail-subject,
+  .field-value {
+    font-size: 16px;
+  }
+
+  .mail-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 6px 0 8px;
+  }
+
+  .attachment-link {
+    font-size: 16px;
+  }
+
+  .mail-attachment {
+    margin-top: 6px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+  }
+
+  .mail-body {
+    padding: 20px 16px;
+    min-height: 140px;
+    border-radius: 12px;
+  }
+
+  .mail-body p {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .mail-footer {
+    padding: 12px 0;
+    flex-wrap: wrap;
+  }
+
+  .mail-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .mail-btn:first-child {
+    position: static;
+    order: -1;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* 게시판 */
+  .board-inner {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .board-sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .board-sidebar ul {
+    display: flex;
+    width: 100%;
+  }
+
+  .board-sidebar li {
+    padding: 12px 18px;
+    font-size: 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .board-content {
+    padding: 16px 20px;
+  }
+
+  .board-inner .board-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .search-box {
+    max-width: 100%;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+  }
+
+  .board-article {
+    padding-top: 18px;
+  }
+
+  .board-article h3 {
+    font-size: 20px;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+  }
+
+  .board-date {
+    position: static;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .board-body p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 18px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .mail-container {
+    padding: 10px 16px 16px;
+  }
+
+  .mail-window {
+    border-radius: 12px;
+  }
+
+  .mail-header,
+  .board-header {
+    padding: 8px 14px;
+  }
+
+  .mail-title,
+  .board-title {
+    gap: 10px;
+  }
+
+  .new-badge,
+  .board-title {
+    font-size: 14px;
+  }
+
+  .mail-time,
+  .board-time {
+    font-size: 14px;
+  }
+
+  .mail-inner,
+  .board-inner {
+    padding: 5px 14px;
+  }
+
+  .mail-tag,
+  .field-label {
+    padding: 3px 14px;
+    font-size: 14px;
+  }
+
+  .mail-subject,
+  .field-value {
+    font-size: 14px;
+  }
+
+  .attachment-link {
+    font-size: 14px;
+  }
+
+  .mail-body {
+    padding: 16px 14px;
+    min-height: 120px;
+  }
+
+  .mail-body p {
+    font-size: 14px;
+  }
+
+  .mail-btn {
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+
+  /* 게시판 */
+  .board-sidebar li {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .board-content {
+    padding: 14px 16px;
+  }
+
+  .board-article h3 {
+    font-size: 18px;
+  }
+
+  .board-body p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* ========================================
+   의사결정 문제 화면 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .question-container {
+    padding: 14px 32px;
+  }
+
+  .quiestion-title {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .question-number {
+    padding: 4px 12px;
+    font-size: 18px;
+  }
+
+  .question-text {
+    font-size: 22px;
+    line-height: 31px;
+  }
+
+  .answer-options {
+    gap: 14px;
+  }
+
+  .answer-option {
+    gap: 18px;
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .option-number {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .option-title {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .option-desc {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .question-container {
+    padding: 12px 20px;
+  }
+
+  .quiestion-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .question-number {
+    padding: 3px 10px;
+    font-size: 16px;
+  }
+
+  .question-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .answer-options {
+    gap: 12px;
+  }
+
+  .answer-option {
+    gap: 14px;
+    padding: 18px 16px;
+    border-radius: 10px;
+  }
+
+  .option-number {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .option-title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  .option-desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .question-container {
+    padding: 10px 16px;
+  }
+
+  .quiestion-title {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .question-number {
+    padding: 2px 8px;
+    font-size: 14px;
+  }
+
+  .question-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .answer-options {
+    gap: 10px;
+  }
+
+  .answer-option {
+    gap: 12px;
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .option-number {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .option-title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  .option-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* ========================================
+   라운드 종료 화면 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .round-end-container {
+    min-height: 450px;
+    padding: 50px 32px;
+  }
+
+  .end-message-box {
+    max-width: 600px;
+    padding: 40px 32px;
+    border-radius: 18px;
+  }
+
+  .end-title {
+    font-size: 28px;
+    line-height: 45px;
+  }
+
+  .end-message {
+    margin-bottom: 32px;
+  }
+
+  .end-message p {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .btn-feedback {
+    height: 64px;
+    padding: 0 36px;
+    font-size: 22px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .round-end-container {
+    min-height: 380px;
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .end-message-box {
+    max-width: 100%;
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .end-title {
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: -1px;
+  }
+
+  .end-message {
+    margin-bottom: 28px;
+  }
+
+  .end-message p {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.9px;
+  }
+
+  .btn-feedback {
+    height: 56px;
+    padding: 0 32px;
+    font-size: 20px;
+    border-radius: 50px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .round-end-container {
+    min-height: 320px;
+    padding: 32px 16px;
+  }
+
+  .end-message-box {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .end-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .end-message {
+    margin-bottom: 24px;
+  }
+
+  .end-message p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .btn-feedback {
+    height: 52px;
+    padding: 0 28px;
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   점수 현황 화면 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .score-body {
+    padding: 28px 32px;
+    max-height: 580px;
+  }
+
+  .score-list {
+    max-width: 900px;
+    gap: 18px;
+  }
+
+  .score-label {
+    min-width: 200px;
+  }
+
+  .label-text {
+    font-size: 20px;
+  }
+
+  .label-sub {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .score-bar-container {
+    gap: 25px;
+  }
+
+  .score-bar {
+    height: 14px;
+  }
+
+  .score-value {
+    font-size: 22px;
+    min-width: 130px;
+  }
+
+  .score-max {
+    font-size: 16px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .score-card .simulation-top,
+  .feedback-card .simulation-top {
+    height: 50px;
+  }
+
+  .score-card .simulation-top h2,
+  .feedback-card .simulation-top h2 {
+    font-size: 20px;
+  }
+
+  .score-body {
+    padding: 20px 20px;
+    max-height: 500px;
+  }
+
+  .score-list {
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .score-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .score-label {
+    min-width: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .label-text {
+    font-size: 18px;
+  }
+
+  .label-sub {
+    font-size: 13px;
+    margin-top: 0;
+  }
+
+  .score-bar-container {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .score-bar {
+    height: 12px;
+  }
+
+  .score-value {
+    font-size: 20px;
+    min-width: 110px;
+  }
+
+  .score-max {
+    font-size: 14px;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .score-body {
+    padding: 16px 16px;
+    max-height: 450px;
+  }
+
+  .score-list {
+    gap: 14px;
+  }
+
+  .score-item {
+    gap: 10px;
+  }
+
+  .label-text {
+    font-size: 16px;
+  }
+
+  .label-sub {
+    font-size: 12px;
+  }
+
+  .score-bar-container {
+    gap: 12px;
+  }
+
+  .score-bar {
+    height: 10px;
+  }
+
+  .score-value {
+    font-size: 18px;
+    min-width: 100px;
+  }
+
+  .score-max {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   피드백 페이지 반응형
+   ======================================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .feedback-container {
+    padding: 14px 32px 0;
+  }
+
+  .feedback-header {
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .feedback-header .question-number {
+    font-size: 18px;
+  }
+
+  .question-progress {
+    font-size: 18px;
+  }
+
+  .round-tabs {
+    gap: 18px;
+  }
+
+  .round-tab {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .round-tab::after {
+    right: -14px;
+    width: 11px;
+  }
+
+  .feedback-question {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .feedback-options {
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .feedback-option {
+    gap: 18px;
+    padding: 18px 22px;
+  }
+
+  .feedback-option .option-number {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .feedback-option .option-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .option-badge {
+    font-size: 18px;
+  }
+
+  .best-badge {
+    height: 38px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .best-badge span {
+    font-size: 18px;
+    padding-left: 36px;
+  }
+
+  .feedback-section {
+    padding: 36px 28px 20px;
+    margin-top: 50px;
+  }
+
+  .feedback-header-label {
+    top: -36px;
+  }
+
+  .feedback-header-label img {
+    height: 56px;
+  }
+
+  .feedback-title {
+    font-size: 18px;
+  }
+
+  .feedback-title em {
+    font-size: 13px;
+  }
+
+  .feedback-content p {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .feedback-navigation {
+    padding: 10px 32px;
+    margin-top: 26px;
+  }
+
+  .nav-btn {
+    height: 44px;
+    padding: 4px 18px;
+    font-size: 16px;
+  }
+
+  .round-btn {
+    height: 44px;
+    right: 32px;
+    padding: 4px 20px;
+    font-size: 16px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .bottom-buttons {
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .bottom-buttons .btn {
+    min-width: 160px;
+  }
+
+  .feedback-container {
+    padding: 12px 20px 0;
+  }
+
+  .feedback-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .feedback-header .question-number {
+    font-size: 16px;
+    padding: 5px 12px;
+  }
+
+  .question-progress {
+    font-size: 16px;
+  }
+
+  .round-tabs {
+    gap: 14px;
+  }
+
+  .round-tab {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .round-tab::after {
+    right: -12px;
+    width: 10px;
+    height: 2px;
+  }
+
+  .feedback-question {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .feedback-options {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .feedback-option {
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 10px;
+  }
+
+  .feedback-option .option-number {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .feedback-option .option-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .option-badge {
+    font-size: 16px;
+  }
+
+  .best-badge {
+    height: 34px;
+    padding: 0 12px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .best-badge span {
+    font-size: 16px;
+    padding-left: 32px;
+    background-size: 26px;
+  }
+
+  .feedback-section {
+    padding: 32px 20px 18px;
+    margin-top: 44px;
+    border-radius: 12px;
+  }
+
+  .feedback-header-label {
+    top: -32px;
+  }
+
+  .feedback-header-label img {
+    height: 50px;
+  }
+
+  .feedback-title {
+    font-size: 16px;
+  }
+
+  .feedback-title em {
+    font-size: 12px;
+  }
+
+  .feedback-content p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .feedback-download {
+    margin-top: 12px;
+  }
+
+  .download-btn {
+    padding-left: 36px;
+    background-position: left 8px top 50%;
+    background-size: 18px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .feedback-navigation {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 10px 20px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-btn {
+    height: 40px;
+    padding: 4px 16px;
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .round-btn {
+    position: static;
+    height: 40px;
+    padding: 4px 18px;
+    font-size: 14px;
+    order: 3;
+    width: 100%;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .feedback-container {
+    padding: 10px 16px 0;
+  }
+
+  .feedback-header {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .feedback-header .question-number {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .question-progress {
+    font-size: 14px;
+  }
+
+  .round-tabs {
+    gap: 12px;
+  }
+
+  .round-tab {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .round-tab::after {
+    right: -10px;
+    width: 8px;
+  }
+
+  .feedback-question {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .feedback-options {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .feedback-option {
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 8px;
+  }
+
+  .feedback-option .option-number {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .feedback-option .option-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .option-badge {
+    font-size: 14px;
+  }
+
+  .best-badge {
+    height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .best-badge span {
+    font-size: 14px;
+    padding-left: 28px;
+    background-size: 22px;
+  }
+
+  .feedback-section {
+    padding: 28px 16px 16px;
+    margin-top: 40px;
+  }
+
+  .feedback-header-label {
+    top: -28px;
+  }
+
+  .feedback-header-label img {
+    height: 44px;
+  }
+
+  .feedback-title {
+    font-size: 14px;
+  }
+
+  .feedback-title em {
+    font-size: 11px;
+  }
+
+  .feedback-content p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .download-btn {
+    padding-left: 32px;
+    background-position: left 6px top 50%;
+    background-size: 16px;
+    height: 32px;
+    font-size: 13px;
+    padding-right: 8px;
+  }
+
+  .feedback-navigation {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    height: 38px;
+    padding: 4px 14px;
+    font-size: 13px;
+    gap: 5px;
+  }
+
+  .round-btn {
+    height: 38px;
+    padding: 4px 16px;
+    font-size: 13px;
+  }
 }
 
 /* ========================================
