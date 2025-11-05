@@ -66,7 +66,7 @@
             <!-- 답변 옵션 -->
             <div class="feedback-options">
               <!-- 옵션 1: 내 선택 -->
-              <div class="feedback-option my-choice">
+              <button class="feedback-option my-choice">
                 <div class="option-number">1</div>
                 <div class="option-content">
                   <p class="option-text">
@@ -85,10 +85,10 @@
                   </svg>
                   <span>내 선택</span>
                 </div>
-              </div>
+              </button>
 
               <!-- 옵션 2: BEST -->
-              <div class="feedback-option best-answer">
+              <button class="feedback-option best-answer">
                 <div class="option-number">2</div>
                 <div class="option-content">
                   <p class="option-text">
@@ -98,29 +98,23 @@
                 <div class="option-badge best-badge">
                   <span>BEST</span>
                 </div>
-              </div>
+              </button>
 
               <!-- 옵션 3: 일반 -->
-              <div class="feedback-option">
+              <button class="feedback-option">
                 <div class="option-number">3</div>
                 <div class="option-content">
                   <p class="option-text">
                     프로젝트 일정이 촉박하므로 행사를 개최하지 않는다
                   </p>
                 </div>
-              </div>
+              </button>
             </div>
 
             <!-- 피드백 섹션 -->
             <div class="feedback-section">
               <div class="feedback-header-label">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                    fill="#4A90E2"
-                  />
-                </svg>
-                <span class="feedback-title">피드백<em>(Feedback)</em></span>
+                <img src="images/assets/feedback.png" alt="">
               </div>
               <div class="feedback-content">
                 <p>
@@ -134,48 +128,26 @@
                   하므로이에관계자들의 반대에 부딪힐 수도있습니다.
                 </p>
               </div>
-              <div class="feedback-download">
-                <button class="download-btn">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path
-                      d="M10 13L6 9H8.5V4H11.5V9H14L10 13Z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M4 14V16H16V14H17.5V17.5H2.5V14H4Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  피드백 레포트 받기
-                </button>
-              </div>
             </div>
 
+            <div class="feedback-download">
+              <button type="button" class="download-btn">
+                피드백 레포트 받기
+              </button>
+            </div>
 
             <!-- 하단 네비게이션 -->
             <div class="feedback-navigation">
-              <button class="nav-btn prev-btn">
-                <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
-                  <path
-                    d="M6 10L2 6L6 2"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+              <button class="nav-btn prev-btn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                  <path d="M8.38986 0.391683C8.51346 0.515035 8.61153 0.661553 8.67844 0.822851C8.74534 0.984148 8.77979 1.15706 8.77979 1.33168C8.77979 1.50631 8.74534 1.67922 8.67844 1.84052C8.61153 2.00181 8.51346 2.14833 8.38986 2.27168L3.21653 7.44502L8.38986 12.6184C8.63916 12.8677 8.77922 13.2058 8.77922 13.5583C8.77922 13.9109 8.63916 14.249 8.38986 14.4984C8.14056 14.7477 7.80243 14.8877 7.44986 14.8877C7.09729 14.8877 6.75916 14.7477 6.50986 14.4984L0.389859 8.37835C0.266254 8.255 0.168191 8.10848 0.101282 7.94718C0.0343742 7.78588 -6.48499e-05 7.61297 -6.48499e-05 7.43835C-6.48499e-05 7.26373 0.0343742 7.09082 0.101282 6.92952C0.168191 6.76822 0.266254 6.6217 0.389859 6.49835L6.50986 0.378349C7.01653 -0.128317 7.86986 -0.128317 8.38986 0.391683Z" fill="#1D7FFF"/>
                 </svg>
                 이전 피드백
               </button>
-              <button class="nav-btn next-btn">
+              <button class="nav-btn next-btn" disabled type="button">
                 다음 피드백
-                <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
-                  <path
-                    d="M2 2L6 6L2 10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                  <path d="M0.389926 0.391683C0.266321 0.515035 0.168257 0.661553 0.101349 0.822851C0.0344403 0.984148 0 1.15706 0 1.33168C0 1.50631 0.0344403 1.67922 0.101349 1.84052C0.168257 2.00181 0.266321 2.14833 0.389926 2.27168L5.56326 7.44502L0.389926 12.6184C0.140622 12.8677 0.000564575 13.2058 0.000564575 13.5583C0.000564575 13.9109 0.140622 14.249 0.389926 14.4984C0.639229 14.7477 0.977357 14.8877 1.32993 14.8877C1.68249 14.8877 2.02062 14.7477 2.26993 14.4984L8.38993 8.37835C8.51353 8.255 8.61159 8.10848 8.6785 7.94718C8.74541 7.78588 8.77985 7.61297 8.77985 7.43835C8.77985 7.26373 8.74541 7.09082 8.6785 6.92952C8.61159 6.76822 8.51353 6.6217 8.38993 6.49835L2.26993 0.378349C1.76326 -0.128317 0.909926 -0.128317 0.389926 0.391683Z" fill="#9AA0A9"/>
                 </svg>
               </button>
               <button class="round-btn">다음 라운드</button>
@@ -200,5 +172,35 @@
       </div>
     </div>
 
+    <script>
+      $(document).ready(function () {
+        // 피드백 옵션 클릭
+        $(".feedback-option").on("click", function () {
+          $(".feedback-option").each(function() {
+            $(this).removeClass("my-choice");
+            $(this).find(".my-choice-badge").remove();
+          });
+          
+          $(this).addClass("my-choice");
+          
+          $(this).find(".best-badge").remove();
+          const myChoiceBadge = `
+            <div class="option-badge my-choice-badge">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M13.5 4L6 11.5L2.5 8"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>내 선택</span>
+            </div>
+          `;
+          $(this).append(myChoiceBadge);
+        });
+      });
+    </script>
   </body>
 </html>
