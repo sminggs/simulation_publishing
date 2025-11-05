@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피드백 - 프로젝트 리더십 시뮬레이션</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body class="hp-template">
+    <!-- 헤더 -->
+    <header class="simulation-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="intro_simulation.html" class="home_btn"></a>
+        </div>
+        <div class="header-nav">
+          <a href="simulation.html">
+            <span>시뮬레이션</span>
+            <em>Simulation</em>
+          </a>
+          <a href="score.html"">
+            <span>점수</span>
+            <em>Score</em>
+          </a>
+          <a href="feedback.html" class="active">
+            <span>피드백</span>
+            <em>Feedback</em>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="main-content">
+      <div class="simulation-container">
+        <div class="simulation-card feedback-card">
+          <div class="simulation-top">
+            <h2>피드백</h2>
+          </div>
+
+          <div class="simulation-body feedback-container">
+            <!-- 라운드/질문 선택 -->
+            <div class="feedback-header">
+              <div class="question-number">1R-Q1</div>
+              <div class="question-progress">5/5 문제</div>
+              <div class="round-tabs">
+                <!-- 라운드 완료마다 active 추가 -->
+                <div class="round-tab active">1R</div>
+                <div class="round-tab active">2R</div>
+                <div class="round-tab">3R</div>
+                <div class="round-tab">4R</div>
+              </div>
+            </div>
+
+            <!-- 질문 -->
+            <div class="feedback-question">
+              <p>
+                홍현주 이사는 여러분이 직접 의사결정하기를 바라고 있습니다.
+                어떻게 하시겠습니까?
+              </p>
+            </div>
+
+            <!-- 답변 옵션 -->
+            <div class="feedback-options">
+              <!-- 옵션 1: 내 선택 -->
+              <button class="feedback-option my-choice">
+                <div class="option-number">1</div>
+                <div class="option-content">
+                  <p class="option-text">
+                    예선이 부족하므로 회식으로 대체한다.
+                  </p>
+                </div>
+                <div class="option-badge my-choice-badge">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M13.5 4L6 11.5L2.5 8"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>내 선택</span>
+                </div>
+              </button>
+
+              <!-- 옵션 2: BEST -->
+              <button class="feedback-option best-answer">
+                <div class="option-number">2</div>
+                <div class="option-content">
+                  <p class="option-text">
+                    요구를 받아들여 1박2일로 팀 빌딩 행사를 간다.
+                  </p>
+                </div>
+                <div class="option-badge best-badge">
+                  <span>BEST</span>
+                </div>
+              </button>
+
+              <!-- 옵션 3: 일반 -->
+              <button class="feedback-option">
+                <div class="option-number">3</div>
+                <div class="option-content">
+                  <p class="option-text">
+                    프로젝트 일정이 촉박하므로 행사를 개최하지 않는다
+                  </p>
+                </div>
+              </button>
+            </div>
+
+            <!-- 피드백 섹션 -->
+            <div class="feedback-section">
+              <div class="feedback-header-label">
+                <img src="images/assets/feedback.png" alt="">
+              </div>
+              <div class="feedback-content">
+                <p>
+                  사외 Kick-off미팅은 어렵기는 하지만, 그에 상응하는 충분한
+                  효과가 있습니다. 팀원들은 그들의 일상 적인 업무에서 잠시
+                  벗어나프로젝트에만 몰입할 수있을 것입니다. 또한 프로젝트
+                  팀형성 초기 단계에 팀원들과 프로젝트 매니저가 상호신뢰관계를
+                  형성시키고, 프로젝트에 대한 서로의기대치에 대해논의 하고
+                  공유할 수있는좋은기회를제공할것입니다. 그러나, 기업 사외
+                  미팅은 프로젝트 팀원들의 많은 노력 을 필요로
+                  하므로이에관계자들의 반대에 부딪힐 수도있습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="feedback-download">
+              <button type="button" class="download-btn">
+                피드백 레포트 받기
+              </button>
+            </div>
+
+            <!-- 하단 네비게이션 -->
+            <div class="feedback-navigation">
+              <button class="nav-btn prev-btn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                  <path d="M8.38986 0.391683C8.51346 0.515035 8.61153 0.661553 8.67844 0.822851C8.74534 0.984148 8.77979 1.15706 8.77979 1.33168C8.77979 1.50631 8.74534 1.67922 8.67844 1.84052C8.61153 2.00181 8.51346 2.14833 8.38986 2.27168L3.21653 7.44502L8.38986 12.6184C8.63916 12.8677 8.77922 13.2058 8.77922 13.5583C8.77922 13.9109 8.63916 14.249 8.38986 14.4984C8.14056 14.7477 7.80243 14.8877 7.44986 14.8877C7.09729 14.8877 6.75916 14.7477 6.50986 14.4984L0.389859 8.37835C0.266254 8.255 0.168191 8.10848 0.101282 7.94718C0.0343742 7.78588 -6.48499e-05 7.61297 -6.48499e-05 7.43835C-6.48499e-05 7.26373 0.0343742 7.09082 0.101282 6.92952C0.168191 6.76822 0.266254 6.6217 0.389859 6.49835L6.50986 0.378349C7.01653 -0.128317 7.86986 -0.128317 8.38986 0.391683Z" fill="#1D7FFF"/>
+                </svg>
+                이전 피드백
+              </button>
+              <button class="nav-btn next-btn" disabled type="button">
+                다음 피드백
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                  <path d="M0.389926 0.391683C0.266321 0.515035 0.168257 0.661553 0.101349 0.822851C0.0344403 0.984148 0 1.15706 0 1.33168C0 1.50631 0.0344403 1.67922 0.101349 1.84052C0.168257 2.00181 0.266321 2.14833 0.389926 2.27168L5.56326 7.44502L0.389926 12.6184C0.140622 12.8677 0.000564575 13.2058 0.000564575 13.5583C0.000564575 13.9109 0.140622 14.249 0.389926 14.4984C0.639229 14.7477 0.977357 14.8877 1.32993 14.8877C1.68249 14.8877 2.02062 14.7477 2.26993 14.4984L8.38993 8.37835C8.51353 8.255 8.61159 8.10848 8.6785 7.94718C8.74541 7.78588 8.77985 7.61297 8.77985 7.43835C8.77985 7.26373 8.74541 7.09082 8.6785 6.92952C8.61159 6.76822 8.51353 6.6217 8.38993 6.49835L2.26993 0.378349C1.76326 -0.128317 0.909926 -0.128317 0.389926 0.391683Z" fill="#9AA0A9"/>
+                </svg>
+              </button>
+              <button class="round-btn">다음 라운드</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 진행률 -->
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span class="progress-label">진행률(20%)</span>
+          <div class="progress-bar-wrap">
+            <div class="processbar active"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // 피드백 옵션 클릭
+        $(".feedback-option").on("click", function () {
+          $(".feedback-option").each(function() {
+            $(this).removeClass("my-choice");
+            $(this).find(".my-choice-badge").remove();
+          });
+          
+          $(this).addClass("my-choice");
+          
+          $(this).find(".best-badge").remove();
+          const myChoiceBadge = `
+            <div class="option-badge my-choice-badge">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M13.5 4L6 11.5L2.5 8"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>내 선택</span>
+            </div>
+          `;
+          $(this).append(myChoiceBadge);
+        });
+      });
+    </script>
+  </body>
+</html>

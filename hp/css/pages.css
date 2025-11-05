@@ -31,21 +31,18 @@
   text-align: center;
   font-size: 78px;
   font-style: normal;
-  font-weight: 800;
-  line-height: normal;
+  font-weight:500;
+  line-height: 1;
   letter-spacing: -4.68px;
   color: #fff;
-  background: var(
-    --gradation_blue,
-    linear-gradient(90deg, #fff 0%, #b0d6ff 100%)
-  );
+  background: linear-gradient(90deg, #FFF 0%, #FFFAB0 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .login-header p {
-  color: #86bfff;
+  color: #FFCF86;
   text-align: center;
   font-family: "Pretendard", san-serif;
   font-size: 46px;
@@ -128,7 +125,7 @@
   display: block;
   font-size: 43px;
   font-weight: 800;
-  color: #1d7fff;
+  color: #F3750D;
 }
 
 .start-form .btn-start-bg span {
@@ -137,7 +134,7 @@
   background-size: 120px;
 }
 .start-form .btn-start-simulation {
-  background: #1d7fff;
+  background: #F3750D;
 }
 
 .start-form .btn-start-simulation span {
@@ -175,7 +172,7 @@
   width: 100%;
   height: 100%;
   background: url("../images/layout/background_info_bg.png") no-repeat center;
-  background-size: cover;
+  background-size: 101%;
   z-index: -1;
 }
 
@@ -223,7 +220,7 @@
 /* 탭 컨텐츠 */
 .tab-content {
   display: none;
-  background: #e3efff;
+  background: #FFFDF0;
   border-radius: 16px;
   padding: 24px 27px;
   height: 646px;
@@ -285,7 +282,7 @@
   left: 2px;
   width: 9px;
   height: 9px;
-  background: #1d7fff;
+  background: #F3750D;
   border-radius: 2px;
 }
 
@@ -1108,7 +1105,7 @@
 }
 
 .section-title {
-  color: #0050b9;
+  color: #BC5500;
   font-family: "NanumSquare Neo";
   font-size: 25px;
   font-style: normal;
@@ -1230,7 +1227,7 @@
 
 .simulation-top {
   height: 62px;
-  background-color: var(--secondary-color);
+  background-color: #8B6648;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1432,7 +1429,7 @@
 }
 
 .dialogue-item.right .dialogue-bubble {
-  background: #2599a3;
+  background: #A37B25;
   color: #fff;
   padding-left: 40px;
   padding-right: 58px;
@@ -1462,7 +1459,7 @@
 ================================ */
 .chat-container {
   padding: 24px 50px;
-  background: #e3efff;
+  background: #FFFDF0;
 }
 
 .chat-container::before {
@@ -1472,7 +1469,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #e3efff;
+  background: #FFFDF0;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -1484,7 +1481,7 @@
 .chat-window {
   background: #fff;
   border-radius: 25px;
-  box-shadow: 0 4px 5px 2px rgba(121, 197, 239, 0.38);
+  box-shadow: 0 4px 5px 2px rgba(239, 182, 121, 0.38);
   padding: 8px;
   overflow: hidden;
   padding: 14px 0 0;
@@ -1633,7 +1630,7 @@
 }
 
 .right-bubble {
-  background: #2599a3;
+  background: #A37B25;
   color: #fff;
   order: 3;
 }
@@ -1645,7 +1642,7 @@
   right: -18px;
   width: 18px;
   height: 18px;
-  background: #2599a3;
+  background: #A37B25;
   border-radius: 50%;
 }
 
@@ -1760,7 +1757,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px 44px 31px 44px;
-  background: #e3efff;
+  background: #FFFDF0;
 }
 
 .mail-container * {
@@ -1778,7 +1775,7 @@
 /* 메일 헤더 */
 .mail-header,
 .board-header {
-  background: #2599a3;
+  background: #A37B25;
   padding: 12px 22px;
   display: flex;
   justify-content: space-between;
@@ -1885,7 +1882,7 @@
 
 .attachment-link {
   flex: 1;
-  color: #2599a3;
+  color: #A37B25;
   text-decoration: none;
   font-size: 24px;
   font-weight: 400;
@@ -1976,7 +1973,7 @@
 
 .board-sidebar {
   width: 250px;
-  background: #ecfbfb;
+  background: #F3F3F5;
 }
 
 .board-sidebar ul {
@@ -1997,7 +1994,7 @@
 }
 
 .board-sidebar li.active {
-  background: #175d66;
+  background: var(--primary-color);
   color: white;
 }
 
@@ -2077,7 +2074,7 @@
 }
 
 .board .simulation-card {
-  background: #e3efff;
+  background: #FFFDF0;
 }
 
 /* ========================================
@@ -2314,10 +2311,7 @@
 
 .score-card .simulation-top,
 .feedback-card .simulation-top {
-  background: var(
-    --gradation_blue,
-    linear-gradient(90deg, #fff 0%, #b0d6ff 100%)
-  );
+  background: var(--HP-GRA, linear-gradient(90deg, #FFF 0%, #FFFAB0 100%));
   border-bottom: 1px solid var(--color-gray-50, #f1f1f1);
 }
 
@@ -2506,7 +2500,7 @@
 
 .feedback-header .question-number {
   background: #c5e1ff;
-  color: #1d7fff;
+  color: #F3750D;
   padding: 6px 14px;
   font-size: 20px;
   font-weight: 800;

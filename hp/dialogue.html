@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>전화 - 프로젝트 리더십 시뮬레이션</title>
+    <title>대화 - 프로젝트 리더십 시뮬레이션</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/pages.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/common.js"></script>
   </head>
-  <body class="pm-template">
+  <body class="hp-template">
     <!-- 헤더 -->
     <header class="simulation-header">
       <div class="header-inner">
@@ -34,48 +34,30 @@
     </header>
 
     <!-- 메인 컨텐츠 -->
-    <div class="main-content phone">
+    <div class="main-content dialogue">
       <div class="simulation-container">
         <div class="simulation-card">
           <div class="simulation-top">
-            <h2>고영길 사장의 전화</h2>
+            <h2>계속되는 언쟁</h2>
           </div>
 
-          <div class="simulation-body phone-container">
-            <div class="phone-device">
-              <img src="images/icons/phone.png" alt="" />
-            </div>
-
-            <div class="phone-content">
-              <p class="content-text">
-                아니 도대체 왜 프로젝트를 하지 못하겠다는 건가?
-              </p>
-
-              <p class="content-text">
-                나도 자네가 내비게이션 Up-grade 작업으로 바쁜 것은 아네. <br />
-                하지만 이번 일은 우리 회사의 사활이 달린 중요한 프로젝트야.
-                <br />
-                언제까지나 2위 업체로 머물러있을 수만은 없지 않은가!
-              </p>
-
-              <p class="content-text">
-                내 목표는 이번 프로젝트를 성공적으로 마무리해서 <br />
-                내후년에는경쟁사를 따돌리고 업계 1위 업체로 발돋움하는 것이라네.
-                <br />
-                그래야지만 진정한 강자가 될 수 있다고.
-              </p>
-              <p class="content-text">이번 프로젝트를 맡아주게.</p>
-            </div>
+          <div
+            class="simulation-body dialogue-container"
+            id="dialogueContainer"
+          >
+            <!-- 대화가 여기에 순차적으로 추가됨 -->
           </div>
 
           <div class="control-buttons">
             <button type="button" class="control-btn pause"></button>
-            <button type="button" class="control-btn next"></button>
+            <button
+              class="control-btn next"
+              onclick="location.href='dialogue.html'"
+            ></button>
           </div>
         </div>
       </div>
 
-      <!-- 진행률 -->
       <div class="progress-wrapper">
         <div class="progress-info">
           <span class="progress-label">진행률(20%)</span>
@@ -90,5 +72,7 @@
         </div>
       </div>
     </div>
+
+    <script src="js/dialogue.js"></script>
   </body>
 </html>

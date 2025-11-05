@@ -1,0 +1,11 @@
+이미지 폴더입니다.
+
+필요한 이미지 파일:
+- building.jpg : 회사 건물 이미지
+- character1.png : 캐릭터 1 (박영진)
+- character2.png : 캐릭터 2 (서민준)
+- ceo.png : CEO 고영길사장 이미지
+- office-bg.jpg : 사무실 배경 이미지
+
+※ 이미지가 없을 경우 자동으로 플레이스홀더가 표시됩니다.
+

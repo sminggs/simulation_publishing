@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판 - 프로젝트 리더십 시뮬레이션</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body class="hp-template">
+    <!-- 헤더 -->
+    <header class="simulation-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="intro_simulation.html" class="home_btn"></a>
+        </div>
+        <div class="header-nav">
+          <a href="simulation.html" class="active">
+            <span>시뮬레이션</span>
+            <em>Simulation</em>
+          </a>
+          <a href="score.html">
+            <span>점수</span>
+            <em>Score</em>
+          </a>
+          <a href="feedback.html">
+            <span>피드백</span>
+            <em>Feedback</em>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="main-content board">
+      <div class="simulation-container">
+        <div class="simulation-card">
+          <div class="simulation-top">
+            <h2>여름휴가 계획 제출 공지</h2>
+          </div>
+
+          <div class="simulation-body board-container">
+            <div class="board-window">
+              <div class="board-header">
+                <div class="board-title">
+                  <span class="new-badge">New mail</span>
+                </div>
+                <div class="board-time">25-09-11 11:21</div>
+                <div class="board-controls">
+                  <img src="images//assets/mail_frame.png" alt="" />
+                </div>
+              </div>
+              <div class="board-inner">
+                <div class="board-sidebar">
+                  <ul>
+                    <li class="active">공지사항</li>
+                    <li>시스템 매뉴얼</li>
+                    <li>회계/총무</li>
+                    <li>인사규정</li>
+                  </ul>
+                </div>
+
+                <div class="board-content">
+                  <div class="board-header">
+                    <div class="search-box">
+                      <div class="search-input">검색어를 입력하세요</div>
+                    </div>
+                    <div class="breadcrumb">홈 &gt; 게시판 &gt; 공지사항</div>
+                  </div>
+
+                  <div class="board-article">
+                    <p class="board-date">XX-03-21 14:17</p>
+                    <h3>[인사교육] 여름휴가 계획 제출</h3>
+
+                    <div class="board-body">
+                      <p>
+                        이제 다음 달이면 계절적으로 완연한 여름이 시작됩니다.
+                      </p>
+                      <p>
+                        각 팀장님들께서는 팀원들의 여름휴가 계획 일정을 유첨
+                        양식에 의거하여 작성하시고 인사교육팀으로 송부하여
+                        주시기 바랍니다.
+                      </p>
+                      <p>감사합니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-buttons">
+            <button type="button" class="control-btn pause"></button>
+            <button type="button" class="control-btn next"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 진행률 -->
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span class="progress-label">진행률(20%)</span>
+          <div class="progress-bar-wrap">
+            <!--진행 정도마다 active 클래스 추가 -->
+            <div class="processbar active"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+            <div class="processbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

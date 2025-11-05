@@ -99,21 +99,21 @@ body {
 
 /* PM 템플릿 색상 */
 body.pm-template {
-  --primary-color: #1d7fff;
+  --primary-color: #F3750D;
   --primary-dark: #1565c0;
   --primary-light: #42a5f5;
-  --secondary-color: #0050b9;
+  --secondary-color: #BC5500;
   --background-dark: #0d47a1;
   --text-on-primary: #ffffff;
 }
 
 /* HP 템플릿 색상 (추후 사용) */
 body.hp-template {
-  --primary-color: #7b1fa2;
+  --primary-color: #F3750D;
   --primary-dark: #6a1b9a;
-  --primary-light: #9c27b0;
-  --secondary-color: #ab47bc;
-  --background-dark: #4a148c;
+  --primary-light: #FFCF86;
+  --secondary-color: #F3750D;
+  --background-dark: #F3750D;
   --text-on-primary: #ffffff;
 }
 
@@ -494,7 +494,7 @@ body.hp-template {
 
 .header-nav a.active span,
 .header-nav a.active em {
-  color: #1d7fff;
+  color: #F3750D;
 }
 
 .header-nav a span {
@@ -629,7 +629,7 @@ body.hp-template {
   border: none;
   cursor: pointer;
   transition: all 0.3s;
-  color: #1d7fff;
+  color: #F3750D;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -720,7 +720,7 @@ body.hp-template {
   left: 0;
   width: 100%;
   height: 12px;
-  background: #26d0ce;
+  background: #FF2D0D;
 }
 
 /* 애니메이션 */
@@ -776,7 +776,7 @@ body.hp-template {
 @media (max-width: 1024px) {
   ::-webkit-scrollbar {
     width: px;
-  } 
+  }
   .container {
     padding: 15px;
   }
