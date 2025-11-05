@@ -2854,6 +2854,11 @@
 
 /* 태블릿 */
 @media (max-width: 1024px) {
+  .phone-device {
+    width: 200px;
+    height: auto;
+    padding-right: 50px;
+  }
   .simulation-container {
     padding: 0 15px;
     margin-top: 14px;
@@ -3411,11 +3416,18 @@
 @media (max-width: 1024px) {
   .phone-container {
     padding-top: 54px;
+    display: block;
   }
 
   .phone-device {
-    width: 300px;
-    height: 413px;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 30px;
+  }
+
+  .phone-device img {
+    width: 100%;
   }
 
   .content-text {
@@ -4503,6 +4515,7 @@
 
   .round-btn {
     position: static;
+    display: block;
     height: 40px;
     padding: 4px 18px;
     font-size: 14px;
