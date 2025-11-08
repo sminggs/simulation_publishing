@@ -340,6 +340,7 @@
 
 /* PSI Electronics 제목 박스 */
 .org-title-box {
+  position: relative;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -349,9 +350,9 @@
   border-radius: 25px;
   display: inline-block;
   background: #fff;
-  margin: 0 auto 30px;
+  margin: 0 auto 10px;
   position: relative;
-  left: 50%;
+  left: calc(50% - 50px);
   transform: translateX(-50%);
 }
 
@@ -4656,4 +4657,368 @@
 /* 조직도 반응형 - 스크롤 처리 */
 .tab-content-inner {
   overflow-x: auto;
+}
+
+
+/* 조직도 */
+.orgchart {
+  width: 1120px;
+  position: relative;
+  text-align: center;
+}
+
+.org-title {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  height: 54px;
+  padding: 0 20px;
+  font-weight: 700;
+  border: 1px solid #003678;
+  border-radius: 14px;
+  color: #003678;
+  background: #fff;
+  margin: 0 auto 10px;
+  position: relative;
+  left: 65px;
+}
+
+
+.node {
+  padding:0 5px;
+  width: 118px;
+  height: 54px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #003678;
+  border-radius: 14px;
+  color: #fff;
+  position: relative;
+}
+
+.node  br {
+  display: none;
+}
+
+.node .name {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.888px;
+}
+
+.node .title {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.62px;
+  margin-left: 3px;
+}
+
+.node .team {
+  width: 100%;
+  color: #B3D5FF;
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  margin-top: -16px;
+}
+
+.ceo-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.ceo-row .node {
+  left: 65px;
+}
+
+.ceo-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(50% + 65px);
+  width: 1px;
+  height: 300px;
+  background: #4985CF;
+  transform: translateX(-50%);
+}
+
+.ceo-row::after {
+  content: '';
+  position: absolute;
+  top: 118px;
+  left: 185px;
+  width: 435px;
+  height: 1px;
+  background: #4985CF;
+}
+
+
+.chairman-row {
+  position: absolute;
+  right: 50px;
+}
+
+.chairman-row .node {
+  height: 62px;
+  min-width: 168px;
+  border: 1px solid #6F93C2;
+  background: #B0C7E6;
+  color: #345277;
+}
+
+.chairman-row .node .team {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  border-radius: 7px;
+  padding: 0 8px;
+  height: 32px;
+  background-color: #fff;
+  color: #7B7B7B;
+  font-size: 16px;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.director-row {
+  margin-top: -32px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 56px;
+}
+
+.left-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-right: 12px;
+  margin-top: 135px;
+  position: relative;
+}
+
+.left-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.node.white {
+  background-color: #fff;
+  color: #202020;
+  border: 1px solid #fff;
+}
+
+.node.dark {
+  background-color: #355161;
+  color: #fff;
+  border: 1px solid #355161;
+}
+
+.node.dark.project {
+  font-weight: 300;
+  line-height: 16px;
+}
+
+.org-row.triple {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.branch {
+  position: relative;
+}
+
+.branch .node.vp .title {
+  margin-left: -6px;
+}
+
+.branch br {
+  display: none;
+}
+
+.branch>div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.branch .node.vp {
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+.sub-row {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.leaf-row {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.follow-row {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.follow-row .node .name {
+  font-size: 17px;
+}
+
+.node.green {
+  background-color: #019D9A;
+  color: #fff;
+  border: 1px solid #019D9A;
+}
+
+.node.green .team {
+  color: #fff;
+}
+
+.node.blue {
+  background-color: #2066BD;
+  color: #fff;
+  border: 1px solid #2066BD;
+}
+
+.branch.three .leaf-row {
+  justify-content: flex-start;
+}
+
+
+.branch:nth-child(4) .node.vp {
+  margin-bottom: 10px;
+}
+
+
+/* line */
+.ceo-row::after {
+  content: '';
+  position: absolute;
+  top: 118px;
+  left: 188px;
+  width: 437px;
+  height: 1px;
+  background: #4985CF;
+}
+
+.left-2::after {
+  content: '';
+  position: absolute;
+  top: 27px;
+  left: 58px;
+  width: 78px;
+  height: 1px;
+  background: #4985CF;
+}
+
+.director-row::after {
+  content: '';
+  position: absolute;
+  bottom: 27px;
+  left: 322px;
+  width: 1px;
+  height: 138px;
+  background: #4985CF;
+}
+
+.left-2::before {
+  content: '';
+  position: absolute;
+  bottom: 27px;
+  left: -29px;
+  width: 166px;
+  height: 1px;
+  background: #4985CF;
+}
+
+.node {
+  z-index: 2;
+}
+
+.left1, .left2, .left3, .director-row {
+  position: relative;
+}
+
+.branch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100px;
+  background: #4985CF;
+}
+
+.sub-row::before {
+  content: '';
+  position: absolute;
+  bottom: 27px;
+  left: 0;
+  width: 266px;
+  height: 1px;
+  background: #4985CF;
+}
+
+.branch.three::before {
+  height: 67px;
+}
+.branch.three .sub-row::before {
+  display: none;
+}
+
+.branch .sub-row  .node:first-child::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 15px;
+  background: #4985CF;
+  z-index: 0;
+}
+
+.branch .sub-row  .node:last-child::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 15px;
+  background: #4985CF;
+  z-index: 0;
+}
+
+.branch:after {
+  content: '';
+  position: absolute;
+  top: 66px;
+  left: 59px;
+  width: 256px;
+  height: 1px;
+  background: #4985CF;
+}
+
+.branch.three::after {
+  width: 128px;
 }
