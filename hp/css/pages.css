@@ -1279,7 +1279,8 @@
 /* 컨트롤 버튼 */
 .control-buttons {
   position: absolute;
-  bottom: 24px;
+  transform: translateY(-100%);
+  bottom: 30px;
   right: 40px;
   display: flex;
   gap: 16px;
@@ -3504,6 +3505,16 @@
     margin-top: 5px;
   }
 
+  .content-text {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 18px;
+  }
+
+  .content-text:first-child {
+    margin-top: 24px;
+  }
+}
 /* 소형 모바일 */
 @media (max-width: 480px) {
   .phone-container {

@@ -1283,7 +1283,8 @@
 /* 컨트롤 버튼 */
 .control-buttons {
   position: absolute;
-  bottom: 24px;
+  transform: translateY(-100%);
+  bottom: 30px;
   right: 40px;
   display: flex;
   gap: 16px;

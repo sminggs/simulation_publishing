@@ -647,6 +647,7 @@ body.hp-template {
 
 /* 진행률 바 */
 .progress-wrapper {
+  position: relative;
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
