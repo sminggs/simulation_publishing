@@ -45,7 +45,77 @@
             class="simulation-body dialogue-container"
             id="dialogueContainer"
           >
-            <!-- 대화가 여기에 순차적으로 추가됨 -->
+            <!-- 관리자가 등록한 대화 내용 -->
+            <!-- 
+              속성 설명:
+              - data-delay: 이 대화가 표시되기까지의 지연 시간 (밀리초)
+              - data-audio: 음성 파일 경로 (선택사항)
+              - data-duration: 음성이 없을 경우 표시 시간 (밀리초, 선택사항)
+              - data-image: 이미지 파일 경로 (선택사항, 필요시 사용)
+            -->
+            <div
+              class="dialogue-item left"
+              data-delay="0"
+              data-audio="audio/dialogue1.mp3"
+              data-duration="2000"
+            >
+              <div class="character-avatar">
+                <img src="images/member/youngjin_emotion3.png" alt="박영진" />
+                <span class="character-name">박영진<em>차장</em></span>
+              </div>
+              <div class="dialogue-bubble typing">
+                말씀이 지나치다니? 뭐가 지나치단 말입니까?
+              </div>
+            </div>
+
+            <div
+              class="dialogue-item right"
+              data-delay="2000"
+              data-audio="audio/dialogue2.mp3"
+              data-duration="2000"
+            >
+              <div class="character-avatar">
+                <img src="images/member/minjun_emotion3.png" alt="서민준" />
+                <span class="character-name">서민준<em>과장</em></span>
+              </div>
+              <div class="dialogue-bubble typing">
+                아니, 제가 회의에 늦은 것은 사과드립니다.<br />
+                하지만 제가 SMART-Navigation 프로젝트만 하는 게 아니잖아요.<br /><br />
+                오늘도 고객미팅을 하고 부랴부랴 달려 나왔는데, 차가 너무 막혀서
+                계속 마음을 졸이면서 왔습니다. 그런데 그런 심정을 몰라주고 저를
+                비난하다니 박 차장님 너무하시네요.. 박 차장님도 지난 번에 회의에
+                20분 정도 늦은 적이 있었다구요. 그렇지 않습니까 팀장님?<br /><br />
+                아니 자기도 회의에 늦으면서 너무하네요, 진짜.
+              </div>
+            </div>
+
+            <div
+              class="dialogue-item left"
+              data-delay="4000"
+              data-audio="audio/dialogue3.mp3"
+              data-duration="6000"
+            >
+              <div class="character-avatar">
+                <img src="images/member/youngjin_emotion3.png" alt="박영진" />
+                <span class="character-name">박영진<em>차장</em></span>
+              </div>
+              <div class="dialogue-bubble typing">
+                팀장님. 서민준 과장이 회의에 늦은 게 어디 한 두 번입니까?
+                팀장님도 잘 아시잖아요? 매번 20분, 30분씩 늦게 왔습니다. 게다가
+                오늘은 한 시간이나 늦었구요. 게다가 회의 때 아이디어라고 내놓은
+                걸 보십시오. <br /><br />
+                말도 안 되는 허무맹랑한 소리만 하고 있지 않습니까?팀장님. 서민준
+                과장이 회의에 늦은 게 어디 한 두 번입니까? 팀장님도 잘
+                아시잖아요? 매번 20분, 30분씩 늦게 왔습니다. 게다가 오늘은 한
+                시간이나 늦었구요. 게다가 회의 때 아이디어라고 내놓은 걸
+                보십시오. <br />
+                말도 안 되는 허무맹랑한 소리만 하고 있지 않습니까?팀장님. 서민준
+                과장이 회의에 늦은 게 어디 한 두 번입니까? 팀장님도 잘
+                아시잖아요? 매번 20분, 30분씩 늦게 왔습니다. 게다가 오늘은 한
+                시간이나 늦었구요. 게다가 회의 때 아이디어라고 내놓은 걸
+                보십시오. 말도 안 되는 허무맹랑한 소리만 하고 있지 않습니까?
+              </div>
+            </div>
           </div>
 
           <div class="control-buttons">
@@ -78,6 +148,6 @@
       </div>
     </div>
 
-    <script src="js/dialogue.js"></script>
+    <script src="js/dialogue-renderer.js"></script>
   </body>
 </html>

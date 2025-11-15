@@ -61,7 +61,71 @@
 
               <!-- 메시지 영역 -->
               <div class="chat-messages">
-                <!-- 메시지가 여기에 순차적으로 추가됨 (chat.js)-->
+                <!-- 관리자가 등록한 채팅 메시지 -->
+                <!-- 
+                  속성 설명:
+                  - data-delay: 이 메시지가 표시되기까지의 지연 시간 (밀리초)
+                  - data-audio: 음성 파일 경로 (선택사항)
+                  - data-duration: 음성이 없을 경우 표시 시간 (밀리초, 선택사항)
+                -->
+                <div
+                  class="message-group message-left fade-in"
+                  data-delay="0"
+                  data-audio="audio/chat1.mp3"
+                  data-duration="2000"
+                >
+                  <div class="message-item">
+                    <div class="message-sender">기술팀 안성호 과장</div>
+                    <div class="message-bubble left-bubble">
+                      하노버는 언제 가세요?
+                    </div>
+                    <div class="message-time">13:30</div>
+                  </div>
+                </div>
+
+                <div
+                  class="message-group message-right fade-in"
+                  data-delay="2000"
+                  data-audio="audio/chat2.mp3"
+                  data-duration="2000"
+                >
+                  <div class="message-item">
+                    <div class="message-sender">마케팅팀 서민준 과장</div>
+                    <div class="message-bubble right-bubble">안 갑니다</div>
+                    <div class="message-time">13:31</div>
+                  </div>
+                </div>
+
+                <div
+                  class="message-group message-left fade-in"
+                  data-delay="4000"
+                  data-audio="audio/chat3.mp3"
+                  data-duration="2000"
+                >
+                  <div class="message-item">
+                    <div class="message-sender">기술팀 안성호 과장</div>
+                    <div class="message-bubble left-bubble">
+                      안 간다구요? 왜요?
+                    </div>
+                    <div class="message-time">13:32</div>
+                  </div>
+                </div>
+
+                <div
+                  class="message-group message-right fade-in"
+                  data-delay="6000"
+                  data-audio="audio/chat4.mp3"
+                  data-duration="3000"
+                >
+                  <div class="message-item">
+                    <div class="message-sender">마케팅팀 서민준 과장</div>
+                    <div class="message-bubble right-bubble">
+                      모르겠어요. 누군가 제 출장을 반대한 모양입니다.<br />하여튼
+                      전 하노버로 안 갑니다. 아니, 못 갑니다..
+                    </div>
+                    <div class="message-time">13:33</div>
+                  </div>
+                </div>
               </div>
 
               <!-- 메시지 입력 영역 -->
@@ -114,6 +178,6 @@
       </div>
     </div>
 
-    <script src="js/chat.js"></script>
+    <script src="js/chat-renderer.js"></script>
   </body>
 </html>
