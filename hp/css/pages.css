@@ -1249,7 +1249,7 @@
 }
 
 /* Welcome 화면 */
-.main-content.welcome .simulation-body {
+.main-content .welcome .simulation-body {
   background: url("../images/layout//simulation_office.jpg");
   background-size: 103%;
   background-position: top -1px left 50%;
@@ -2955,7 +2955,7 @@
     max-height: 500px;
   }
 
-  .main-content.welcome .simulation-body,
+  .main-content .welcome .simulation-body,
   .main-content.dialogue .simulation-body {
     background-size: cover;
     background-position: center;

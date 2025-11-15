@@ -682,6 +682,7 @@ body.hp-template {
 }
 
 .progress-bar-wrap {
+  position: relative;
   flex: 1;
   height: 100%;
   padding: 0 16px;
@@ -693,26 +694,43 @@ body.hp-template {
   display: flex;
 }
 
-.processbar {
+.bar-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  max-width: calc(100% - 32px);
+  left: 16px;
+}
+
+.bg-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-line .line {
   flex: 1;
   height: 100%;
   position: relative;
   border-right: 1px solid #d3d3d3;
 }
 
-.processbar:last-child {
+.bg-line .line:last-child {
   border-right: none;
 }
 
-.processbar:first-child.active::before {
-  border-radius: 50px 0 0 50px;
+.processbar::before {
+  border-radius: 50px;
 }
 
-.processbar:last-child.active::before {
-  border-radius: 0 50px 50px 0;
-}
 
-.processbar.active::before {
+.processbar::before {
   content: "";
   position: absolute;
   top: 18px;
@@ -721,6 +739,7 @@ body.hp-template {
   width: 100%;
   height: 12px;
   background: #FF2D0D;
+  z-index: 1;
 }
 
 /* 애니메이션 */
@@ -927,7 +946,7 @@ body.hp-template {
     border-radius: 10px;
   }
 
-  .processbar.active::before {
+  .processbar::before {
     top: 14px;
     height: 10px;
   }
@@ -1019,7 +1038,7 @@ body.hp-template {
     padding: 0 10px;
   }
 
-  .processbar.active::before {
+  .processbar::before {
     top: 12px;
     height: 8px;
   }
