@@ -1718,7 +1718,7 @@
 }
 
 /* ========================================
-   5. 전화 화면
+  5. 전화 화면
   ======================================== */
 
 .phone-container {
@@ -1729,10 +1729,43 @@
   justify-content: center;
 }
 .phone-device {
+  position: relative;
   width: 332px;
   height: 457px;
   margin-top: -30px;
 }
+
+.phone-device .member-info {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  object-fit: cover;
+  transform: rotate(-6deg);
+}
+
+.phone-device .member-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.phone-device .member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-device .member-name {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38.4px;
+  letter-spacing: -0.96px;
+  color: #fff;
+  margin-top: 10px;
+}
+
 /* 전화 내용 텍스트 */
 
 .content-text {
@@ -3450,6 +3483,32 @@
   .phone-device {
     width: 260px;
     margin-left: 40px;
+  }
+
+  .phone-device .member-info {
+    top: 57px;
+    left: 31px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .phone-device .member-image {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  
+  .phone-device .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .phone-device .member-name {
+    font-size: 15px;
+    line-height: 20.4px;
+    color: #fff;
+    margin-top: 5px;
   }
 
   .content-text {
