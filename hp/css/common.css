@@ -706,6 +706,10 @@ body.hp-template {
   left: 16px;
 }
 
+.bar-inner .processbar {
+  position: relative;
+}
+
 .bg-line {
   position: absolute;
   left: 0;
