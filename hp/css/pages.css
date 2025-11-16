@@ -2129,7 +2129,7 @@
 .quiestion-title {
   display: flex;
   gap: 9px;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 32px;
 }
 
@@ -2149,8 +2149,25 @@
   font-weight: 700;
   color: #1f2937;
   line-height: 33.6px;
+  flex: 1;
 }
 
+.answer-textarea textarea {
+  border: 2px solid #e5e7eb;
+  width: 100%;
+  border-radius: 10px;
+  resize: none;
+  height: 100%;
+  padding: 15px;
+  height: 350px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.answer-textarea  textarea:focus {
+  outline: none;
+}
 /* 답변 옵션 */
 .answer-options {
   display: flex;
@@ -2210,6 +2227,9 @@
 
 .option-content {
   flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .option-title {
@@ -2217,7 +2237,6 @@
   font-weight: 700;
   color: #111827;
   line-height: 28px;
-  margin-bottom: 15px;
 }
 
 .option-desc {
@@ -2226,6 +2245,10 @@
   font-weight: 400;
   color: #111827;
   margin: 0;
+}
+
+.option-title~.option-desc {
+  margin-top: 10px;
 }
 
 /* ========================================
@@ -3907,6 +3930,11 @@
     font-size: 22px;
     line-height: 31px;
   }
+
+  .answer-textarea textarea {
+    height: 250px;
+  }
+
 
   .answer-options {
     gap: 14px;
