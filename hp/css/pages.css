@@ -2382,7 +2382,6 @@
 .score-body {
   padding: 32px 40px;
   background: #fff;
-  height: auto;
   max-height: 652px;
 }
 
@@ -2391,14 +2390,20 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+}
+
+.score-list ~ .btn-area {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
 }
 
 .score-item {
   display: flex;
   align-items: center;
   gap: 25px;
-  padding: 0;
+  padding: 13px 0;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
@@ -4187,7 +4192,7 @@
 
   .score-list {
     max-width: 900px;
-    gap: 18px;
+    gap: 0;
   }
 
   .score-label {
@@ -4240,13 +4245,18 @@
 
   .score-list {
     max-width: 100%;
-    gap: 16px;
+    gap: 0;
   }
 
   .score-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    padding: 5px 0;
+  }
+
+  .score-list ~ .btn-area {
+    margin-top: 32px;
   }
 
   .score-label {
@@ -4293,7 +4303,7 @@
   }
 
   .score-list {
-    gap: 14px;
+    gap: 10px;
   }
 
   .score-item {
