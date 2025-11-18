@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>의사결정 문제 - 프로젝트 리더십 시뮬레이션</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body class="hp-template">
+    <!-- 헤더 -->
+    <header class="simulation-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="intro_simulation.html" class="home_btn"></a>
+        </div>
+        <div class="header-nav">
+          <a href="simulation.html" class="active">
+            <span>시뮬레이션</span>
+            <em>Simulation</em>
+          </a>
+          <a href="score.html">
+            <span>점수</span>
+            <em>Score</em>
+          </a>
+          <a href="feedback.html">
+            <span>피드백</span>
+            <em>Feedback</em>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="main-content">
+      <div class="simulation-container">
+        <div class="simulation-card">
+          <div class="simulation-top">
+            <h2>의사결정 문제</h2>
+          </div>
+
+          <div class="simulation-body question-container">
+            <div class="question-box">
+              <div class="quiestion-title">
+                <div class="question-number">1R-Q1</div>
+                <div class="question-text">
+                  홍현주 이사는 여러분이 직접 의사결정하기를 바라고 있습니다.
+                  어떻게 하시겠습니까?
+                </div>
+              </div>
+
+              <div class="discussion-box">
+                <img src="images/icons/discussion.svg" alt="" />
+                <p>자유롭게 의견을 나눠보세요</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 진행률 -->
+      <div class="progress-wrapper">
+        <div class="control-buttons">
+          <button type="button" class="control-btn play" disabled></button>
+          <button type="button" class="control-btn next"></button>
+        </div>
+
+        <div class="progress-info">
+          <span class="progress-label">진행률(20%)</span>
+          <div class="progress-bar-wrap">
+            <div class="bg-line">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="bar-inner">
+              <!-- 진행 정도마다 퍼센테이지 수정 -->
+              <div class="processbar" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // 답변 선택
+        $(".answer-option").on("click", function () {
+          $(".answer-option").removeClass("selected");
+          $(this).addClass("selected");
+        });
+      });
+    </script>
+  </body>
+</html>
