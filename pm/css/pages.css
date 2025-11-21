@@ -2409,7 +2409,7 @@
   display: flex;
   align-items: center;
   gap: 25px;
-  padding: 13px 0;
+  padding: 8px 0;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
@@ -2827,6 +2827,9 @@
 }
 
 .download-btn {
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
   display: flex;
   align-items: center;
   padding-left: 40px;
