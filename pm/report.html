@@ -45,40 +45,47 @@
     <div
       style="
         width: 100%;
-        background: linear-gradient(90deg, #155dfc 0%, #1447e6 100%);
+        background: #155dfc;
         padding: 10px 32px;
-        display: flex;
-        align-items: center;
         margin-bottom: 16px;
+        overflow: hidden;
       "
     >
-      <div
-        style="
-          width: 32px;
-          height: 32px;
-          background: #ffffff;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-right: 8px;
-        "
-      >
-        <img src="images/layout/logoo.png" alt="" />
-      </div>
-      <div>
-        <div
-          style="
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-          "
-        >
-          Feedback Report
-        </div>
-        <div style="color: #dbeafe; font-size: 10px; font-weight: 400">
-          HP_R1 008300
+      <div style="display: table; width: 100%">
+        <div style="display: table-cell; vertical-align: middle">
+          <div
+            style="
+              width: 32px;
+              height: 32px;
+              background: #ffffff;
+              border-radius: 50%;
+              display: inline-block;
+              margin-right: 8px;
+              text-align: center;
+              line-height: 32px;
+            "
+          >
+            <img
+              src="images/layout/logo.png"
+              alt=""
+              style="vertical-align: middle"
+            />
+          </div>
+          <div style="display: inline-block; vertical-align: middle">
+            <div
+              style="
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+              "
+            >
+              Feedback Report
+            </div>
+            <div style="color: #dbeafe; font-size: 10px; font-weight: 400">
+              HP_R1 008300
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -87,7 +94,7 @@
     <div style="max-width: 730px; margin: 0 auto; padding: 0 32px 60px">
       <!-- 의사결정 섹션 -->
       <div style="margin-bottom: 32px">
-        <div style="display: flex; align-items: center; margin-bottom: 9px">
+        <div style="margin-bottom: 9px">
           <h2
             style="
               font-size: 16px;
@@ -124,7 +131,7 @@
 
       <!-- Your Choice 섹션 -->
       <div style="margin-bottom: 32px">
-        <div style="display: flex; align-items: center; margin-bottom: 8px">
+        <div style="margin-bottom: 8px">
           <div
             style="
               width: 4px;
@@ -132,6 +139,8 @@
               background: #59c283;
               margin-right: 8px;
               border-radius: 2px;
+              display: inline-block;
+              vertical-align: middle;
             "
           ></div>
           <h2
@@ -141,6 +150,8 @@
               color: #00ae45;
               margin: 0;
               line-height: 28px;
+              display: inline-block;
+              vertical-align: middle;
             "
           >
             Your Choice
@@ -162,7 +173,7 @@
 
       <!-- Choice Feedback 섹션 -->
       <div style="margin-bottom: 32px">
-        <div style="display: flex; align-items: center; margin-bottom: 8px">
+        <div style="margin-bottom: 8px">
           <div
             style="
               width: 4px;
@@ -170,6 +181,8 @@
               background: #6b97e0;
               margin-right: 8px;
               border-radius: 2px;
+              display: inline-block;
+              vertical-align: middle;
             "
           ></div>
           <h2
@@ -179,6 +192,8 @@
               color: #074bbb;
               margin: 0;
               line-height: 28px;
+              display: inline-block;
+              vertical-align: middle;
             "
           >
             Choice Feedback
@@ -207,7 +222,7 @@
 
       <!-- Scores for Choice 섹션 -->
       <div style="margin-bottom: 32px">
-        <div style="display: flex; align-items: center; margin-bottom: 8px">
+        <div style="margin-bottom: 8px">
           <div
             style="
               width: 4px;
@@ -215,6 +230,8 @@
               background: #ac78d5;
               margin-right: 8px;
               border-radius: 2px;
+              display: inline-block;
+              vertical-align: middle;
             "
           ></div>
           <h2
@@ -224,6 +241,8 @@
               color: #9732dd;
               margin: 0;
               line-height: 28px;
+              display: inline-block;
+              vertical-align: middle;
             "
           >
             Scores for Choice
@@ -231,32 +250,30 @@
         </div>
         <div
           style="
-            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            background: #faf5ff;
             border-radius: 10px;
             padding: 16px 24px;
             border: 1px solid #e9d4ff;
           "
         >
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-            "
-          >
-            <span style="font-size: 16px; color: #501692; font-weight: 700"
-              >리더십 역량</span
-            >
-            <span style="font-size: 30px; color: #8200db; font-weight: 700"
-              >+85</span
-            >
+          <div style="display: table; width: 100%">
+            <div style="display: table-cell; width: 50%">
+              <span style="font-size: 16px; color: #501692; font-weight: 700"
+                >리더십 역량</span
+              >
+            </div>
+            <div style="display: table-cell; width: 50%; text-align: right">
+              <span style="font-size: 30px; color: #8200db; font-weight: 700"
+                >+85</span
+              >
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Other Choice(s) 섹션 -->
       <div style="margin-bottom: 32px">
-        <div style="display: flex; align-items: center; margin-bottom: 8px">
+        <div style="margin-bottom: 8px">
           <div
             style="
               width: 4px;
@@ -264,6 +281,8 @@
               background: #90a1b9;
               margin-right: 8px;
               border-radius: 2px;
+              display: inline-block;
+              vertical-align: middle;
             "
           ></div>
           <h2
@@ -273,6 +292,8 @@
               color: #56749d;
               margin: 0;
               line-height: 28px;
+              display: inline-block;
+              vertical-align: middle;
             "
           >
             Other Choice(s)
@@ -287,18 +308,17 @@
                 line-height: 21px;
                 margin-bottom: 8px;
                 padding-left: 12px;
-                position: relative;
               "
             >
               <span
                 style="
-                  position: absolute;
-                  left: 0;
-                  top: 8px;
+                  display: inline-block;
                   width: 4px;
                   height: 4px;
                   background: #90a1b9;
                   border-radius: 50%;
+                  margin-right: 8px;
+                  vertical-align: middle;
                 "
               ></span>
               팀원 중 가장 경험이 많은 사람에게 프로젝트 리더 역할을 맡기고,
@@ -311,18 +331,17 @@
                 line-height: 21px;
                 margin-bottom: 8px;
                 padding-left: 12px;
-                position: relative;
               "
             >
               <span
                 style="
-                  position: absolute;
-                  left: 0;
-                  top: 8px;
+                  display: inline-block;
                   width: 4px;
                   height: 4px;
                   background: #90a1b9;
                   border-radius: 50%;
+                  margin-right: 8px;
+                  vertical-align: middle;
                 "
               ></span>
               팀원 중 가장 경험이 많은 사람에게 프로젝트 리더 역할을 맡기고,
@@ -335,18 +354,17 @@
                 line-height: 21px;
                 margin-bottom: 8px;
                 padding-left: 12px;
-                position: relative;
               "
             >
               <span
                 style="
-                  position: absolute;
-                  left: 0;
-                  top: 8px;
+                  display: inline-block;
                   width: 4px;
                   height: 4px;
                   background: #90a1b9;
                   border-radius: 50%;
+                  margin-right: 8px;
+                  vertical-align: middle;
                 "
               ></span>
               팀원 중 가장 경험이 많은 사람에게 프로젝트 리더 역할을 맡기고,
@@ -359,18 +377,17 @@
                 line-height: 21px;
                 margin-bottom: 8px;
                 padding-left: 12px;
-                position: relative;
               "
             >
               <span
                 style="
-                  position: absolute;
-                  left: 0;
-                  top: 8px;
+                  display: inline-block;
                   width: 4px;
                   height: 4px;
                   background: #90a1b9;
                   border-radius: 50%;
+                  margin-right: 8px;
+                  vertical-align: middle;
                 "
               ></span>
               팀원 중 가장 경험이 많은 사람에게 프로젝트 리더 역할을 맡기고,
@@ -384,12 +401,10 @@
     <!-- 페이지 번호 -->
     <div
       style="
-        position: fixed;
-        bottom: 0;
-        right: 0;
         text-align: right;
         width: 100%;
         padding: 32px 32px 16px 0;
+        margin-top: 40px;
       "
     >
       <span style="font-size: 12px; color: #90a1b9">Page 14</span>
