@@ -31,18 +31,18 @@
   text-align: center;
   font-size: 78px;
   font-style: normal;
-  font-weight:500;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -4.68px;
   color: #fff;
-  background: linear-gradient(90deg, #FFF 0%, #FFFAB0 100%);
+  background: linear-gradient(90deg, #fff 0%, #fffab0 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .login-header p {
-  color: #FFCF86;
+  color: #ffcf86;
   text-align: center;
   font-family: "Pretendard", san-serif;
   font-size: 46px;
@@ -125,7 +125,7 @@
   display: block;
   font-size: 43px;
   font-weight: 800;
-  color: #F3750D;
+  color: #f3750d;
 }
 
 .start-form .btn-start-bg span {
@@ -134,7 +134,7 @@
   background-size: 120px;
 }
 .start-form .btn-start-simulation {
-  background: #F3750D;
+  background: #f3750d;
 }
 
 .start-form .btn-start-simulation span {
@@ -220,7 +220,7 @@
 /* 탭 컨텐츠 */
 .tab-content {
   display: none;
-  background: #FFFDF0;
+  background: #fffdf0;
   border-radius: 16px;
   padding: 24px 27px;
   height: 646px;
@@ -282,7 +282,7 @@
   left: 2px;
   width: 9px;
   height: 9px;
-  background: #F3750D;
+  background: #f3750d;
   border-radius: 2px;
 }
 
@@ -1105,7 +1105,7 @@
 }
 
 .section-title {
-  color: #BC5500;
+  color: #bc5500;
   font-family: "NanumSquare Neo";
   font-size: 25px;
   font-style: normal;
@@ -1227,7 +1227,7 @@
 
 .simulation-top {
   height: 62px;
-  background-color: #8B6648;
+  background-color: #8b6648;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1430,7 +1430,7 @@
 }
 
 .dialogue-item.right .dialogue-bubble {
-  background: #A37B25;
+  background: #a37b25;
   color: #fff;
   padding-left: 40px;
   padding-right: 58px;
@@ -1460,7 +1460,7 @@
 ================================ */
 .chat-container {
   padding: 24px 50px;
-  background: #FFFDF0;
+  background: #fffdf0;
 }
 
 .chat-container::before {
@@ -1470,7 +1470,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #FFFDF0;
+  background: #fffdf0;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -1631,7 +1631,7 @@
 }
 
 .right-bubble {
-  background: #A37B25;
+  background: #a37b25;
   color: #fff;
   order: 3;
 }
@@ -1643,7 +1643,7 @@
   right: -18px;
   width: 18px;
   height: 18px;
-  background: #A37B25;
+  background: #a37b25;
   border-radius: 50%;
 }
 
@@ -1718,52 +1718,52 @@
    5. 전화 화면
   ======================================== */
 
-  .phone-container {
-    display: flex;
-    background: url("../images/layout/phone_bg.jpg") no-repeat center;
-    background-size: cover;
-    padding-top: 64px;
-    justify-content: center;
-  }
-  .phone-device {
-    position: relative;
-    width: 332px;
-    height: 457px;
-    margin-top: -30px;
-  }
-  
-  .phone-device .member-info {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    object-fit: cover;
-    transform: rotate(-6deg);
-  }
-  
-  .phone-device .member-image {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .phone-device .member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .phone-device .member-name {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 38.4px;
-    letter-spacing: -0.96px;
-    color: #fff;
-    margin-top: 10px;
-  }
-  
-  /* 전화 내용 텍스트 */
+.phone-container {
+  display: flex;
+  background: url("../images/layout/phone_bg.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 64px;
+  justify-content: center;
+}
+.phone-device {
+  position: relative;
+  width: 332px;
+  height: 457px;
+  margin-top: -30px;
+}
+
+.phone-device .member-info {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  object-fit: cover;
+  transform: rotate(-6deg);
+}
+
+.phone-device .member-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.phone-device .member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-device .member-name {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38.4px;
+  letter-spacing: -0.96px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* 전화 내용 텍스트 */
 
 .content-text {
   font-size: 24px;
@@ -1791,7 +1791,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px 44px 31px 44px;
-  background: #FFFDF0;
+  background: #fffdf0;
 }
 
 .mail-container * {
@@ -1809,7 +1809,7 @@
 /* 메일 헤더 */
 .mail-header,
 .board-header {
-  background: #A37B25;
+  background: #a37b25;
   padding: 12px 22px;
   display: flex;
   justify-content: space-between;
@@ -1916,7 +1916,7 @@
 
 .attachment-link {
   flex: 1;
-  color: #A37B25;
+  color: #a37b25;
   text-decoration: none;
   font-size: 24px;
   font-weight: 400;
@@ -2009,7 +2009,7 @@
 
 .board-sidebar {
   width: 250px;
-  background: #F3F3F5;
+  background: #f3f3f5;
 }
 
 .board-sidebar ul {
@@ -2110,7 +2110,7 @@
 }
 
 .board .simulation-card {
-  background: #FFFDF0;
+  background: #fffdf0;
 }
 
 /* ========================================
@@ -2165,7 +2165,7 @@
   font-weight: 400;
 }
 
-.answer-textarea  textarea:focus {
+.answer-textarea textarea:focus {
   outline: none;
 }
 /* 답변 옵션 */
@@ -2247,7 +2247,7 @@
   margin: 0;
 }
 
-.option-title~.option-desc {
+.option-title ~ .option-desc {
   margin-top: 10px;
 }
 
@@ -2370,7 +2370,7 @@
 
 .score-card .simulation-top,
 .feedback-card .simulation-top {
-  background: var(--HP-GRA, linear-gradient(90deg, #FFF 0%, #FFFAB0 100%));
+  background: var(--HP-GRA, linear-gradient(90deg, #fff 0%, #fffab0 100%));
   border-bottom: 1px solid var(--color-gray-50, #f1f1f1);
 }
 
@@ -2564,7 +2564,7 @@
 
 .feedback-header .question-number {
   background: #c5e1ff;
-  color: #F3750D;
+  color: #f3750d;
   padding: 6px 14px;
   font-size: 20px;
   font-weight: 800;
@@ -2852,6 +2852,7 @@
   padding: 12px 40px;
   background: #eaecee;
   margin-top: 30px;
+  z-index: 20;
 }
 
 .feedback-container {
@@ -3518,19 +3519,19 @@
     width: 100px;
     text-align: center;
   }
-  
+
   .phone-device .member-image {
     width: 50px;
     height: 50px;
     margin: 0 auto;
   }
-  
+
   .phone-device .member-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .phone-device .member-name {
     font-size: 15px;
     line-height: 20.4px;
@@ -3942,7 +3943,6 @@
   .answer-textarea textarea {
     height: 250px;
   }
-
 
   .answer-options {
     gap: 14px;
@@ -4767,9 +4767,9 @@
   height: 54px;
   padding: 0 20px;
   font-weight: 700;
-  border: 1px solid #784E00;
+  border: 1px solid #784e00;
   border-radius: 14px;
-  color: #784E00;
+  color: #784e00;
   background: #fff;
   margin: 0 auto 15px;
   position: relative;
@@ -4782,16 +4782,16 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: #784E00;
-  background: #D7B898;
-  border: 1px solid #C29C6F;
+  color: #784e00;
+  background: #d7b898;
+  border: 1px solid #c29c6f;
   border-radius: 14px;
   padding: 26px 24px 13px 24px;
 }
 
 .client-box {
   position: relative;
-  background: #98825D;
+  background: #98825d;
   height: 54px;
   border-radius: 8px;
 }
@@ -4806,10 +4806,9 @@
   border-radius: 8px;
   padding: 8px;
   width: 115px;
-  border: 1px solid #E5E5E5;
-  color: #7B7B7B;
+  border: 1px solid #e5e5e5;
+  color: #7b7b7b;
   font-size: 16px;
-
 }
 .client-box {
   display: flex;
@@ -4818,7 +4817,7 @@
   flex-wrap: wrap;
 }
 
-.client-box>span {
+.client-box > span {
   font-size: 16px;
   color: #fff;
   font-weight: 300;
@@ -4848,14 +4847,14 @@
 }
 
 .node {
-  padding:0 5px;
+  padding: 0 5px;
   width: 118px;
   height: 54px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #9D5C01;
+  background-color: #9d5c01;
   border-radius: 14px;
   color: #fff;
   position: relative;
@@ -4865,7 +4864,7 @@
 .node span {
   width: 100%;
   display: block;
-  color: #FFDAB3;
+  color: #ffdab3;
   font-size: 14px;
   margin-top: -16px;
 }
@@ -4885,7 +4884,7 @@
 
 .node .team {
   width: 100%;
-  color: #B3D5FF;
+  color: #b3d5ff;
   display: block;
   font-size: 14px;
   font-weight: 300;
@@ -4915,7 +4914,6 @@
 .branch.center .node {
   margin-bottom: 15px;
 }
-
 
 .branch.left {
   position: absolute;
@@ -4963,24 +4961,24 @@
 
 /* line */
 .org-inner::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
   height: 440px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
 .org-inner::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 96px;
   left: 50px;
   width: 270px;
   height: 1px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
 .node {
@@ -4989,93 +4987,93 @@
 }
 
 .branch.left::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
   height: 300px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
 .branch.left::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 27px;
   left: -35px;
   width: 1px;
   height: 276px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
 .branch.left .node::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 27px;
   left: -35px;
   width: 35px;
   height: 1px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
 .branch .inner::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 42px;
   left: 0;
   width: 181px;
   height: 1px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
-.branch.right .subrow {position: relative;}
+.branch.right .subrow {
+  position: relative;
+}
 
 .branch.right .subrow::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -22px;
   width: 592px;
   left: 59px;
   height: 1px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
 .branch.right .subrow .node::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -22px;
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
   height: 22px;
-  background: #CF8749;
+  background: #cf8749;
 }
 
-
 .node.red {
-  background-color: #9D4701;
+  background-color: #9d4701;
 }
 
 .node.white {
   background-color: #fff;
   color: #313131;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
 }
 
-
-.node.white  span {
+.node.white span {
   color: #313131;
 }
 
 .node.you {
-  background-color: #F3750D;
+  background-color: #f3750d;
   color: #fff;
-  border: 1px solid #F3750D;
+  border: 1px solid #f3750d;
 }
 
 .node.manager span {
-  color :#874A00;
+  color: #874a00;
 }
 
 .branch.right .subrow .node span {
@@ -5087,7 +5085,7 @@
 
 .node.ceo {
   position: relative;
-  background: #784E00;
+  background: #784e00;
   max-width: 710px;
 }
 
@@ -5112,7 +5110,7 @@
   line-height: 24px;
 }
 
-@media screen and (max-width: 1024px) {  
+@media screen and (max-width: 1024px) {
   .discussion-box {
     padding: 32px 0;
   }
@@ -5135,7 +5133,6 @@
   .discussion-box img {
     width: 150px;
   }
-
 
   .discussion-box p {
     font-size: 18px;
