@@ -476,6 +476,7 @@ body.hp-template {
   flex: 1;
   gap: 30px;
   justify-content: center;
+  align-items: center;
 }
 
 .header-nav a {
@@ -516,6 +517,24 @@ body.hp-template {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header-nav .logout-btn {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0 10px;
+  flex-shrink: 0;
+  position: absolute;
+  right: 32px;
+  width: 24px !important;
+}
+
+.header-nav .logout-btn img {
+  display: block;
 }
 
 .background-header {
@@ -734,7 +753,6 @@ body.hp-template {
   border-radius: 50px;
 }
 
-
 .processbar::before {
   content: "";
   position: absolute;
@@ -800,7 +818,7 @@ body.hp-template {
 @media (max-width: 1024px) {
   ::-webkit-scrollbar {
     width: px;
-  } 
+  }
   .container {
     padding: 15px;
   }
@@ -891,6 +909,17 @@ body.hp-template {
   .simulation-header .icon {
     width: 24px;
     height: 24px;
+  }
+
+  .simulation-header .header-nav .logout-btn {
+    width: 27px !important;
+    min-width: inherit !important;
+    right: 15px;
+  }
+
+  .simulation-header .header-nav .logout-btn img {
+    width: 27px;
+    height: 27px;
   }
 
   /* 배경정보 헤더 */
