@@ -471,6 +471,7 @@
 
               <!-- 세부 정보 -->
               <div class="detail-section">
+                <!-- 기본 상태 (문항 미선택) -->
                 <div class="empty-state">
                   <svg
                     class="empty-icon"
@@ -495,6 +496,137 @@
                   </svg>
                   <div class="empty-text">
                     문항을 선택하여 상세 정보를 확인하세요
+                  </div>
+                </div>
+
+                <!-- 케이스 1: 완료된 문항 선택 시 -->
+
+                <div class="question-detail">
+                  <div class="question-header">
+                    <div class="question-badge-container">
+                      <div class="question-badge">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M6 1L7.5 4.5L11 5.5L8.5 8.5L9 12L6 10.5L3 12L3.5 8.5L1 5.5L4.5 4.5L6 1Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <span>문제 풀이</span>
+                      </div>
+                      <div class="status-badge completed">완료</div>
+                    </div>
+                    <div class="question-title-container">
+                      <div class="question-code-badge">R1-Q1</div>
+                      <h3 class="question-title">문제 1-1: 문제 제목 1</h3>
+                    </div>
+                    <p class="question-description">
+                      라운드 1의 1번째 문제입니다. 주어진 상황을 분석하고 최적의
+                      답을 선택하세요.
+                    </p>
+                  </div>
+                  <div class="answer-section">
+                    <div class="answer-label">선택한 답변</div>
+                    <div class="answer-value">선택한 답변 1: 옵션 B</div>
+                  </div>
+                  <button class="reset-btn" data-popopen="resetPopup">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M4 4L12 12M12 4L4 12"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    R1-Q1 초기화
+                  </button>
+                </div>
+
+                <!-- 케이스 2: 진행중인 문항 선택 시 -->
+
+                <div class="question-detail">
+                  <div class="question-header">
+                    <div class="question-badge-container">
+                      <div class="question-badge">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M6 1L7.5 4.5L11 5.5L8.5 8.5L9 12L6 10.5L3 12L3.5 8.5L1 5.5L4.5 4.5L6 1Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <span>문제 풀이</span>
+                      </div>
+                      <div class="status-badge in-progress">진행중</div>
+                    </div>
+                    <div class="question-title-container">
+                      <div class="question-code-badge">R3-Q21</div>
+                      <h3 class="question-title">문제 3-21: 문제 제목 21</h3>
+                    </div>
+                    <p class="question-description">
+                      라운드 3의 21번째 문제입니다. 주어진 상황을 분석하고
+                      최적의 답을 선택하세요.
+                    </p>
+                  </div>
+                  <div class="answer-section">
+                    <div class="answer-label">임시 저장된 답변</div>
+                    <div class="answer-value">임시 저장된 답변 21: 옵션 B</div>
+                  </div>
+                  <button class="reset-btn" data-popopen="resetPopup">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M4 4L12 12M12 4L4 12"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    R3-Q21 초기화
+                  </button>
+                </div>
+
+                <!-- 케이스 3: 대기중인 문항 선택 시 -->
+
+                <div class="question-detail">
+                  <div class="question-header">
+                    <div class="question-badge-container">
+                      <div class="question-badge">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M6 1L7.5 4.5L11 5.5L8.5 8.5L9 12L6 10.5L3 12L3.5 8.5L1 5.5L4.5 4.5L6 1Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <span>문제 풀이</span>
+                      </div>
+                      <div class="status-badge waiting">대기</div>
+                    </div>
+                    <div class="question-title-container">
+                      <div class="question-code-badge">R4-Q1</div>
+                      <h3 class="question-title">문제 4-1: 문제 제목 1</h3>
+                    </div>
+                    <p class="question-description">
+                      라운드 4의 1번째 문제입니다. 주어진 상황을 분석하고 최적의
+                      답을 선택하세요.
+                    </p>
+                  </div>
+                  <div class="answer-section waiting">
+                    <p>아직 시작하지 않은 단계입니다.</p>
                   </div>
                 </div>
               </div>
@@ -1027,6 +1159,42 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 초기화 팝업 -->
+    <div class="popup-overlay" id="resetPopup">
+      <div class="popup reset-popup">
+        <div class="popup-header">
+          <div class="popup-title-container">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 2L3 18H17L10 2Z" fill="#1C398E" />
+              <path
+                d="M10 8V12M10 14H10.01"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <h3 class="popup-title">단계 초기화 확인</h3>
+          </div>
+        </div>
+        <div class="popup-body">
+          <p class="reset-message">
+            <span class="highlight">팀 A</span>의
+            <span class="highlight-code">R1-Q1</span>을(를) 초기화하시겠습니까?
+          </p>
+          <p class="reset-warning">
+            이 작업은 해당 단계의 모든 진행 내용과 선택한 답변을 삭제하며,
+            <span class="highlight">되돌릴 수 없습니다.</span>
+          </p>
+        </div>
+        <div class="popup-footer">
+          <button class="popup-btn cancel-btn" data-popclose="resetPopup">
+            취소
+          </button>
+          <button class="popup-btn confirm-btn">초기화</button>
         </div>
       </div>
     </div>

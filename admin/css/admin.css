@@ -558,6 +558,7 @@ body {
 .progress-content {
   display: none;
   flex-direction: column;
+  overflow-y: auto;
   height: 100%;
 }
 
@@ -676,9 +677,15 @@ body {
   padding: 24px;
   flex: 1;
   overflow-y: auto;
+}
+
+.detail-section .empty-state {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  min-height: 400px;
 }
 
 .detail-section .empty-icon {
@@ -871,4 +878,302 @@ body {
   top: 8px;
   width: 35px;
   text-align: right;
+}
+
+/* 문항 상세 정보 */
+.question-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.question-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 0.67px solid #e5e7eb;
+  padding-bottom: 16.67px;
+}
+
+.question-badge-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 22px;
+  position: relative;
+}
+
+.question-badge {
+  background: #155dfc;
+  border-radius: 8px;
+  padding: 2.67px 8.67px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  width: 86px;
+}
+
+.question-badge svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.question-badge span {
+  font-size: 12px;
+  color: white;
+  line-height: 16px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.question-header .status-badge {
+  position: absolute;
+  left: 93.55px;
+  top: 0;
+  height: 21.33px;
+  border-radius: 8px;
+  padding: 2.67px 8.67px;
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.question-header .status-badge.completed {
+  background: #00bc7d;
+  width: 41.33px;
+}
+
+.question-header .status-badge.in-progress {
+  background: #fe9a00;
+  width: 53.33px;
+}
+
+.question-header .status-badge.waiting {
+  background: #6a7282;
+  width: 41.33px;
+}
+
+.question-title-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.question-code-badge {
+  background: #155dfc;
+  border-radius: 10px;
+  padding: 8px;
+  height: 56px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: white;
+  line-height: 16px;
+}
+
+.question-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #101828;
+  margin: 0;
+  line-height: 24px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+  flex: 1;
+}
+
+.question-description {
+  font-size: 14px;
+  color: #4a5565;
+  margin: 0;
+  line-height: 20px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.answer-section {
+  background: #f3f4f6;
+  border: 0.67px solid #d1d5dc;
+  border-radius: 10px;
+  padding: 16.67px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.answer-section.waiting {
+  padding: 16.67px;
+}
+
+.answer-section.waiting p {
+  font-size: 14px;
+  color: #4a5565;
+  margin: 0;
+  line-height: 20px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.answer-label {
+  font-size: 12px;
+  color: #4a5565;
+  line-height: 16px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.answer-value {
+  font-size: 16px;
+  color: #101828;
+  line-height: 24px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.reset-btn {
+  background: #e7000b;
+  border: none;
+  border-radius: 8px;
+  height: 36px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.reset-btn:hover {
+  background: #c5000a;
+}
+
+.reset-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* 초기화 팝업 */
+.reset-popup {
+  width: 512px;
+}
+
+.reset-popup .popup-header {
+  padding: 25px;
+  border-bottom: none;
+}
+
+.popup-title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-title-container svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.reset-popup .popup-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c398e;
+  line-height: 28px;
+}
+
+.reset-popup .popup-body {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.reset-message {
+  font-size: 16px;
+  color: #717182;
+  line-height: 24px;
+  margin: 0;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.reset-message .highlight {
+  color: #e7000b;
+}
+
+.reset-message .highlight-code {
+  color: #e7000b;
+  font-family: Consolas, monospace;
+}
+
+.reset-warning {
+  font-size: 16px;
+  color: #717182;
+  line-height: 24px;
+  margin: 0;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.reset-warning .highlight {
+  color: #e7000b;
+}
+
+.popup-footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 25px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.popup-btn {
+  height: 36px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
+}
+
+.popup-btn.cancel-btn {
+  background: #f3f4f6;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #0a0a0a;
+  width: 62px;
+}
+
+.popup-btn.cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+.popup-btn.confirm-btn {
+  background: #e7000b;
+  color: white;
+  width: 74px;
+}
+
+.popup-btn.confirm-btn:hover {
+  background: #c5000a;
 }
