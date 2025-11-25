@@ -293,7 +293,7 @@ body {
 
 .team-details {
   display: none;
-  padding: 8px 16px 4px;
+  padding: 8px 16px 16px 16px;
 }
 
 .team-item.active .team-details {
@@ -423,22 +423,23 @@ body {
 
 .round-item.completed {
   border: 1px solid #a4f4cf;
-  background: transparent;
+  background: linear-gradient(135deg, #d0fae5 0%, #dcfce7 100%);
 }
 
 .round-item.in-progress {
   border: 1px solid #fee685;
-  background: transparent;
+  background: linear-gradient(135deg, #fef3c6 0%, #fef9c2 100%);
 }
 
 .round-item.active {
+  display: flex !important;
   background: #00bc7d;
   border: 2px solid #00774f;
 }
 
 .round-item.waiting {
   border: 1px solid #d1d5dc;
-  background: transparent;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
 }
 
 .round-label {
@@ -534,6 +535,7 @@ body {
 
 /* 빈 상태 */
 .empty-state {
+  gap: 16px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -580,7 +582,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  height: 86px;
   box-sizing: border-box;
 }
 
@@ -608,12 +609,11 @@ body {
 }
 
 .round-badge {
-  background: #00bc7d;
+  background: linear-gradient(135deg, #4f39f6 0%, #155dfc 100%);
   border: 2px solid #00774f;
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 14px;
-  font-family: Consolas, monospace;
   color: #fff;
   height: 28px;
   display: inline-flex;
@@ -633,6 +633,7 @@ body {
 .section-title {
   font-size: 14px;
   color: #4a5565;
+  font-weight: 500;
   margin: 0 0 12px 0;
   line-height: 20px;
 }
@@ -648,12 +649,13 @@ body {
 .question-btn {
   margin: 0;
   padding: 0;
-  border: 0.67px solid #d1d5dc;
-  background: #f3f4f6;
   border-radius: 10px;
+  background: #f0fdf4;
+  border: 0.67px solid #a4f4cf;
+  color: #007a55;
   font-size: 12px;
   font-family: Consolas, monospace;
-  color: #364153;
+  color: #007a55;
   height: 48px;
   display: flex;
   align-items: center;
@@ -663,13 +665,10 @@ body {
 }
 
 .question-btn.completed {
-  background: #f0fdf4;
-  border: 0.67px solid #a4f4cf;
-  color: #007a55;
-}
-
-.question-btn:hover {
-  transform: translateY(-1px);
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #364153;
+  pointer-events: none;
 }
 
 /* 세부 정보 섹션 */
@@ -685,7 +684,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  min-height: 400px;
+  min-height: 200px;
 }
 
 .detail-section .empty-icon {
@@ -727,8 +726,7 @@ body {
 }
 
 .popup-header {
-  padding: 24px 48px 24px 24px;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 24px 48px 31px 24px;
   position: relative;
 }
 
@@ -776,6 +774,7 @@ body {
 
 .popup-body {
   padding: 24px;
+  padding-top: 0;
   max-height: calc(90vh - 96px);
   overflow-y: auto;
 }
@@ -899,20 +898,41 @@ body {
 .question-badge-container {
   display: flex;
   align-items: center;
+  margin-bottom: 6px;
   gap: 8px;
   height: 22px;
   position: relative;
+  width: auto;
 }
 
 .question-badge {
   background: #155dfc;
   border-radius: 8px;
-  padding: 2.67px 8.67px;
+  padding: 2px 9px;
   display: flex;
   align-items: center;
   gap: 4px;
   height: 22px;
-  width: 86px;
+  width: auto;
+}
+
+.question-badge.type_question span {
+  display: block;
+  padding-left: 17px;
+  background: #155dfc url("../images/badge_quesetion.svg") no-repeat left 0 top
+    50%;
+  background-size: 12px;
+}
+
+.question-badge.type_scenario {
+  background-color: #000;
+}
+
+.question-badge.type_scenario span {
+  display: block;
+  padding-left: 17px;
+  background: #000 url("../images/badge_scenario.svg") no-repeat left 0 top 50%;
+  background-size: 12px;
 }
 
 .question-badge svg {
@@ -930,14 +950,12 @@ body {
 }
 
 .question-header .status-badge {
-  position: absolute;
-  left: 93.55px;
-  top: 0;
-  height: 21.33px;
+  height: 22px;
   border-radius: 8px;
-  padding: 2.67px 8.67px;
+  padding: 2px 9px;
   font-size: 12px;
   line-height: 16px;
+  font-weight: 400;
   color: white;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
@@ -945,26 +963,25 @@ body {
 
 .question-header .status-badge.completed {
   background: #00bc7d;
-  width: 41.33px;
 }
 
 .question-header .status-badge.in-progress {
   background: #fe9a00;
-  width: 53.33px;
 }
 
 .question-header .status-badge.waiting {
   background: #6a7282;
-  width: 41.33px;
 }
 
 .question-title-container {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  position: relative;
+  padding-left: 80px;
 }
 
 .question-code-badge {
+  position: absolute;
+  left: 0;
+  top: 0;
   background: #155dfc;
   border-radius: 10px;
   padding: 8px;
@@ -980,6 +997,10 @@ body {
   line-height: 16px;
 }
 
+.question-code-badge.type_scenario {
+  background-color: #99a1af;
+}
+
 .question-title {
   font-size: 16px;
   font-weight: 400;
@@ -993,6 +1014,7 @@ body {
 
 .question-description {
   font-size: 14px;
+  margin-top: 8px;
   color: #4a5565;
   margin: 0;
   line-height: 20px;
@@ -1141,7 +1163,7 @@ body {
   gap: 8px;
   justify-content: flex-end;
   padding: 25px;
-  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
 }
 
 .popup-btn {
