@@ -1,0 +1,74 @@
+/* 폰트 설정 */
+/* @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css"); */
+
+/* 공통 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
+  background: linear-gradient(
+    150.642deg,
+    rgb(239, 246, 255) 0%,
+    rgb(238, 242, 255) 50%,
+    rgb(219, 234, 254) 100%
+  );
+  color: #000;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 유틸리티 클래스 */
+.hidden {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.active {
+  display: block !important;
+}

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자 페이지 - PSI HP 시뮬레이션</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header class="admin-header">
+      <div class="admin-header-content">
+        <!-- 상단 -->
+        <div class="header-top">
+          <div class="hp-badge">HP</div>
+          <h1 class="header-title">High Performance Team 리더십 시뮬레이션</h1>
+          <span class="status-badge">진행중</span>
+        </div>
+
+        <!-- 통계 -->
+        <div class="header-stats">
+          <!-- 기간 -->
+          <div class="stat-item">
+            <div style="display: flex; align-items: center; gap: 4px">
+              <svg class="stat-icon" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M6 2V5M14 2V5M3 8.5H17M4.5 4H15.5C16.3284 4 17 4.67157 17 5.5V16.5C17 17.3284 16.3284 18 15.5 18H4.5C3.67157 18 3 17.3284 3 16.5V5.5C3 4.67157 3.67157 4 4.5 4Z"
+                  stroke="#4A5565"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span class="stat-label">기간</span>
+            </div>
+            <div class="date-info">
+              <div class="date-value">2025년 10월 1일</div>
+              <div class="date-value">~ 2025년 10월 10일</div>
+            </div>
+          </div>
+
+          <!-- 실행라운드 -->
+          <div class="stat-item">
+            <div style="display: flex; align-items: center; gap: 4px">
+              <svg class="stat-icon" viewBox="0 0 20 20" fill="none">
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="7"
+                  stroke="#4A5565"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M10 6V10L13 13"
+                  stroke="#4A5565"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span class="stat-label">실행라운드</span>
+            </div>
+            <div class="round-buttons">
+              <div class="round-btn" data-popopen="roundPopup">1</div>
+              <div class="round-btn" data-popopen="roundPopup">2</div>
+              <div class="round-btn" data-popopen="roundPopup">3</div>
+              <div class="round-btn" data-popopen="roundPopup">4</div>
+            </div>
+          </div>
+
+          <!-- 전체 참여자 -->
+          <div class="stat-item">
+            <div style="display: flex; align-items: center; gap: 4px">
+              <svg class="stat-icon" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M13 16V14.5C13 13.1193 11.8807 12 10.5 12H5.5C4.11929 12 3 13.1193 3 14.5V16M17 16V14.5C17 13.1193 15.8807 12 14.5 12H14M11 5.5C11 6.88071 9.88071 8 8.5 8C7.11929 8 6 6.88071 6 5.5C6 4.11929 7.11929 3 8.5 3C9.88071 3 11 4.11929 11 5.5ZM15 5.5C15 6.88071 13.8807 8 12.5 8C12.2239 8 12 7.77614 12 7.5C12 7.22386 12.2239 7 12.5 7C13.3284 7 14 6.32843 14 5.5C14 4.67157 13.3284 4 12.5 4C12.2239 4 12 3.77614 12 3.5C12 3.22386 12.2239 3 12.5 3C13.8807 3 15 4.11929 15 5.5Z"
+                  stroke="#4A5565"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span class="stat-label">전체 참여자</span>
+            </div>
+            <div class="stat-value">24명</div>
+          </div>
+
+          <!-- 차수 평균 -->
+          <div class="stat-item highlight clickable" data-popopen="avgPopup">
+            <div style="display: flex; align-items: center; gap: 4px">
+              <svg class="stat-icon" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M3 17L7 12L10 15L17 7M17 7V11M17 7H13"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="stat-label">차수 평균</span>
+            </div>
+            <div class="stat-value">1081점</div>
+          </div>
+
+          <!-- 전체 차수 평균 -->
+          <div
+            class="stat-item highlight clickable"
+            data-popopen="totalAvgPopup"
+          >
+            <div style="display: flex; align-items: center; gap: 4px">
+              <svg class="stat-icon" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M3 17L7 12L10 15L17 7M17 7V11M17 7H13"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="stat-label">전체 차수 평균</span>
+            </div>
+            <div class="stat-value">1081점</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 컨테이너 -->
+    <div class="admin-container">
+      <div class="admin-content">
+        <!-- 팀 목록 -->
+        <aside class="team-list-panel">
+          <div class="panel-header">
+            <h2 class="panel-title">팀 목록</h2>
+          </div>
+          <div class="panel-body">
+            <!-- 팀 A -->
+            <div class="team-item" data-team="A">
+              <div class="team-header">
+                <div class="team-info">
+                  <div class="team-number">1</div>
+                  <div class="team-name">팀 A</div>
+                </div>
+                <div class="team-score">
+                  <svg class="team-score-icon" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M3 13L6 9L8.5 11.5L13 6M13 6V9M13 6H10"
+                      stroke="#155dfc"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="team-score-value">396점</span>
+                </div>
+                <svg class="team-toggle" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#717182"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="team-details">
+                <!-- 취득점수 -->
+                <div class="score-card">
+                  <div class="card-title">
+                    <svg class="card-icon" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M3 13L6 9L8.5 11.5L13 6M13 6V9M13 6H10"
+                        stroke="#4A5565"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    취득점수
+                  </div>
+                  <div class="score-list">
+                    <div class="score-item">
+                      <div class="score-label">목표설정</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>60</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 20%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                    <div class="score-item">
+                      <div class="score-label">업무분장</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>40</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 30%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                    <div class="score-item">
+                      <div class="score-label">동기부여</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>50</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 24%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                    <div class="score-item">
+                      <div class="score-label">과정관리</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>100</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 12%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                    <div class="score-item">
+                      <div class="score-label">평가보상</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>80</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 15%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                    <div class="score-item">
+                      <div class="score-label">자원확보</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>50</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 24%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                    <div class="score-item">
+                      <div class="score-label">코칭/피드백</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>80</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 15%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                    <div class="score-item">
+                      <div class="score-label">변화관리</div>
+                      <div class="score-bar-container">
+                        <div class="score-range">
+                          <span>0</span>
+                          <span>50</span>
+                        </div>
+                        <div class="score-bar-bg"></div>
+                        <div class="score-bar" style="width: 24%"></div>
+                        <span class="score-value">12</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 진행라운드 -->
+                <div class="rounds-card">
+                  <div class="card-title">진행라운드 (총 4개)</div>
+                  <div class="round-grid">
+                    <div class="round-item active" data-round="1">
+                      <div class="round-label">R1</div>
+                      <div class="round-status">완료</div>
+                    </div>
+                    <div class="round-item completed" data-round="2">
+                      <div class="round-label">R2</div>
+                      <div class="round-status">완료</div>
+                    </div>
+                    <div class="round-item in-progress" data-round="3">
+                      <div class="round-label">R3</div>
+                      <div class="round-status">진행중</div>
+                    </div>
+                    <div class="round-item waiting" data-round="4">
+                      <div class="round-label">R4</div>
+                      <div class="round-status">대기</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 레포트 -->
+                <div class="report-card">
+                  <button class="report-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M8 2V8M8 8V14M8 8H14M8 8H2"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    팀 A 레포트 확인
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 팀 B -->
+            <div class="team-item" data-team="B">
+              <div class="team-header">
+                <div class="team-info">
+                  <div class="team-number">2</div>
+                  <div class="team-name">팀 B</div>
+                </div>
+                <div class="team-score">
+                  <svg class="team-score-icon" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M3 13L6 9L8.5 11.5L13 6M13 6V9M13 6H10"
+                      stroke="#155dfc"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="team-score-value">396점</span>
+                </div>
+                <svg class="team-toggle" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#717182"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- 팀 C -->
+            <div class="team-item" data-team="C">
+              <div class="team-header">
+                <div class="team-info">
+                  <div class="team-number">3</div>
+                  <div class="team-name">팀 C</div>
+                </div>
+                <div class="team-score">
+                  <svg class="team-score-icon" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M3 13L6 9L8.5 11.5L13 6M13 6V9M13 6H10"
+                      stroke="#155dfc"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="team-score-value">396점</span>
+                </div>
+                <svg class="team-toggle" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#717182"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- 참여자 진행이력 -->
+        <main class="progress-panel">
+          <div class="panel-header">
+            <h2 class="panel-title">참여자 진행이력</h2>
+          </div>
+          <div class="panel-body">
+            <!-- 기본 상태 (내용 없을 때) -->
+            <div class="empty-state" id="emptyState">
+              <svg
+                class="empty-icon"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="40"
+                  cy="40"
+                  r="35"
+                  stroke="#E5E7EB"
+                  stroke-width="3"
+                />
+                <path
+                  d="M30 40L37 47L50 33"
+                  stroke="#99A1AF"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div class="empty-text">
+                팀과 라운드를 선택하여<br />세부 단계별 진행이력을 확인하세요
+              </div>
+            </div>
+
+            <!-- 진행이력 내용 -->
+            <div class="progress-content" id="progressContent">
+              <!-- 선택된 팀/라운드 정보 -->
+              <div class="selected-info">
+                <div class="info-box">
+                  <div class="info-item">
+                    <div class="info-label">팀</div>
+                    <div class="info-value" id="selectedTeam">팀 A</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">선택 라운드</div>
+                    <div class="info-value">
+                      <span
+                        class="round-badge"
+                        style="background: #00bc7d; border: 2px solid #00774f"
+                        >R1</span
+                      >
+                      <span id="selectedRound">총 100문제</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 문항 목록 -->
+              <div class="questions-section">
+                <h3 class="section-title">문항 목록 (총 100개)</h3>
+                <div class="questions-grid">
+                  <button class="question-btn">R1-L1</button>
+                  <button class="question-btn">R1-L2</button>
+                  <button class="question-btn completed">R1-Q1</button>
+                  <button class="question-btn completed">R1-Q2</button>
+                  <button class="question-btn completed">R1-Q3</button>
+                  <button class="question-btn completed">R1-Q4</button>
+                  <button class="question-btn completed">R1-Q5</button>
+                  <button class="question-btn completed">R1-Q6</button>
+                  <button class="question-btn completed">R1-Q7</button>
+                  <button class="question-btn completed">R1-Q8</button>
+                  <button class="question-btn completed">R1-Q9</button>
+                  <button class="question-btn completed">R1-Q10</button>
+                  <button class="question-btn completed">R1-Q11</button>
+                  <button class="question-btn completed">R1-Q12</button>
+                  <button class="question-btn completed">R1-Q13</button>
+                  <button class="question-btn completed">R1-Q14</button>
+                  <button class="question-btn completed">R1-Q15</button>
+                  <button class="question-btn completed">R1-Q16</button>
+                  <button class="question-btn completed">R1-Q17</button>
+                  <button class="question-btn completed">R1-Q18</button>
+                  <button class="question-btn completed">R1-Q19</button>
+                  <button class="question-btn completed">R1-Q20</button>
+                  <button class="question-btn completed">R1-Q21</button>
+                  <button class="question-btn completed">R1-Q22</button>
+                </div>
+              </div>
+
+              <!-- 세부 정보 -->
+              <div class="detail-section">
+                <div class="empty-state">
+                  <svg
+                    class="empty-icon"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="28"
+                      stroke="#E5E7EB"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M24 32L30 38L40 26"
+                      stroke="#99A1AF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div class="empty-text">
+                    문항을 선택하여 상세 정보를 확인하세요
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- 실행라운드 팝업 -->
+    <div class="popup-overlay" id="roundPopup">
+      <div class="popup">
+        <div class="popup-header">
+          <h3 class="popup-title">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle
+                cx="10"
+                cy="10"
+                r="7"
+                stroke="#1C398E"
+                stroke-width="1.5"
+              />
+            </svg>
+            ROUND 1 취득 점수 평균
+          </h3>
+          <p class="popup-subtitle">ROUND 1의 취득 점수 평균입니다.</p>
+          <button class="popup-close" data-popclose="roundPopup">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="#1C398E"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="popup-body">
+          <div class="popup-score-list">
+            <div class="popup-score-item">
+              <div class="popup-score-label">목표설정</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>60</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 20%"></div>
+                <span class="popup-score-value">60</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">업무분장</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>40</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 30%"></div>
+                <span class="popup-score-value">40</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">동기부여</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>50</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 24%"></div>
+                <span class="popup-score-value">50</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">과정관리</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>100</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 12%"></div>
+                <span class="popup-score-value">100</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">평가보상</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>80</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 15%"></div>
+                <span class="popup-score-value">80</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">자원확보</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>50</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 24%"></div>
+                <span class="popup-score-value">50</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">코칭/피드백</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>80</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 15%"></div>
+                <span class="popup-score-value">80</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">변화관리</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>50</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 24%"></div>
+                <span class="popup-score-value">50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 차수 평균 팝업 -->
+    <div class="popup-overlay" id="avgPopup">
+      <div class="popup">
+        <div class="popup-header">
+          <h3 class="popup-title">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle
+                cx="10"
+                cy="10"
+                r="7"
+                stroke="#1C398E"
+                stroke-width="1.5"
+              />
+            </svg>
+            차수 평균 세부내역
+          </h3>
+          <p class="popup-subtitle">차수 평균 점수 세부내역 결과입니다.</p>
+          <button class="popup-close" data-popclose="avgPopup">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="#1C398E"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="popup-body">
+          <div class="popup-score-list">
+            <div class="popup-score-item">
+              <div class="popup-score-label">목표설정</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>60</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 20%"></div>
+                <span class="popup-score-value">60</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">업무분장</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>40</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 25%"></div>
+                <span class="popup-score-value">40</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">동기부여</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>50</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 24%"></div>
+                <span class="popup-score-value">50</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">과정관리</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>100</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 12%"></div>
+                <span class="popup-score-value">100</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">평가보상</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>80</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 15%"></div>
+                <span class="popup-score-value">80</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">자원확보</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>50</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 24%"></div>
+                <span class="popup-score-value">50</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">코칭/피드백</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>80</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 15%"></div>
+                <span class="popup-score-value">80</span>
+              </div>
+            </div>
+            <div class="popup-score-item">
+              <div class="popup-score-label">변화관리</div>
+              <div class="popup-score-bar-container">
+                <div class="popup-score-range">
+                  <span>0</span>
+                  <span>50</span>
+                </div>
+                <div class="popup-score-bar-bg"></div>
+                <div class="popup-score-bar" style="width: 24%"></div>
+                <span class="popup-score-value">50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 전체 차수 평균 팝업 -->
+    <div class="popup-overlay" id="totalAvgPopup">
+      <div class="popup">
+        <div class="popup-header">
+          <h3 class="popup-title">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle
+                cx="10"
+                cy="10"
+                r="7"
+                stroke="#1C398E"
+                stroke-width="1.5"
+              />
+            </svg>
+            전체 평균 점수
+          </h3>
+          <p class="popup-subtitle">전체 차수 평균 점수 결과입니다.</p>
+          <button class="popup-close" data-popclose="totalAvgPopup">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="#1C398E"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="popup-body">
+          <div class="popup-section">
+            <h4 class="popup-section-title">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="7"
+                  stroke="#1C398E"
+                  stroke-width="1.5"
+                />
+              </svg>
+              전체 평균 점수
+            </h4>
+            <p class="popup-section-subtitle">
+              전체 차수 평균 점수 결과입니다.
+            </p>
+            <div class="popup-score-list">
+              <div class="popup-score-item">
+                <div class="popup-score-label">목표설정</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>60</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 20%"></div>
+                  <span class="popup-score-value">60</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">업무분장</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>40</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 25%"></div>
+                  <span class="popup-score-value">40</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">동기부여</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>50</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 24%"></div>
+                  <span class="popup-score-value">50</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">과정관리</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>100</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 12%"></div>
+                  <span class="popup-score-value">100</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">평가보상</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>80</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 15%"></div>
+                  <span class="popup-score-value">80</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">자원확보</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>50</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 24%"></div>
+                  <span class="popup-score-value">50</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">코칭/피드백</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>80</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 15%"></div>
+                  <span class="popup-score-value">80</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">변화관리</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>50</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 24%"></div>
+                  <span class="popup-score-value">50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup-section">
+            <h4 class="popup-section-title">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="7"
+                  stroke="#1C398E"
+                  stroke-width="1.5"
+                />
+              </svg>
+              최고 차수 점수
+            </h4>
+            <p class="popup-section-subtitle">최고 차수 점수 결과입니다.</p>
+            <div class="popup-score-list">
+              <div class="popup-score-item">
+                <div class="popup-score-label">목표설정</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>60</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 20%"></div>
+                  <span class="popup-score-value">60</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">업무분장</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>40</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 25%"></div>
+                  <span class="popup-score-value">40</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">동기부여</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>50</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 24%"></div>
+                  <span class="popup-score-value">50</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">과정관리</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>100</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 12%"></div>
+                  <span class="popup-score-value">100</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">평가보상</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>80</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 15%"></div>
+                  <span class="popup-score-value">80</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">자원확보</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>50</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 24%"></div>
+                  <span class="popup-score-value">50</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">코칭/피드백</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>80</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 15%"></div>
+                  <span class="popup-score-value">80</span>
+                </div>
+              </div>
+              <div class="popup-score-item">
+                <div class="popup-score-label">변화관리</div>
+                <div class="popup-score-bar-container">
+                  <div class="popup-score-range">
+                    <span>0</span>
+                    <span>50</span>
+                  </div>
+                  <div class="popup-score-bar-bg"></div>
+                  <div class="popup-score-bar" style="width: 24%"></div>
+                  <span class="popup-score-value">50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>
