@@ -76,9 +76,17 @@
       <!-- 진행률 -->
       <div class="progress-wrapper">
         <div class="control-buttons">
-          <button type="button" class="control-btn pause"></button>
+          <!-- 소리 활성화 : voice_on / 소리 비활성화 : voice_off -->
+          <button type="button" class="control-btn voice_on"></button>
+          <button type="button" class="control-btn voice_off"></button>
+
+          <!-- 플레이 비활성화 : play_off / 플레이 활성화 : play_on -->
           <button
-            class="control-btn next"
+            class="control-btn play_off"
+            onclick="location.href='dialogue.html'"
+          ></button>
+          <button
+            class="control-btn play_on"
             onclick="location.href='dialogue.html'"
           ></button>
         </div>

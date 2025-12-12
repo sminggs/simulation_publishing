@@ -3002,7 +3002,7 @@
     padding-left: 52px;
     margin-top: 52px;
     word-break: keep-all;
-  	overflow-wrap: normal;
+    overflow-wrap: normal;
   }
 
   .dialogue-item.right .dialogue-bubble {
@@ -5204,5 +5204,44 @@
   .discussion-box p {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+.control-btn.voice_on {
+  background: var(--primary-color);
+  background-image: url("../images/voice_on.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.control-btn.voice_off {
+  background: var(--primary-color);
+  background-image: url("../images/voice_off.svg");
+  background-position: top 50% left 48%;
+  background-repeat: no-repeat;
+}
+
+.control-btn.play_on {
+  background: var(--primary-color);
+  background-image: url("../images/ico_play.svg");
+  background-position: top 50% left 63%;
+  background-repeat: no-repeat;
+}
+
+.control-btn.play_off {
+  background: #afafaf;
+  background-image: url("../images/ico_play.svg");
+  background-position: top 50% left 63%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .control-btn.play_off,
+  .control-btn.play_on {
+    background-position: top 50% left 56%;
+  }
+
+  .control-btn.voice_off {
+    background-size: 10px auto !important;
   }
 }
